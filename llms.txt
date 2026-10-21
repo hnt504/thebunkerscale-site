@@ -14,7 +14,7 @@ Key facts:
 
 ## The scale
 - 0-2: Background Noise. Interesting, but no meaningful change in risk.
-- 3-4: Worth Watching. Something real happened. Keep an eye on it.
+- 3-4: Worth Watching. Something real. Keep an eye on it.
 - 5-6: Eyebrow Raised. A meaningful development worth understanding and following.
 - 7-8: Pay Attention. Credible evidence of a significant change in capability, risk, policy, or real-world impact.
 - 9: Stock the Shelves. A major escalation with serious practical implications. This does not literally mean buying seventeen years’ worth of canned goods.
