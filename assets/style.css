@@ -120,3 +120,4 @@ section.featured,section.recent,section.method,section.promise{padding-top:56px;
 .bh-fallback{margin:8px 0}
 .subscribe .bh-note{font-size:14px;margin:0}
 .subscribe.dark .bh-note a{color:#fff}
+@media (max-width:600px){.bh-card{padding:10px 4px 4px}.bh-card iframe{min-height:500px}}
