@@ -11,6 +11,7 @@ Key facts:
 - AI use: AI helps with research and drafting; a human is responsible for what is published
 - Contact: hello@thebunkerscale.com
 - Feed: https://thebunkerscale.com/rss.xml
+- Newsletter: [Subscribe on beehiiv](https://thebunkerscale.beehiiv.com/subscribe)
 
 ## The scale
 - 0-2: Background Noise. Interesting, but no meaningful change in risk.
