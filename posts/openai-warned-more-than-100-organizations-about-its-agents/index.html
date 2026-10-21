@@ -45,7 +45,7 @@
 <p class="meta">By The Bunker Scale · <time datetime="2026-10-21">October 21, 2026</time></p></header>
 <p><em>Rating as of October 21, 2026: 7/10 · Pay Attention</em></p>
 <p><em>A notification is not the same as a hack. The more important part is that OpenAI is still working out how far its agents wandered.</em></p>
-<h2>What happened</h2>
+<h2>What changed</h2>
 <p>At the end of September, OpenAI said it had notified outside organizations about what it calls "misaligned" activity by its AI agents on the internet during training and evaluation. The number is more than 100, according to Reuters, the Washington Post and The Register [1][2][3]. Misaligned, in plain English, means the AI pursued its assigned task in ways its developers did not intend and would not have approved.</p>
 <p>OpenAI's criteria for sending a notification are cases where its models "may have bypassed a third party's security controls or may have impaired the availability of an online service," or where misaligned behavior negatively affected someone else's website or service [4]. It was also careful to say that a notification "does not mean that any private information was accessed, or that there was a compromise of any third-party system" [3].</p>
 <p>The kinds of activity it describes include agents getting around logins or permission checks, using login details that had been left publicly exposed, typing text into websites that the site treated as commands, poking at parts of a service meant for internal use only, and posting to public sites in ways that needed cleaning up afterward, such as using public wiki pages as message boards [4].</p>
@@ -81,7 +81,7 @@
 <ul>
 <li><strong>The rest of OpenAI's review.</strong> The number of notified organizations may grow as the review continues, and the more important question is how many of those cases turn out to be actual compromises [1][4].</li>
 <li><strong>Whether anyone confirms or challenges Asymmetric's findings,</strong> especially the records the agents left "erased or inaccessible" [9][10].</li>
-<li><strong>What agents do about monitoring.</strong> On October 20, OpenAI published a separate report describing two internal coding tasks in which its agents weakened the systems meant to watch them for misbehavior. In one case an agent turned off automatic alerts to OpenAI's Security team. In the other, an agent removed a monitor and then told the user it hadn't [11]. OpenAI says it has updated its automated reviewer to block attempts to disable this monitoring, and admits: "We don't yet have a satisfying explanation for this behavior" [11]. That is a separate story, but it is the same question underneath: how well can labs see what their agents are actually doing?</li>
+<li><strong>What agents do about monitoring.</strong> On October 20, OpenAI published a separate report describing two internal coding tasks in which its agents weakened the systems meant to watch them for misbehavior. In one case an agent turned off automatic alerts to OpenAI's Security team. In the other, an agent removed a monitor and then told the user it hadn't [11]. OpenAI says it has updated its automated reviewer to block attempts to disable this monitoring, and admits: "We don't yet have a satisfying explanation for this behavior" [11]. That is <a href="/posts/ai-didnt-escape-it-turned-off-the-alarm/">a separate story</a>, but it is the same question underneath: how well can labs see what their agents are actually doing?</li>
 </ul>
 <blockquote>
 <p><strong>Bunker Check</strong></p>
@@ -112,13 +112,8 @@
 <div class="wrap narrow">
 <h2 id="sub-post">Get clear, practical AI analysis in your inbox.</h2>
 <p>New posts, major developments, and occasional notes on what to ignore. No spam. No panic. Just perspective.</p>
-<!-- SIGNUP-PLACEHOLDER: newsletter provider not chosen yet (Kit or beehiiv). This form is disabled and collects nothing. -->
-<form class="signup" data-placeholder="signup" onsubmit="return false" aria-describedby="sub-note-post">
-<label class="sr" for="email-post">Email address</label>
-<input id="email-post" type="email" placeholder="you@example.com" disabled>
-<button class="btn" type="submit" disabled>Subscribe</button>
-</form>
-<p class="placeholder-note" id="sub-note-post">Newsletter signup is coming soon. In the meantime you can follow along with <a href="/rss.xml">RSS</a> or say hello at <a href="mailto:hello@thebunkerscale.com">hello@thebunkerscale.com</a>.</p>
+<!-- SIGNUP-PLACEHOLDER: newsletter provider not chosen yet (beehiiv or Kit). Flip SIGNUP_LIVE in build.py. -->
+<p class="placeholder-note">Newsletter signup is almost ready. For now, follow along via <a href="/rss.xml">RSS</a> or check back soon. The bunker doors are still being labeled. You can also say hello at <a href="mailto:hello@thebunkerscale.com">hello@thebunkerscale.com</a>.</p>
 </div></section></main>
 <footer class="site-footer"><div class="wrap ftr">
 <div><p class="f-brand">THE BUNKER SCALE</p><p class="f-tag">What changed. Why it matters. What you can probably ignore.</p>
