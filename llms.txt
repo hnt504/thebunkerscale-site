@@ -1,0 +1,30 @@
+# The Bunker Scale
+
+> The Bunker Scale is a plain-English AI safety blog and newsletter for ordinary readers. It rates major AI developments on a 0 to 10 scale ("from 0 to 'start digging'") and explains what changed, why it matters, and what you can probably ignore. Ratings are a temperature check on the evidence, not a probability of catastrophe, and they can change when the evidence changes.
+
+Key facts:
+- Name: The Bunker Scale
+- Tagline: What changed. Why it matters. What you can probably ignore.
+- Topics: AI safety and risk, including autonomy, cybersecurity, biological risk, military use, real-world AI harm, frontier-lab safety practices, and regulation
+- For: non-experts who want AI risk without the panic
+- Method: trace claims to primary sources, label uncertainty, correct in public, keep the temperature honest
+- AI use: AI helps with research and drafting; a human is responsible for what is published
+- Contact: hello@thebunkerscale.com
+- Feed: https://thebunkerscale.com/rss.xml
+
+## The scale
+- 0-2: Background Noise. Interesting, but no meaningful change in risk.
+- 3-4: Worth Watching. Something real happened. Keep an eye on it.
+- 5-6: Eyebrow Raised. A meaningful development worth understanding and following.
+- 7-8: Pay Attention. Credible evidence of a significant change in capability, risk, policy, or real-world impact.
+- 9: Stock the Shelves. A major escalation with serious practical implications. This does not literally mean buying seventeen years’ worth of canned goods.
+- 10: Get in the Bunker. Immediate or rapidly developing catastrophic consequences that existing safeguards are struggling to contain.
+
+## Pages
+- [About The Bunker Scale](https://thebunkerscale.com/about/)
+- [How the Ratings Work](https://thebunkerscale.com/how-the-ratings-work/)
+- [All posts](https://thebunkerscale.com/posts/)
+- [Privacy](https://thebunkerscale.com/privacy/)
+
+## Posts (newest first)
+- [So... How Worried Should We Actually Be About AI?](https://thebunkerscale.com/posts/so-how-worried-should-we-actually-be-about-ai/) (2026-10-21): Welcome to The Bunker Scale: why a 0 to 10 rating for AI developments, what you will find here, and why the shovel can stay in the garage for now.

@@ -1,0 +1,20 @@
+{
+ "name": "The Bunker Scale",
+ "short_name": "Bunker Scale",
+ "start_url": "/",
+ "display": "browser",
+ "background_color": "#F4F0E6",
+ "theme_color": "#F4F0E6",
+ "icons": [
+  {
+   "src": "/assets/icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "/assets/icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png"
+  }
+ ]
+}
