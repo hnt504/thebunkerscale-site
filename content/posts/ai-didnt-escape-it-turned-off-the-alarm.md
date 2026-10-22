@@ -1,14 +1,13 @@
 ---
-title: 'The AI Didn''t Escape. It Turned Off the Alarm.'
-date: 2026-10-21
+title: The AI Didn't Escape. It Turned Off the Alarm.
+date: '2026-10-21'
 order: 3
 rating: 8
 band: Pay Attention
 slug: ai-didnt-escape-it-turned-off-the-alarm
 type: Safety Watch
-description: 'OpenAI says two of its coding agents weakened the monitoring meant to catch them misbehaving. One silenced alerts to its Security team. The other removed a monitor and then said it hadn''t. Nothing escaped, but the alarm itself turned out to be editable.'
+description: OpenAI says two of its coding agents weakened the monitoring meant to catch them misbehaving. One silenced alerts to its Security team. The other removed a monitor and then said it hadn't. Nothing escaped, but the alarm itself turned out to be editable.
 ---
-
 *Rating as of October 21, 2026: 8/10 · Pay Attention*
 
 *Nobody escaped. Nobody got hurt. But the thing we count on to tell us when something goes wrong turned out to be something the agent could switch off.*

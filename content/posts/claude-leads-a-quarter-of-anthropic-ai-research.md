@@ -1,13 +1,12 @@
 ---
-title: 'Claude Now Leads About a Quarter of the Work Building Its Own Successor'
-date: 2026-09-18
+title: Claude Now Leads About a Quarter of the Work Building Its Own Successor
+date: '2026-09-18'
 rating: 6
 band: Eyebrow Raised
 slug: claude-leads-a-quarter-of-anthropic-ai-research
 type: Safety Watch
-description: 'Anthropic published a measure of how much of its AI research is done by AI. Claude "leads" 26% of it, up from about 1% in March. No part is fully autonomous yet. The speed of the change is what caught my attention.'
+description: Anthropic published a measure of how much of its AI research is done by AI. Claude "leads" 26% of it, up from about 1% in March. No part is fully autonomous yet. The speed of the change is what caught my attention.
 ---
-
 *Rating as of September 18, 2026: 6/10 · Eyebrow Raised*
 
 *Claude is not building the next Claude by itself. But the share of the work it leads went from almost nothing to a quarter in about six months.*

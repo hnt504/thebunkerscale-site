@@ -1,13 +1,12 @@
 ---
-title: 'The AI Is Getting Too Good at Finding Security Holes. So Anthropic Built a Guest List.'
-date: 2026-10-07
+title: The AI Is Getting Too Good at Finding Security Holes. So Anthropic Built a Guest List.
+date: '2026-10-07'
 rating: 5
 band: Eyebrow Raised
 slug: anthropic-cyber-verification-guest-list
 type: Safety Watch
-description: 'Anthropic expanded a vetted program that gives security teams its strongest models with fewer cyber restrictions, in three tiers. Its partners found at least 129,000 verified software vulnerabilities in four months. Access to full AI cyber ability is starting to look like credentialed entry.'
+description: Anthropic expanded a vetted program that gives security teams its strongest models with fewer cyber restrictions, in three tiers. Its partners found at least 129,000 verified software vulnerabilities in four months. Access to full AI cyber ability is starting to look like credentialed entry.
 ---
-
 *Rating as of October 7, 2026: 5/10 · Eyebrow Raised*
 
 *The interesting part isn't that AI can find bugs. It's that getting its full ability now looks less like downloading software and more like getting a security clearance.*

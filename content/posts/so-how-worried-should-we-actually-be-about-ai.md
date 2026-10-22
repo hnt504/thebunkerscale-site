@@ -1,11 +1,11 @@
 ---
-title: 'So... How Worried Should We Actually Be About AI?'
-date: 2026-10-21
+title: So... How Worried Should We Actually Be About AI?
+date: '2026-10-21'
 order: 1
 description: 'Welcome to The Bunker Scale: why a 0 to 10 rating for AI developments, what you will find here, and why the shovel can stay in the garage for now.'
 type: Launch post
+slug: so-how-worried-should-we-actually-be-about-ai
 ---
-
 **Welcome to The Bunker Scale.**
 
 This whole thing started with a question.

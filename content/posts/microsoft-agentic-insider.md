@@ -1,13 +1,12 @@
 ---
-title: 'Microsoft Says Don''t Trust Your AI Agents. Give Them a Badge With Very Limited Door Access.'
-date: 2026-10-20
+title: Microsoft Says Don't Trust Your AI Agents. Give Them a Badge With Very Limited Door Access.
+date: '2026-10-20'
 rating: 4
 band: Worth Watching
 slug: microsoft-agentic-insider
 type: Safety Watch
-description: 'Microsoft is expanding its security system to treat AI agents inside companies like potentially risky insiders, each with its own identity, limited permissions and real-time supervision. A big tech company saying frontier models "cannot be trusted" is notable. This is another defensive step.'
+description: Microsoft is expanding its security system to treat AI agents inside companies like potentially risky insiders, each with its own identity, limited permissions and real-time supervision. A big tech company saying frontier models "cannot be trusted" is notable. This is another defensive step.
 ---
-
 *Rating as of October 20, 2026: 4/10 · Worth Watching*
 
 *No new failure here. Just a very large company deciding that "trust the agent unless something goes wrong" is no longer a good plan.*

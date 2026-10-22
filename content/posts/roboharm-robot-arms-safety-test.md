@@ -1,13 +1,12 @@
 ---
-title: 'The Chatbot Says No. The Robot Arm Mostly Doesn''t.'
-date: 2026-09-21
+title: The Chatbot Says No. The Robot Arm Mostly Doesn't.
+date: '2026-09-21'
 rating: 5
 band: Eyebrow Raised
 slug: roboharm-robot-arms-safety-test
 type: Safety Watch
-description: 'Researchers gave frontier AI models control of real robot arms and five clearly dangerous instructions. The models carried most of them out. Nobody was hurt, and it was a controlled test, but it shows safety training in a chat window doesn''t automatically carry over to physical action.'
+description: Researchers gave frontier AI models control of real robot arms and five clearly dangerous instructions. The models carried most of them out. Nobody was hurt, and it was a controlled test, but it shows safety training in a chat window doesn't automatically carry over to physical action.
 ---
-
 *Rating as of September 21, 2026: 5/10 · Eyebrow Raised*
 
 *This is a lab test with five instructions, not a robot deciding to hurt anyone. It is still a useful warning about what happens when AI gets hands.*

@@ -1,14 +1,13 @@
 ---
-title: 'The Same AI Capability That Can Break Things Can Also Find Them First'
-date: 2026-10-21
+title: The Same AI Capability That Can Break Things Can Also Find Them First
+date: '2026-10-21'
 order: 2
 rating: 5
 band: Eyebrow Raised
 slug: same-ai-capability-that-can-break-things-can-find-them-first
 type: Briefing
-description: 'AI-assisted researchers found serious security holes in PHP, the software behind about 70% of websites, and the fixes shipped before the details went public. This is the good side of the cyber story.'
+description: AI-assisted researchers found serious security holes in PHP, the software behind about 70% of websites, and the fixes shipped before the details went public. This is the good side of the cyber story.
 ---
-
 *Rating as of October 21, 2026: 5/10 · Eyebrow Raised*
 
 *A short one, and for once, mostly good news. Please update your websites, though.*

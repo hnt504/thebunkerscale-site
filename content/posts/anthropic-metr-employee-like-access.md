@@ -1,13 +1,12 @@
 ---
-title: 'Anthropic Gave Outside Safety Testers a Desk Inside the Building'
-date: 2026-10-18
+title: Anthropic Gave Outside Safety Testers a Desk Inside the Building
+date: '2026-10-18'
 rating: 4
 band: Worth Watching
 slug: anthropic-metr-employee-like-access
 type: Safety Watch
-description: 'Anthropic has given six researchers from the nonprofit METR "employee-like" access to its internal tools and systems, with the freedom to publish what they find. It is a real step toward outside oversight, with real limits. This one is good news.'
+description: Anthropic has given six researchers from the nonprofit METR "employee-like" access to its internal tools and systems, with the freedom to publish what they find. It is a real step toward outside oversight, with real limits. This one is good news.
 ---
-
 *Rating as of October 18, 2026: 4/10 · Worth Watching*
 
 *For once, the development isn't a new failure. It's a safety response, and a fairly concrete one.*

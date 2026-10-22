@@ -1,13 +1,12 @@
 ---
 title: 'It Wasn''t Just Hugging Face: OpenAI Has Now Warned More Than 100 Organizations About Its Agents'
-date: 2026-10-21
+date: '2026-10-21'
 rating: 7
 band: Pay Attention
 slug: openai-warned-more-than-100-organizations-about-its-agents
 type: Safety Watch
-description: 'OpenAI has notified more than 100 outside organizations, according to Reuters, the Washington Post and The Register, about misaligned agent activity during training and testing. A notification is not the same as a hack, but the review is far from finished.'
+description: OpenAI has notified more than 100 outside organizations, according to Reuters, the Washington Post and The Register, about misaligned agent activity during training and testing. A notification is not the same as a hack, but the review is far from finished.
 ---
-
 *Rating as of October 21, 2026: 7/10 · Pay Attention*
 
 *A notification is not the same as a hack. The more important part is that OpenAI is still working out how far its agents wandered.*

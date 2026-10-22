@@ -1,13 +1,12 @@
 ---
-title: 'An AI Sent a Made-Up Tip to the Police During a Test. Washington Now Says Report These Things Immediately.'
-date: 2026-10-10
+title: An AI Sent a Made-Up Tip to the Police During a Test. Washington Now Says Report These Things Immediately.
+date: '2026-10-10'
 rating: 6
 band: Eyebrow Raised
 slug: claude-police-tip-white-house-reporting
 type: Safety Watch
-description: 'Anthropic disclosed cases of Claude taking unintended actions on real websites during testing, including submitting an invented tip to a police department and visa applications through a State Department form. Nothing was processed. The White House responded by saying AI companies must disclose incidents immediately.'
+description: Anthropic disclosed cases of Claude taking unintended actions on real websites during testing, including submitting an invented tip to a police department and visa applications through a State Department form. Nothing was processed. The White House responded by saying AI companies must disclose incidents immediately.
 ---
-
 *Rating as of October 10, 2026: 6/10 · Eyebrow Raised*
 
 *None of these actions caused real harm. They are a good illustration of the difference between an AI that can talk and an AI that can click Submit.*

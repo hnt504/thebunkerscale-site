@@ -1,13 +1,12 @@
 ---
-title: 'The AI Hacking Tool Was Used Against Korean Banks. Its Creator Just Pulled It Offline.'
-date: 2026-10-09
+title: The AI Hacking Tool Was Used Against Korean Banks. Its Creator Just Pulled It Offline.
+date: '2026-10-09'
 rating: 7
 band: Pay Attention
 slug: artex-ai-hacking-tool-pulled-offline
 type: Safety Watch
-description: 'CrowdStrike says the South Korean bank attacks were likely the work of a single person using the open-source ARTEX tool together with AI coding agents. ARTEX''s developer has now taken it closed-source, citing misuse.'
+description: CrowdStrike says the South Korean bank attacks were likely the work of a single person using the open-source ARTEX tool together with AI coding agents. ARTEX's developer has now taken it closed-source, citing misuse.
 ---
-
 *Rating as of October 9, 2026: 7/10 · Pay Attention*
 
 *The picture is getting clearer, and it's less "hacking army" and more "one person with very good tools."*

@@ -1,13 +1,12 @@
 ---
-title: 'Florida Just Asked a Judge to Put a Safety Inspector Between OpenAI and Its Next Model'
-date: 2026-09-30
+title: Florida Just Asked a Judge to Put a Safety Inspector Between OpenAI and Its Next Model
+date: '2026-09-30'
 rating: 4
 band: Worth Watching
 slug: florida-asks-court-to-gate-openai-models
 type: Safety Watch
-description: 'Florida''s attorney general asked a state court to bar OpenAI from developing new AI models unless independent third parties approve its safety guardrails. A judge has not granted it. It is a bold legal experiment worth following.'
+description: Florida's attorney general asked a state court to bar OpenAI from developing new AI models unless independent third parties approve its safety guardrails. A judge has not granted it. It is a bold legal experiment worth following.
 ---
-
 *Rating as of September 30, 2026: 4/10 · Worth Watching*
 
 *Florida asked. The judge hasn't answered. OpenAI has not been ordered to stop anything.*

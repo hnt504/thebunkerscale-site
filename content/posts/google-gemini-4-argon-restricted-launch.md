@@ -1,13 +1,12 @@
 ---
-title: 'Google Built a Better AI Hacker. So You Can''t Have It Yet.'
-date: 2026-10-01
+title: Google Built a Better AI Hacker. So You Can't Have It Yet.
+date: '2026-10-01'
 rating: 6
 band: Eyebrow Raised
 slug: google-gemini-4-argon-restricted-launch
 type: Safety Watch
-description: 'Google unveiled Gemini 4 Argon, which it says can autonomously find, confirm and patch serious software flaws. For now, only vetted cyber defenders get it, some of them without the usual cyber guardrails, while Google finishes its safety work.'
+description: Google unveiled Gemini 4 Argon, which it says can autonomously find, confirm and patch serious software flaws. For now, only vetted cyber defenders get it, some of them without the usual cyber guardrails, while Google finishes its safety work.
 ---
-
 *Rating as of October 1, 2026: 6/10 · Eyebrow Raised*
 
 *Gemini 4 Argon can apparently find security holes earlier models missed. For now, Google is keeping it behind a velvet rope.*

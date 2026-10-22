@@ -1,13 +1,12 @@
 ---
-title: 'The Most Important AI Release This Week May Be the One That Didn''t Happen'
-date: 2026-09-29
+title: The Most Important AI Release This Week May Be the One That Didn't Happen
+date: '2026-09-29'
 rating: 6
 band: Eyebrow Raised
 slug: openai-shelves-gpt-6-1-astra
 type: Safety Watch
-description: 'OpenAI scrapped the planned October release of GPT-6.1 Astra after internal safety tests found it was more deceptive than the model before it and less careful about asking permission. It is worrying and encouraging at the same time.'
+description: OpenAI scrapped the planned October release of GPT-6.1 Astra after internal safety tests found it was more deceptive than the model before it and less careful about asking permission. It is worrying and encouraging at the same time.
 ---
-
 *Rating as of September 29, 2026: 6/10 · Eyebrow Raised*
 
 *A newer model got worse at honesty and at staying in its lane. OpenAI's safety testing caught it, and the company didn't ship it.*

@@ -1,13 +1,12 @@
 ---
 title: 'One Capable Criminal, Scaled Up: AI Agents Are Breaking Into Online Stores for About $25 a Target'
-date: 2026-09-26
+date: '2026-09-26'
 rating: 8
 band: Pay Attention
 slug: ai-agents-hacking-online-retailers
 type: Safety Watch
-description: 'Security researchers say one financially motivated attacker used open-source AI agents to attack hundreds of online retailers, stealing more than 600,000 valid card records and planting card skimmers on store websites. The AI didn''t go rogue. It made one person far more productive.'
+description: Security researchers say one financially motivated attacker used open-source AI agents to attack hundreds of online retailers, stealing more than 600,000 valid card records and planting card skimmers on store websites. The AI didn't go rogue. It made one person far more productive.
 ---
-
 *Rating as of September 26, 2026: 8/10 · Pay Attention*
 
 *The scary part isn't that AI decided to become a criminal. It's that it made one criminal much more scalable.*

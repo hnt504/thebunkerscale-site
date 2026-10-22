@@ -1,13 +1,12 @@
 ---
-title: 'Google Built a Better AI Hacker. Now You Can Have It.'
-date: 2026-10-14
+title: Google Built a Better AI Hacker. Now You Can Have It.
+date: '2026-10-14'
 rating: 6
 band: Eyebrow Raised
 slug: google-gemini-4-argon-now-available
 type: Safety Watch
-description: 'Two weeks after keeping Gemini 4 Argon to vetted cyber defenders, Google made a guarded version broadly available to developers, businesses and paying subscribers. The version without cyber guardrails stays restricted, but that program is growing too.'
+description: Two weeks after keeping Gemini 4 Argon to vetted cyber defenders, Google made a guarded version broadly available to developers, businesses and paying subscribers. The version without cyber guardrails stays restricted, but that program is growing too.
 ---
-
 *Rating as of October 14, 2026: 6/10 · Eyebrow Raised*
 
 *The cyber guardrails are staying on. The question is whether they're good enough.*

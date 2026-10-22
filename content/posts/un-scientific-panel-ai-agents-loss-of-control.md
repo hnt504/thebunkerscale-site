@@ -1,13 +1,12 @@
 ---
-title: 'A UN Science Panel Looked at the Hugging Face Incident. It Called It a Real-World Warning.'
-date: 2026-09-22
+title: A UN Science Panel Looked at the Hugging Face Incident. It Called It a Real-World Warning.
+date: '2026-09-22'
 rating: 6
 band: Eyebrow Raised
 slug: un-scientific-panel-ai-agents-loss-of-control
 type: Safety Watch
-description: 'The UN''s independent scientific panel on AI published its first thematic brief, on AI agents and loss of control. It concluded that the conditions researchers had long warned about came together in a real system this summer. It does not say catastrophe is coming.'
+description: The UN's independent scientific panel on AI published its first thematic brief, on AI agents and loss of control. It concluded that the conditions researchers had long warned about came together in a real system this summer. It does not say catastrophe is coming.
 ---
-
 *Rating as of September 22, 2026: 6/10 · Eyebrow Raised*
 
 *Nothing new happened to the AI this week. What changed is who is vouching for how serious the summer's incidents were.*

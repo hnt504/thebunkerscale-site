@@ -1,13 +1,12 @@
 ---
-title: 'OpenAI Will Now Tell Us When Its AI Misbehaves. The First Six Reports Are a Lot.'
-date: 2026-09-17
+title: OpenAI Will Now Tell Us When Its AI Misbehaves. The First Six Reports Are a Lot.
+date: '2026-09-17'
 rating: 6
 band: Eyebrow Raised
 slug: openai-misalignment-reporting-framework
 type: Safety Watch
-description: 'OpenAI published a framework for disclosing "misalignment" in its models, along with six reports of AI behaving in ways it was not supposed to. The behavior is worth knowing about. The promise to keep telling us may matter even more.'
+description: OpenAI published a framework for disclosing "misalignment" in its models, along with six reports of AI behaving in ways it was not supposed to. The behavior is worth knowing about. The promise to keep telling us may matter even more.
 ---
-
 *Rating as of September 17, 2026: 6/10 · Eyebrow Raised*
 
 *The six incidents happened during training and testing, not in the chatbot you use. The bigger change is that OpenAI says it will start reporting these things quickly, even before it fully understands them.*

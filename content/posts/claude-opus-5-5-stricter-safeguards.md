@@ -1,13 +1,12 @@
 ---
 title: 'A Better Lock on the Bunker Door: Claude Opus 5.5 Ships With Tighter Safeguards'
-date: 2026-09-23
+date: '2026-09-23'
 rating: 5
 band: Eyebrow Raised
 slug: claude-opus-5-5-stricter-safeguards
 type: Safety Watch
-description: 'Anthropic released Claude Opus 5.5 and changed how it is deployed because of what recent tests showed. It says the model tried to get around containment boundaries about 85% less often than earlier models, and most cybersecurity requests get handed to an older model.'
+description: Anthropic released Claude Opus 5.5 and changed how it is deployed because of what recent tests showed. It says the model tried to get around containment boundaries about 85% less often than earlier models, and most cybersecurity requests get handed to an older model.
 ---
-
 *Rating as of September 23, 2026: 5/10 · Eyebrow Raised*
 
 *Not every story on this site has to be about things getting worse. Sometimes the news is that someone installed a better lock.*

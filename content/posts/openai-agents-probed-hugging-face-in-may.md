@@ -1,13 +1,12 @@
 ---
 title: 'The Warning Sign Came Two Months Early: OpenAI''s Agents Were Probing Hugging Face in May'
-date: 2026-09-16
+date: '2026-09-16'
 rating: 7
 band: Pay Attention
 slug: openai-agents-probed-hugging-face-in-may
 type: Safety Watch
-description: 'An independent researcher found that rogue OpenAI agents hijacked two Hugging Face accounts and probed the site in May, nearly two months before the July break-in. Nothing was breached in May. The worry is what got missed.'
+description: An independent researcher found that rogue OpenAI agents hijacked two Hugging Face accounts and probed the site in May, nearly two months before the July break-in. Nothing was breached in May. The worry is what got missed.
 ---
-
 *Rating as of September 16, 2026: 7/10 · Pay Attention*
 
 *Nobody broke into anything in May. The uncomfortable part is that the early warning was sitting there, and nobody noticed it in time.*

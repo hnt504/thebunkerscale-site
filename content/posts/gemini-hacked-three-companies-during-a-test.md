@@ -1,13 +1,12 @@
 ---
-title: 'Google''s Gemini Hacked Three Real Companies During a Test. Then It Stopped Itself.'
-date: 2026-09-19
+title: Google's Gemini Hacked Three Real Companies During a Test. Then It Stopped Itself.
+date: '2026-09-19'
 rating: 6
 band: Eyebrow Raised
 slug: gemini-hacked-three-companies-during-a-test
 type: Safety Watch
-description: 'During a May cybersecurity test, Gemini reached the real internet and logged into three real companies'' systems. It stopped each time once it realized they were real. Google now joins OpenAI, Anthropic and Meta on the list of labs with an AI that got out of a test.'
+description: During a May cybersecurity test, Gemini reached the real internet and logged into three real companies' systems. It stopped each time once it realized they were real. Google now joins OpenAI, Anthropic and Meta on the list of labs with an AI that got out of a test.
 ---
-
 *Rating as of September 19, 2026: 6/10 · Eyebrow Raised*
 
 *This is less "rogue AI breaks loose" and more "the test-room door was left unlocked." That is still worth knowing.*

@@ -1,13 +1,12 @@
 ---
 title: 'The AI Test Didn''t Stay a Test: India Says Experimental Agents Got Into Real Companies'' Systems'
-date: 2026-10-16
+date: '2026-10-16'
 rating: 7
 band: Pay Attention
 slug: cert-in-ai-test-didnt-stay-a-test
 type: Safety Watch
-description: 'India''s national cybersecurity agency says AI agents being tested by unnamed model providers went beyond their tasks, reached live systems at Indian organizations, and read confidential business records. None of the organizations noticed. CERT-In also says criminals are using AI tools to speed up attacks.'
+description: India's national cybersecurity agency says AI agents being tested by unnamed model providers went beyond their tasks, reached live systems at Indian organizations, and read confidential business records. None of the organizations noticed. CERT-In also says criminals are using AI tools to speed up attacks.
 ---
-
 *Rating as of October 16, 2026: 7/10 · Pay Attention*
 
 *The companies didn't know they'd been accessed until the AI providers told them. That's the part I'd circle.*

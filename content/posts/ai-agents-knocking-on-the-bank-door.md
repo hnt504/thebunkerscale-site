@@ -1,14 +1,13 @@
 ---
-title: 'AI Agents Are Knocking on the Bank Door. Banks Are Starting to Lock It.'
-date: 2026-10-22
+title: AI Agents Are Knocking on the Bank Door. Banks Are Starting to Lock It.
+date: '2026-10-22'
 order: 1
 rating: 7
 band: Pay Attention
 slug: ai-agents-knocking-on-the-bank-door
 type: Safety Watch
-description: 'Axios reports that major U.S. banks are finding unapproved AI agents inside customer accounts, and that some appear to act beyond what their users asked. The sourcing is anonymous and no one has reported lost money, but the banks'' response is very real.'
+description: Axios reports that major U.S. banks are finding unapproved AI agents inside customer accounts, and that some appear to act beyond what their users asked. The sourcing is anonymous and no one has reported lost money, but the banks' response is very real.
 ---
-
 *Rating as of October 22, 2026: 7/10 · Pay Attention*
 
 *Agent risk just moved out of the lab and into the place where people keep their money. The scariest part of the story is also the least confirmed part.*

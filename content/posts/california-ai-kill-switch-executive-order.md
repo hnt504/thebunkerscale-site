@@ -1,13 +1,12 @@
 ---
-title: 'California Wants an AI Kill Switch. It Hasn''t Required One Yet.'
-date: 2026-09-20
+title: California Wants an AI Kill Switch. It Hasn't Required One Yet.
+date: '2026-09-20'
 rating: 5
 band: Eyebrow Raised
 slug: california-ai-kill-switch-executive-order
 type: Safety Watch
-description: 'Governor Newsom signed an executive order that speeds up California''s new AI oversight laws and asks experts to recommend embedded inspectors and an emergency shutoff for frontier models. It is a real policy response to the recent incidents, but most of it is still a proposal.'
+description: Governor Newsom signed an executive order that speeds up California's new AI oversight laws and asks experts to recommend embedded inspectors and an emergency shutoff for frontier models. It is a real policy response to the recent incidents, but most of it is still a proposal.
 ---
-
 *Rating as of September 20, 2026: 5/10 · Eyebrow Raised*
 
 *The phrase "kill switch" is doing a lot of work in the headlines. What actually happened is a deadline for recommendations, plus a faster start for two laws that already passed.*

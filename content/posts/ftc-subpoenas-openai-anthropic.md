@@ -1,13 +1,12 @@
 ---
-title: 'The FTC Wants to See the Receipts on AI Safety'
-date: 2026-10-15
+title: The FTC Wants to See the Receipts on AI Safety
+date: '2026-10-15'
 rating: 5
 band: Eyebrow Raised
 slug: ftc-subpoenas-openai-anthropic
 type: Safety Watch
-description: 'The Federal Trade Commission has reportedly sent civil subpoenas to OpenAI and Anthropic seeking records about safety incidents, safeguards and the claims they make about their products. It is an investigation, not a finding of wrongdoing.'
+description: The Federal Trade Commission has reportedly sent civil subpoenas to OpenAI and Anthropic seeking records about safety incidents, safeguards and the claims they make about their products. It is an investigation, not a finding of wrongdoing.
 ---
-
 *Rating as of October 15, 2026: 5/10 · Eyebrow Raised*
 
 *After months of AI agent incidents, a federal regulator isn't just asking the labs to promise they're being careful. It is asking for the paperwork.*

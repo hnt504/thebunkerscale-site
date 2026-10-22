@@ -1,13 +1,12 @@
 ---
-title: 'AI Didn''t Need to Break Into the Vault. It Found the Side Door.'
-date: 2026-10-06
+title: AI Didn't Need to Break Into the Vault. It Found the Side Door.
+date: '2026-10-06'
 rating: 7
 band: Pay Attention
 slug: south-korea-bank-hacks-ai-side-door
 type: Safety Watch
-description: 'South Korea is investigating a wave of breaches at more than seven financial institutions that exposed personal information of over 68,000 people. Traces of an open-source AI hacking tool were found. How much of the work the AI did is still unclear.'
+description: South Korea is investigating a wave of breaches at more than seven financial institutions that exposed personal information of over 68,000 people. Traces of an open-source AI hacking tool were found. How much of the work the AI did is still unclear.
 ---
-
 *Rating as of October 6, 2026: 7/10 · Pay Attention*
 
 *No money is known to have been stolen, and the core banking systems seem to be fine. The attackers went after the less-watched systems around the edges.*
