@@ -8,10 +8,11 @@ name: Build and publish
 on:
   push:
     branches: [main]
+  pull_request:
   workflow_dispatch:
 
 concurrency:
-  group: build-site
+  group: ${{ github.event_name == 'pull_request' && format('check-{0}', github.ref) || 'build-site' }}
   cancel-in-progress: false
 
 permissions:
@@ -19,7 +20,23 @@ permissions:
   pages: write
 
 jobs:
+  check:
+    # On pull requests: run every check and show what would change, publish nothing.
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: python3 tools/build.py --check
+
   build:
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
