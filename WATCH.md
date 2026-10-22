@@ -80,6 +80,24 @@ Open the PR with `gh api repos/hnt504/thebunkerscale-site/pulls` (base `main`). 
 
 Read the week's posts and drafts, then ask whether the overall picture moved. If it did, open a separate PR that updates `current_reading` in `site.yml` (move the old reading into `reading_history` with a note) and explain the case in the PR. If it didn't, say so in the summary. Never change the current reading without a PR.
 
-## 8. Report
+## 8. Friday roundup email (beehiiv draft)
 
-End every run with a short summary for Heather: drafts opened (with links), rating changes proposed, near misses in one line each, and anything that's blocking. If nothing cleared the bar, say "Nothing cleared the bar today" and list the top near misses.
+Every Friday, after the current-reading review, draft the week's email to subscribers in beehiiv.
+Subscribers get nothing else from the site, so this is their weekly connection to it.
+
+- **Where:** the beehiiv publication "The Bunker Scale" (`pub_358d8b68-a28d-4d38-9842-5326bdc54a01`). Create it with `save_post` as a **draft**. Never schedule or send it; Heather sends it from beehiiv.
+- **Title and subject:** "This week on the Bunker Scale: <Month D> to <Month D>". Preview text: the current reading in a few words.
+- **What goes in it,** in this order, all in the voice from `EDITORIAL.md` (no em dashes, never "signal"):
+  1. One or two sentences on how the week felt.
+  2. **The current reading:** the number, band, whether it moved or held, one line on why, linked to https://thebunkerscale.com/ratings/.
+  3. **This week's posts** (only posts live on the site this week, newest first): linked title, "X/10 · Band", one sentence on what changed.
+  4. **Rating changes** this week, if any, with the reason.
+  5. **What you can probably ignore:** the best one from the week's posts, claim plus one-line reason.
+  6. A "Bunker status:" closer and a link to the site.
+- **Quiet week:** if there were no new posts and the reading held, draft a short note that says so and still gives the current reading. Flag it in the summary so Heather can decide whether to send it.
+- If the beehiiv tools aren't available in the run, write the roundup in the summary instead, ready to paste.
+- Include the beehiiv editor link in the run summary.
+
+## 9. Report
+
+End every run with a short summary for Heather: drafts opened (with links), the Friday roundup draft (if any), rating changes proposed, near misses in one line each, and anything that's blocking. If nothing cleared the bar, say "Nothing cleared the bar today" and list the top near misses.
