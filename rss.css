@@ -1,0 +1,19 @@
+/* Browser view for /rss.xml and /feed.xml. Feed readers ignore this; it only styles the raw feed when a person opens it in a browser.
+   CSS (not XSLT) on purpose: Chrome removes XSLT on Nov 17, 2026 and already shows a warning banner on XSLT pages. */
+@font-face{font-family:"Newsreader";src:url(/assets/fonts/newsreader.woff2) format("woff2");font-weight:200 800;font-display:swap}
+@font-face{font-family:"IBM Plex Sans";src:url(/assets/fonts/plex-sans.woff2) format("woff2");font-weight:100 700;font-display:swap}
+rss{display:block;background:#F4F0E6;color:#1E1F1B;font:400 18px/1.65 "IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding:32px 24px 56px;min-height:100vh}
+channel{display:flex;flex-direction:column;max-width:720px;margin:0 auto}
+channel>*{display:none}
+channel::before{order:1;display:block;white-space:pre-wrap;background:#fff;border:1px solid #CFC7B4;border-left:4px solid #D18A12;border-radius:4px;padding:18px 20px 12px;margin:0;
+  content:"THIS IS AN RSS FEED\A\A Copy the address below into your feed reader to follow The Bunker Scale. New to RSS? See aboutfeeds.com for a short guide.\A\A Prefer email? Subscribe free at thebunkerscale.com.";font-size:17px}
+channel>link[href]{order:2;display:block;background:#fff;border:1px solid #CFC7B4;border-top:0;border-left:4px solid #D18A12;border-radius:0 0 4px 4px;padding:0 20px 18px;margin:-4px 0 32px}
+channel>link[href]::before{content:attr(href);display:block;font:500 15px/1.4 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:#F4F0E6;border:1px solid #CFC7B4;border-radius:4px;padding:8px 10px;overflow-wrap:anywhere;user-select:all}
+channel>title{order:3;display:block;font:600 40px/1.15 "Newsreader",Georgia,serif;letter-spacing:-.01em;margin:0 0 8px}
+channel>description{order:4;display:block;color:#5d5a50;margin:0 0 16px}
+item{order:5;display:block;border-top:1px solid #CFC7B4;padding:20px 0}
+item>*{display:none}
+item>title{display:block;font:600 24px/1.2 "Newsreader",Georgia,serif;margin:0 0 4px}
+item>pubDate{display:block;font-size:14px;color:#5d5a50}
+item>description{display:block;margin:6px 0}
+item>link{display:block;font-size:14px;color:#8a5a08;overflow-wrap:anywhere}

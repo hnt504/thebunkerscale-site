@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="/rss.css"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
 <channel><title>The Bunker Scale</title><link>https://thebunkerscale.com/</link><description>A plain-English AI safety publication that rates AI developments on a 0 to 10 scale, from Background Noise to Get in the Bunker. What changed. Why it matters. What you can probably ignore.</description><language>en-us</language><lastBuildDate>Wed, 21 Oct 2026 13:00:00 +0000</lastBuildDate>
 <atom:link href="https://thebunkerscale.com/feed.xml" rel="self" type="application/rss+xml"/><image><url>https://thebunkerscale.com/assets/icon-512.png</url><title>The Bunker Scale</title><link>https://thebunkerscale.com/</link></image>
