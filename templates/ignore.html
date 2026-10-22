@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+{% block main %}<section class="wrap prose page ignore-page"><header class="post-head"><h1>What You Can Probably Ignore</h1><p class="dek">Every post ends with the scariest version of the story going around, and why it’s less than it sounds. Here they all are in one place, newest first.</p></header>
+{% for p in posts if p.ignore %}<section class="ignore-group"><h2><a href="{{ p.path }}">{{ p.title|esc }}</a></h2><p class="meta"><time datetime="{{ p.date }}">{{ p.date_long }}</time>{% if p.rating is not none %} · {{ m.badge(p) }}{% endif %}</p>
+<ul>{% for item in p.ignore %}<li><p class="claim">“{{ item.claim|esc }}”</p><p>{{ item.why|esc }}</p></li>{% endfor %}</ul></section>
+{% endfor %}<p class="small">These are summaries. The full post has the sources and the reasoning.</p></section>
+{{ m.subscribe("sub-page", site) }}{% endblock %}

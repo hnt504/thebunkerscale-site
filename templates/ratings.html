@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+{% block main %}<section class="wrap prose page ratings-page"><header class="post-head"><h1>Ratings</h1><p class="dek">The overall reading, every rating so far, and every time a rating changed.</p></header>
+{% if reading %}<section id="current-reading" class="reading-box" aria-labelledby="cr-h">
+<div class="reading-gauge">{{ m.gauge(site.bands, "Current overall reading: " ~ reading.value ~ " out of 10, " ~ reading.band.name, needle_deg=reading.deg, decorative=false) }}</div>
+<div><p class="label">Current reading · <time datetime="{{ reading.as_of }}">{{ reading.as_of_long }}</time></p>
+<h2 id="cr-h">{{ reading.value }}/10 · {{ reading.band.name }}</h2>
+{% if reading.direction %}<p class="meta">Direction: {{ reading.direction }}</p>{% endif %}
+<p>{{ reading.summary|esc }}</p>
+<p class="small">The overall reading is a judgment about the whole picture, not an average of the posts. Each post is rated on its own.</p></div>
+</section>
+{% if reading.history %}<h2>Earlier readings</h2>
+<ul class="change-log">{% for h in reading.history %}<li><time datetime="{{ h.date }}">{{ h.date_long }}</time> <span class="badge" style="--c:{{ h.band.color }}">{{ h.value }}/10 · {{ h.band.name|upper }}</span>{% if h.note %} <span>{{ h.note|esc }}</span>{% endif %}</li>{% endfor %}</ul>
+{% endif %}{% endif %}
+<h2>How the ratings spread out</h2>
+{% set counts = {} %}{% for p in rated %}{% set _ = counts.update({p.rating: counts.get(p.rating, 0) + 1}) %}{% endfor %}{% set top = (counts.values()|list|max) if counts else 1 %}
+<div class="spread" role="img" aria-label="{{ rated|length }} rated posts. {% for n in range(0, 11) %}{% if counts.get(n) %}{{ n }}/10: {{ counts.get(n) }}. {% endif %}{% endfor %}">{% for b in site.bands %}{% for n in range(b.low, b.high + 1) %}<div class="col"><span class="bar" style="--c:{{ b.color }};--h:{{ ((counts.get(n, 0) / top) * 100)|round(1) }}%"><b>{{ counts.get(n, '') }}</b></span><span class="n">{{ n }}</span></div>{% endfor %}{% endfor %}</div>
+<p class="small">{{ rated|length }} rated posts so far. A 9 or 10 is meant to be rare, and so far nothing has earned one.</p>
+
+<h2 id="changes">Rating changes</h2>
+{% set changed = [] %}{% for p in rated if p.history|length > 1 %}{% set _ = changed.append(p) %}{% endfor %}
+{% if changed %}<ul class="change-log">{% for p in changed %}{% for h in p.history[1:]|reverse %}<li><time datetime="{{ h.date }}">{{ h.date_long }}</time> <a href="{{ p.path }}">{{ p.title|esc }}</a> <span class="badge" style="--c:{{ h.band.color }}">{{ h.rating }}/10</span> <span>{{ h.note|esc }}</span></li>{% endfor %}{% endfor %}</ul>
+{% else %}<p>No rating has changed yet. When new evidence moves one up or down, the change and the reason show up here and on the post itself.</p>
+{% endif %}
+<h2>Every rating</h2>
+<table class="ratings-table"><thead><tr><th scope="col">Rating</th><th scope="col">Story</th><th scope="col">Direction</th></tr></thead><tbody>{% for p in rated %}<tr><td><span class="badge" style="--c:{{ p.band.color }}">{{ p.rating }}/10</span></td><td><a href="{{ p.path }}">{{ p.title|esc }}</a><span class="meta"><time datetime="{{ p.date }}">{{ p.date_long }}</time></span></td><td>{{ p.direction or "" }}</td></tr>{% endfor %}</tbody></table>
+<p class="small">Want the details on what each band means? <a href="/how-the-ratings-work/">How the ratings work</a>.</p></section>
+{{ m.subscribe("sub-page", site) }}{% endblock %}

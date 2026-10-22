@@ -4,20 +4,25 @@
 <div class="hero-copy"><p class="eyebrow">AI risk, in perspective</p>
 <h1>How worried should we <em>actually</em> be about AI?</h1>
 <p class="tagline">{{ site.tagline }}</p>
-<p class="lede">{{ site.name }} puts fast-moving AI developments in perspective. We separate real changes from scary headlines, explain what the evidence actually shows, and rate how much attention each development deserves.</p>
+<p class="lede">I read past the headlines on fast-moving AI developments, back to the research and the fine print, then rate how much attention each one actually deserves, on a scale from 0 to “start digging.”</p>
 <p class="ctas"><a class="btn" href="{{ posts[0].path }}">Read the latest</a> <a class="link" href="/about/">About {{ site.name }}</a></p></div>
-<figure class="hero-gauge">{{ m.gauge(site.bands, "The Bunker Scale gauge, from 0 (Background Noise) to 10 (Get in the Bunker). The needle is decorative, not a rating.") }}
+<figure class="hero-gauge">{% if reading %}{{ m.gauge(site.bands, "Current overall reading: " ~ reading.value ~ " out of 10, " ~ reading.band.name, needle_deg=reading.deg, decorative=false) }}
+<figcaption><span class="reading-label">Current reading · <time datetime="{{ reading.as_of }}">{{ reading.as_of_long }}</time></span><strong>{{ reading.value }}/10 · {{ reading.band.name }}</strong><span>{{ reading.band.shovel }}</span><a class="mini-link" href="/ratings/#current-reading">Why a {{ reading.value }}?</a></figcaption>
+{% else %}{{ m.gauge(site.bands, "The Bunker Scale gauge, from 0 (Background Noise) to 10 (Get in the Bunker). The needle is decorative, not a rating.") }}
 <figcaption><strong>On a scale from 0 to “start digging,” how worried should we actually be?</strong><span>The shovel can stay in the garage for now.</span></figcaption>
-<div class="mini-key"><ul aria-label="The Bunker Scale, at a glance">{% for b in site.bands %}<li style="--c:{{ b.color }}"><b>{{ b.range }}</b><strong>{{ b.name }}</strong><span>{{ b.short }}</span></li>{% endfor %}</ul><a class="mini-link" href="/how-the-ratings-work/">How the ratings work →</a></div></figure>
+{% endif %}<div class="mini-key"><ul aria-label="The Bunker Scale, at a glance">{% for b in site.bands %}<li style="--c:{{ b.color }}"><b>{{ b.range }}</b><strong>{{ b.name }}</strong><span>{{ b.short }}</span></li>{% endfor %}</ul><a class="mini-link" href="/how-the-ratings-work/">How the ratings work →</a></div></figure>
 </div></section>
-<section class="wrap featured"><p class="label">Start here</p>{{ m.card(posts[0], big=true) }}</section>
-<section class="wrap recent"><p class="label">Recent posts</p><div class="grid3">{% for p in posts[1:4] %}{{ m.card(p) }}{% endfor %}</div></section>
-<section class="scale-sec dark"><div class="wrap">
+<section class="wrap featured"><p class="label">Latest</p>{{ m.card(posts[0], big=true) }}</section>
+<section class="wrap recent"><p class="label">Recent posts</p><div class="grid3">{% for p in posts[1:4] %}{{ m.card(p) }}{% endfor %}</div><p class="more"><a class="link" href="/posts/">All {{ posts|length }} posts →</a></p></section>
+{% if ignore_feed %}<section class="wrap ignore-home"><p class="label">What you can probably ignore</p>
+<div class="grid3">{% for item in ignore_feed[:3] %}<article class="ignore-card"><p class="claim">“{{ item.claim|esc }}”</p><p>{{ item.why|truncate(190, killwords=false, end="…")|esc }}</p><p class="meta">From <a href="{{ item.post.path }}">{{ item.post.title|esc }}</a></p></article>{% endfor %}</div>
+<p class="more"><a class="link" href="/ignore/">The whole ignore pile →</a></p></section>
+{% endif %}<section class="scale-sec dark"><div class="wrap">
 <h2>From background noise to get in the bunker.</h2>
 <p class="lede">{{ site.name }} rates AI developments from 0-10 based on evidence, real-world impact, autonomy, access, reproducibility, and how much the development actually changes the risk picture. It is not a prediction. It is a current reading.</p>
 <ol class="bands">{% for b in site.bands %}<li style="--c:{{ b.color }}"><span class="rng">{{ b.range }}</span><strong>{{ b.name }}</strong><span>{{ b.long }}</span></li>{% endfor %}</ol>
 <p><a class="link light" href="/how-the-ratings-work/">How the ratings work</a></p></div></section>
-<section class="wrap method"><p class="label">Our method</p><div class="grid4"><div><h3>Trace the claim</h3><p>Follow the evidence back to the strongest available source, not just the headline.</p></div><div><h3>Label uncertainty</h3><p>Say what is known, what is disputed, and what remains unclear.</p></div><div><h3>Correct in public</h3><p>If the evidence changes, update the rating and explain why.</p></div><div><h3>Keep the temperature honest</h3><p>Serious risk deserves serious language. Speculation does not become evidence because it is frightening or viral.</p></div></div></section>
+<section class="wrap method"><p class="label">How I work</p><div class="grid4"><div><h3>Trace the claim</h3><p>Follow the evidence back to the strongest available source, not just the headline.</p></div><div><h3>Label uncertainty</h3><p>Say what is known, what is disputed, and what remains unclear.</p></div><div><h3>Correct in public</h3><p>If the evidence changes, update the rating and explain why. <a href="/ratings/#changes">Every change is logged.</a></p></div><div><h3>Keep the temperature honest</h3><p>Serious risk deserves serious language. Speculation does not become evidence because it is frightening or viral.</p></div></div></section>
 <section class="wrap promise"><blockquote>“Understand the thing you’re afraid of. Then decide what it actually deserves from you.”</blockquote>
 <p>AI can help with the work. It does not get to grade its own homework.</p></section>
 {{ m.subscribe("sub-home", site) }}

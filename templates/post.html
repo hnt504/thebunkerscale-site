@@ -1,9 +1,11 @@
 {% extends "base.html" %}
 {% import "_macros.html" as m %}
 {% block main %}<article class="wrap prose post"><header class="post-head">{% if post.rating is not none %}<p class="rating-h">BUNKER SCALE: {{ post.rating }}/10 · {{ post.band.name|upper }}</p>{{ m.ratingbar(post.rating, site.bands) }}{% endif %}{% if post.kicker %}<p class="kicker">{{ post.kicker }}</p>{% endif %}<h1>{{ post.title|esc }}</h1>
-<p class="meta">By {{ post.author }} · <time datetime="{{ post.date }}">{{ post.date_long }}</time></p></header>
-{{ post.body_html|safe }}
+<p class="meta">By {{ post.author }} · <time datetime="{{ post.date }}">{{ post.date_long }}</time>{% if post.updated_long %} · Updated <time datetime="{{ post.updated }}">{{ post.updated_long }}</time>{% endif %}</p></header>
+{% if post.history|length > 1 %}<aside class="rating-history" aria-label="Rating history"><p class="label">Rating history</p><ol>{% for h in post.history|reverse %}<li><time datetime="{{ h.date }}">{{ h.date_long }}</time> <span class="badge" style="--c:{{ h.band.color }}">{{ h.rating }}/10</span> {{ h.note|esc }}</li>{% endfor %}</ol></aside>
+{% endif %}{{ post.body_html|safe }}
 <aside class="post-foot"><p><strong>Disagree with the rating? Send me your argument. I may change my mind.</strong> <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
 <p>Share {{ site.name }} with someone who wants AI risk without the panic.</p></aside>
-</article>
+{% if newer or older %}<nav class="post-nav" aria-label="More posts">{% if older %}<a class="older" href="{{ older.path }}"><span>Older</span>{{ older.title|esc }}</a>{% endif %}{% if newer %}<a class="newer" href="{{ newer.path }}"><span>Newer</span>{{ newer.title|esc }}</a>{% endif %}</nav>
+{% endif %}</article>
 {{ m.subscribe("sub-post", site, lead_magnet=true) }}{% endblock %}

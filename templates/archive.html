@@ -1,5 +1,29 @@
 {% extends "base.html" %}
 {% import "_macros.html" as m %}
 {% block main %}<section class="wrap prose page"><header class="post-head"><h1>All posts</h1><p class="dek">Newest first. Rated articles show their current Bunker Scale reading, and ratings can change when the evidence does.</p></header>
-<ul class="archive">{% for p in posts %}<li><time datetime="{{ p.date }}">{{ p.date_long }}</time> {% if p.rating is not none %}{{ m.badge(p) }}{% endif %}<a href="{{ p.path }}">{{ p.title|esc }}</a><span>{{ p.description|esc }}</span></li>{% endfor %}</ul><p class="small">Prefer a feed reader? <a href="/rss.xml">Subscribe with RSS</a>.</p></section>
+<div class="filters" role="group" aria-label="Show posts by rating" hidden><button type="button" aria-pressed="true" data-band="">All</button>{% for b in site.bands %}<button type="button" aria-pressed="false" data-band="{{ b.range }}" style="--c:{{ b.color }}">{{ b.name }}</button>{% endfor %}</div>
+<ul class="archive">{% for p in posts %}<li data-band="{{ p.band.range if p.band else '' }}"><time datetime="{{ p.date }}">{{ p.date_long }}</time> {% if p.rating is not none %}{{ m.badge(p) }}{% endif %}<a href="{{ p.path }}">{{ p.title|esc }}</a><span>{{ p.description|esc }}</span></li>{% endfor %}</ul><p class="filter-empty small" hidden>No posts in this band yet.</p><p class="small">Prefer a feed reader? <a href="/rss.xml">Subscribe with RSS</a>.</p></section>
 {{ m.subscribe("sub-archive", site) }}{% endblock %}
+{% block scripts %}<script>
+(function () {
+  var bar = document.querySelector(".filters");
+  if (!bar) return;
+  var items = document.querySelectorAll(".archive li");
+  var empty = document.querySelector(".filter-empty");
+  bar.hidden = false;
+  bar.addEventListener("click", function (e) {
+    var btn = e.target.closest("button");
+    if (!btn) return;
+    var band = btn.getAttribute("data-band");
+    bar.querySelectorAll("button").forEach(function (b) { b.setAttribute("aria-pressed", String(b === btn)); });
+    var shown = 0;
+    items.forEach(function (li) {
+      var match = !band || li.getAttribute("data-band") === band;
+      li.hidden = !match;
+      if (match) shown++;
+    });
+    empty.hidden = shown > 0;
+  });
+})();
+</script>
+{% endblock %}

@@ -80,6 +80,11 @@ def render_body(body: str, suffix: str) -> str:
     return body.strip()
 
 
+def display_body(body: str, suffix: str) -> str:
+    """Source body -> the HTML that appears on the post page (minus the checklist box)."""
+    return mark_bunker_check(autolink(render_body(body, suffix)))
+
+
 def band_for(bands: list[dict], rating: int | None) -> dict | None:
     if rating is None:
         return None
@@ -99,6 +104,72 @@ def insert_before_second_h2(body: str, snippet: str) -> str:
 
 def absolute_urls(fragment: str, base: str) -> str:
     return re.sub(r'(href|src)="/(?!/)', rf'\1="{base}/', fragment)
+
+
+URL = re.compile(r"https?://[^\s<>\"']+")
+
+
+def autolink(fragment: str) -> str:
+    """Make bare URLs (as in the Sources list) clickable. Leaves existing links alone."""
+    out, inside_a = [], 0
+    for part in re.split(r"(<[^>]+>)", fragment):
+        if part.startswith("<"):
+            if re.match(r"<a[\s>]", part):
+                inside_a += 1
+            elif part.startswith("</a"):
+                inside_a = max(0, inside_a - 1)
+            out.append(part)
+        elif inside_a:
+            out.append(part)
+        else:
+            def link(m):
+                url = m.group(0)
+                trail = ""
+                while url and url[-1] in ".,;:)":
+                    trail = url[-1] + trail
+                    url = url[:-1]
+                return f'<a href="{url}" rel="noopener">{url}</a>{trail}'
+            out.append(URL.sub(link, part))
+    return "".join(out)
+
+
+def mark_bunker_check(fragment: str) -> str:
+    return re.sub(r"<blockquote>(\s*<p><strong>Bunker Check</strong></p>)",
+                  r'<blockquote class="bunker-check">\1', fragment)
+
+
+def section(fragment: str, heading: str) -> str:
+    m = re.search(rf"<h2[^>]*>\s*{re.escape(heading)}\s*</h2>([\s\S]*?)(?=<h2[\s>]|$)", fragment)
+    return m.group(1) if m else ""
+
+
+def plain(fragment: str) -> str:
+    return html.unescape(re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", fragment))).strip()
+
+
+def ignore_items(body: str) -> list[dict]:
+    """The bolded "headline claims" from a post's What-you-can-probably-ignore section."""
+    items = []
+    for para in re.findall(r"<p>([\s\S]*?)</p>", section(body, "What you can probably ignore")):
+        m = re.match(r"\s*<strong>([\s\S]*?)</strong>([\s\S]*)", para)
+        if not m:
+            continue
+        claim = plain(m.group(1))
+        if not claim or claim[0] not in "\"“":
+            continue
+        why = re.sub(r"\s*\[\d+\]", "", plain(m.group(2)))
+        items.append({"claim": claim.strip("\"“”").rstrip("."), "why": why})
+    return items
+
+
+def direction(body: str) -> str | None:
+    m = re.search(r"<strong>Direction:</strong>\s*([^<]+)", body)
+    return m.group(1).strip().rstrip(".") if m else None
+
+
+def needle_deg(value: float) -> float:
+    # the gauge runs from 0 (far left) to 10 (far right), about 16.4 degrees per point
+    return round((value - 5) * 16.36, 2)
 
 
 def write(path: Path, text: str, changed: list[str], dry: bool) -> None:
@@ -132,6 +203,16 @@ def load_posts(site: dict) -> list[dict]:
         rating = None if rating in (None, "") else int(rating)
         date = as_date(meta["date"])
         updated = as_date(meta["updated"]) if meta.get("updated") else None
+        body_html = display_body(body, path.suffix)
+        history = []
+        for h in meta.get("rating_history") or []:
+            hd = as_date(h["date"])
+            r = int(h["rating"])
+            history.append({"date": hd.isoformat(), "date_long": long_date(hd), "rating": r,
+                            "band": band_for(site["bands"], r), "note": str(h.get("note", ""))})
+        history.sort(key=lambda h: h["date"])
+        if history and (updated is None or as_date(history[-1]["date"]) > updated):
+            updated = as_date(history[-1]["date"])
         post = {
             "source": path,
             "slug": slug,
@@ -148,9 +229,13 @@ def load_posts(site: dict) -> list[dict]:
             "band": band_for(site["bands"], rating),
             "kicker": meta.get("type") or meta.get("kicker"),
             "author": meta.get("author") or site["author"],
+            "updated_long": long_date(updated) if updated and updated != date else None,
             "meta": meta,
             "body_raw": body,
-            "body_html": render_body(body, path.suffix),
+            "body_html": body_html,
+            "history": history,
+            "direction": direction(body_html),
+            "ignore": ignore_items(body_html),
         }
         posts.append(post)
     # newest first; same day: higher `order` first, then title
@@ -197,7 +282,7 @@ def adopt_stray_html(reimport_from: str | None) -> list[str]:
         rel = f"posts/{slug}/index.html"
         source_touched = any(c.startswith(f"content/posts/{slug}.") for c in changed)
         if rel in changed and not source_touched:
-            if import_post(ROOT, slug, overwrite=True, render=render_body):
+            if import_post(ROOT, slug, overwrite=True, render=display_body):
                 notes.append(f"re-imported post edited as HTML: {slug}")
     for name in PAGES:
         rel = f"{name}/index.html"
@@ -242,9 +327,15 @@ def build(site: dict, posts: list[dict], pages: dict, dry: bool) -> list[str]:
         "rated": [p for p in posts if p["rating"] is not None],
         "css_version": hashlib.sha256(css).hexdigest()[:8],
         "year": dt.date.today().year,
-        "show_header_tagline": True,
-        "main_nav": [("posts", "/posts/", "Posts"), ("scale", "/how-the-ratings-work/", "The Scale"), ("about", "/about/", "About")],
-        "footer_nav": [("/posts/", "Posts"), ("/how-the-ratings-work/", "The Scale"), ("/about/", "About"), ("/privacy/", "Privacy"), ("/rss.xml", "RSS")],
+        "show_header_tagline": False,
+        "main_nav": [("posts", "/posts/", "Posts"), ("ratings", "/ratings/", "Ratings"),
+                     ("scale", "/how-the-ratings-work/", "The Scale"), ("about", "/about/", "About")],
+        "footer_nav": [("/posts/", "Posts"), ("/ratings/", "Ratings"), ("/ignore/", "What to ignore"),
+                       ("/how-the-ratings-work/", "The Scale"), ("/about/", "About"), ("/privacy/", "Privacy"),
+                       ("/rss.xml", "RSS")],
+        "reading": current_reading(site),
+        # newest first, one claim per post so the homepage doesn't show three from one story
+        "ignore_feed": [{**p["ignore"][0], "post": p} for p in posts if p["ignore"]],
     }
     url = site["url"]
 
@@ -270,11 +361,13 @@ def build(site: dict, posts: list[dict], pages: dict, dry: bool) -> list[str]:
     )
 
     # posts
-    for post in posts:
+    for i, post in enumerate(posts):
         body = insert_before_second_h2(post["body_html"], LM_BOX)
         render(
             "post.html", f"posts/{post['slug']}/index.html", nav="posts", has_subscribe=True,
             post={**post, "body_html": body},
+            newer=posts[i - 1] if i > 0 else None,
+            older=posts[i + 1] if i + 1 < len(posts) else None,
             head={
                 "title": f"{post['title']} | {site['name']}", "description": post["description"],
                 "canonical": post["url"], "og_type": "article", "og_title": post["title"], "og_url": post["url"],
@@ -319,6 +412,26 @@ def build(site: dict, posts: list[dict], pages: dict, dry: bool) -> list[str]:
                   "canonical": purl, "og_title": page["title"], "og_url": purl, "jsonld": ld},
         )
 
+    # ratings board and the ignore pile
+    render(
+        "ratings.html", "ratings/index.html", nav="ratings", has_subscribe=True,
+        head={
+            "title": f"Ratings | {site['name']}",
+            "description": "The current overall Bunker Scale reading, every rating so far, and every rating change, with the reasons.",
+            "canonical": f"{url}/ratings/", "og_title": "Ratings", "og_url": f"{url}/ratings/",
+            "jsonld": [crumbs(site, ("Ratings", f"{url}/ratings/"))],
+        },
+    )
+    render(
+        "ignore.html", "ignore/index.html", nav="", has_subscribe=True,
+        head={
+            "title": f"What You Can Probably Ignore | {site['name']}",
+            "description": "The scariest-sounding AI claims from recent headlines, and why each one is less than it sounds.",
+            "canonical": f"{url}/ignore/", "og_title": "What You Can Probably Ignore", "og_url": f"{url}/ignore/",
+            "jsonld": [crumbs(site, ("What You Can Probably Ignore", f"{url}/ignore/"))],
+        },
+    )
+
     render(
         "404.html", "404.html", nav="", has_subscribe=False,
         head={"title": f"Page not found | {site['name']}", "description": "This page does not exist.",
@@ -331,6 +444,22 @@ def build(site: dict, posts: list[dict], pages: dict, dry: bool) -> list[str]:
     write(ROOT / "sitemap.xml", sitemap(site, posts, pages), changed, dry)
     write(ROOT / "llms.txt", env.get_template("llms.txt").render(**common, pages=pages), changed, dry)
     return changed
+
+
+def current_reading(site: dict) -> dict | None:
+    cr = site.get("current_reading")
+    if not cr:
+        return None
+    value = int(cr["value"])
+    as_of = as_date(cr["as_of"])
+    history = []
+    for h in site.get("reading_history") or []:
+        hd = as_date(h["date"])
+        history.append({"date": hd.isoformat(), "date_long": long_date(hd), "value": int(h["value"]),
+                        "band": band_for(site["bands"], int(h["value"])), "note": str(h.get("note", ""))})
+    return {"value": value, "band": band_for(site["bands"], value), "as_of": as_of.isoformat(),
+            "as_of_long": long_date(as_of), "direction": cr.get("direction"),
+            "summary": str(cr.get("summary", "")).strip(), "deg": needle_deg(value), "history": history}
 
 
 def rss(site: dict, posts: list[dict], self_name: str) -> str:
@@ -367,7 +496,8 @@ def sitemap(site: dict, posts: list[dict], pages: dict) -> str:
     newest = max((p["updated"] for p in posts), default=dt.date.today().isoformat())
     locs = [(f"{url}/", newest)]
     locs += [(f"{url}{pages[n]['path']}", newest) for n in ("about", "how-the-ratings-work")]
-    locs += [(f"{url}/posts/", newest), (f"{url}/privacy/", newest)]
+    locs += [(f"{url}/posts/", newest), (f"{url}/ratings/", newest), (f"{url}/ignore/", newest),
+             (f"{url}/privacy/", newest)]
     locs += [(p["url"], p["updated"]) for p in posts]
     rows = "\n".join(f"<url><loc>{loc}</loc><lastmod>{mod}</lastmod></url>" for loc, mod in locs)
     return ('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'

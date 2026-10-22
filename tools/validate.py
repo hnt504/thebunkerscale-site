@@ -27,6 +27,11 @@ def check(site: dict, posts: list[dict], required: list[str]) -> tuple[list[str]
     problems: list[str] = []
     warnings: list[str] = []
     seen: dict[str, str] = {}
+    cr = site.get("current_reading") or {}
+    if cr and not 0 <= int(cr.get("value", -1)) <= 10:
+        problems.append("site.yml: current_reading value must be 0 to 10")
+    if cr and EM_DASH in str(cr.get("summary", "")):
+        problems.append("site.yml: the current reading summary contains an em dash")
     for p in posts:
         name = p["source"].name
         if p["slug"] in seen:
@@ -45,6 +50,12 @@ def check(site: dict, posts: list[dict], required: list[str]) -> tuple[list[str]
         if SIGNAL.search(text):
             problems.append(f"{name}: uses the word \"signal\". Pick another word.")
 
+        if p["history"] and p["rating"] is not None and p["history"][-1]["rating"] != p["rating"]:
+            problems.append(f"{name}: rating is {p['rating']} but the last rating_history entry says "
+                            f"{p['history'][-1]['rating']}. Add a rating_history entry for the change.")
+        for h in p["history"]:
+            if not h["note"]:
+                problems.append(f"{name}: every rating_history entry needs a note saying why ({h['date']})")
         if p["rating"] is None:
             continue
         body = p["body_html"]

@@ -16,9 +16,14 @@ Key facts:
 ## The scale
 {% for b in site.bands %}- {{ b.range }}: {{ b.name }}. {{ b.long }}
 {% endfor %}
-## Pages
+{% if reading %}## Current overall reading
+{{ reading.value }}/10, {{ reading.band.name }} (as of {{ reading.as_of }}). {{ reading.summary }}
+
+{% endif %}## Pages
 - [About The Bunker Scale]({{ site.url }}/about/)
 - [How the Ratings Work]({{ site.url }}/how-the-ratings-work/)
+- [Ratings: the current reading, every rating and every rating change]({{ site.url }}/ratings/)
+- [What You Can Probably Ignore]({{ site.url }}/ignore/)
 - [All posts]({{ site.url }}/posts/)
 - [Privacy]({{ site.url }}/privacy/)
 
