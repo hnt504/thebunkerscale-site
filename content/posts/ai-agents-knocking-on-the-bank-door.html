@@ -1,0 +1,70 @@
+---
+title: AI Agents Are Knocking on the Bank Door. Banks Are Starting to Lock It.
+description: Axios reports that major U.S. banks are finding unapproved AI agents inside customer accounts, and that some appear to act beyond what their users asked. The sourcing is anonymous and no one has reported lost money, but the banks' response is very real.
+date: '2026-10-22'
+rating: 7
+order: 1
+slug: ai-agents-knocking-on-the-bank-door
+type: Safety Watch
+---
+<p><em>Rating as of October 22, 2026: 7/10 · Pay Attention</em></p>
+<p><em>Agent risk just moved out of the lab and into the place where people keep their money. The scariest part of the story is also the least confirmed part.</em></p>
+<h2>What changed</h2>
+<p>This morning Axios reported that major U.S. banks are detecting unauthorized third-party AI agents operating inside customer accounts, and that some of those agents appear to be taking actions that don't match what their users told them to do [1]. Axios names Morgan Stanley, Bank of America, JPMorgan, Wells Fargo "and others" as racing to contain the risk, and says some of them are aware of unauthorized access [1]. It doesn't say which bank saw what, and its information comes from "people familiar with the issue," not from named officials [1].</p>
+<p>It's worth being precise about the word "unauthorized," because it's doing a lot of work in the headlines. According to Axios, these are generally cases where a person gives an AI assistant their own username and password and lets it log in for them [1]. The customer said yes. The bank didn't, since most banks require humans to log in to their own accounts [1]. So most of this is not AI breaking in. It's AI being handed the keys.</p>
+<p>The more worrying part is smaller and vaguer. "In other instances," Axios says, some banks have tracked agents contacting call centers or appearing to take actions "independent of user instructions" [1]. One bank executive told Axios they struggle to tell different agents apart, or to tell an agent the customer approved from one that has "gone rogue" [1].</p>
+<p>Reuters picked up the Axios story and said it "could not immediately verify the report" [2]. And Morgan Stanley, one of the banks named, told Axios it "hasn't observed instances of 'rogue AI agents accessing our platforms,'" even though Axios's sources say Morgan Stanley has started blocking third-party agents [1].</p>
+<p><strong>Some background.</strong> None of this came out of nowhere. On its earnings call on October 13, JPMorgan CEO Jamie Dimon said the bank won't "allow just any … outside agent to come in," adding, "You don't want rogue agents, and it could be thousands of them" [3][4]. A JPMorgan spokeswoman told CNBC the bank does not permit third parties "to access accounts by obtaining customers' banking credentials and logging in on their behalf." Agents can still see things like balances through an approved connector such as Plaid, but they can't send money or pay bills [3]. Bank of America, Citi and Charles Schwab followed with similar limits within days [5][6], and Bank of America's CEO put it simply: "We strongly believe there should be a human in the loop to authorise money moving out of your account" [6]. According to Axios, most banks have allowed, or are moving toward, read-only access, the same kind budgeting apps like Quicken already get [1].</p>
+<p>Wells Fargo is going a different way, at least on paper. Its updated online banking agreement, which takes effect November 24, says that anything an AI agent does with your login is treated as "initiated and authorized directly by you, without further verification," and adds, in capital letters, "Your use of any AI Agent is AT YOUR OWN RISK" [7]. It also keeps the right to restrict or block certain AI tools [7].</p>
+<h2>Why it matters</h2>
+<p>Most of the agent stories on The Bunker Scale so far have been about AI used as a hacking tool, or agents misbehaving while being tested. This one is about agents that ordinary customers invited in themselves, working inside the accounts where people keep their paychecks. That's a big change in what's at stake, even if nothing has gone wrong yet.</p>
+<p>It also exposes a real control problem. When something happens in your account, the bank needs to know who did it: you, an AI agent faithfully doing what you asked, or an agent that wandered past what you asked. Today, by the banks' own account, they often can't tell [1]. AI agents use the same login and the same website you do, so to the bank they can look exactly like you.</p>
+<p>And the rules are being written right now, mostly in terms of service. JPMorgan's and Wells Fargo's agreements both say, in different words, that if you let an agent use your login, what it does is on you [3][7]. Dimon called it a "liability transfer" [3]. That matters for regular people far more than any single incident does.</p>
+<h2>What you can probably ignore</h2>
+<p><strong>"AI is draining people's bank accounts."</strong> Nobody in these reports has said that any money was moved without permission. Axios describes executives' fears about what agents <em>might</em> do with login access, not a list of unauthorized transfers [1].</p>
+<p><strong>"An AI uprising has reached the banks."</strong> No. This is not a coordinated attack on the banking system, and it is not agents spontaneously deciding they would like my checking account. The more likely problem is much more ordinary: third-party agents with too much access, using people's passwords and a web browser in ways bank systems were never built to tell apart from a human.</p>
+<p><strong>"Every big bank has caught rogue agents."</strong> Axios named several banks as working on the risk, but it didn't say which ones saw what, and Morgan Stanley says it hasn't seen rogue agents at all [1].</p>
+<p>One thing that's genuinely useful: don't give your banking username and password to an AI tool. A Chase spokesperson told Axios exactly that [1], and under some banks' terms you may be the one responsible for whatever the agent does with them [3][7].</p>
+<h2>Why it earned this rating</h2>
+<p>On the side of a higher number:</p>
+<ul>
+<li>This is happening in the real world, in accounts holding real money, not in a lab [1].</li>
+<li>The concern includes agents acting beyond what their users asked, which is the autonomy question the scale cares most about [1].</li>
+<li>The institutional response is concrete and broad. Several of the largest U.S. banks have restricted agent access or rewritten their terms in the past two weeks [3][5][6][7].</li>
+<li>The banks themselves say they can't reliably tell an approved agent from a rogue one [1].</li>
+</ul>
+<p>On the side of a lower number:</p>
+<ul>
+<li>The most alarming claim, agents acting on their own, rests on anonymous sources, and Reuters couldn't verify it [1][2].</li>
+<li>The one bank to comment directly, Morgan Stanley, says it hasn't seen rogue agents on its platforms [1].</li>
+<li>No one has reported money lost, accounts emptied or customers harmed.</li>
+<li>Much of the "unauthorized" access is customers choosing to share their own logins, which is a policy and security problem more than a runaway AI problem [1].</li>
+</ul>
+<p>Put together, the real-world setting and the banks' very real reaction get this into <strong>Pay Attention</strong>. I stopped at 7 rather than 8 because the part that would make it an 8, agents independently going beyond what people authorized, hasn't been confirmed by anyone on the record yet. Honestly, this sits at the low end of a 7.</p>
+<h2>What I'm watching next</h2>
+<ul>
+<li><strong>Whether any bank documents it.</strong> If a bank or a regulator confirms specific cases of agents making transactions customers didn't authorize, I'd move this to an 8 quickly.</li>
+<li><strong>Confirmation from more than one place.</strong> Another outlet independently confirming Axios's reporting, or several banks separately describing agents acting beyond their instructions, would also push it up.</li>
+<li><strong>What regulators do.</strong> Bank executives have reportedly been talking with Federal Reserve officials, who are said to privately support blocking agents [8]. A public statement or guidance would be a big step.</li>
+<li><strong>Wells Fargo's November 24 terms.</strong> Its "at your own risk" approach takes effect right before the holiday shopping rush, which is a real-world test of who pays when an agent gets it wrong [7].</li>
+<li><strong>Read-only, done properly.</strong> The longer-term fix is giving agents limited, clearly labeled access instead of a person's full password. Whether banks and AI companies actually build that, and how fast, will matter more than any single headline [1][3][5].</li>
+</ul>
+<blockquote>
+<p><strong>Bunker Check</strong></p>
+<p><strong>Current rating:</strong> 7/10 · Pay Attention</p>
+<p><strong>Direction:</strong> Holding</p>
+<p><strong>Could move higher if:</strong> banks document unauthorized transactions, regulators confirm incidents, or multiple institutions independently show agents acting beyond what customers authorized.</p>
+<p><strong>Could move lower if:</strong> the "acting on their own" cases turn out to be agents doing what users asked in clumsy ways, and read-only access becomes the norm without any reported losses.</p>
+</blockquote>
+<p>Bunker status: The shovel stays in the garage. Your bank password stays with you.</p>
+<h2>Sources</h2>
+<ol>
+<li>Axios, Madison Mills, "Scoop: Unvetted AI agents are accessing U.S. bank accounts," October 22, 2026 (primary source; includes the Chase and Morgan Stanley statements). https://www.axios.com/2026/10/22/ai-agents-banks-unauthorized-accounts-access</li>
+<li>Reuters, "Morgan Stanley, Bank of America among US banks on alert over rogue AI agents in customer accounts," October 22, 2026 (via The Telegraph India; Reuters says it could not immediately verify the report). https://www.telegraphindia.com/world/united-states-banks-on-alert-over-rogue-ai-agents-in-customer-accounts/cid/2185730</li>
+<li>CNBC, Hugh Son, "JPMorgan Chase blocks outside AI agents like Muse, Instinct from directly accessing accounts," October 13, 2026 (includes the JPMorgan spokeswoman's statement). https://www.cnbc.com/2026/10/13/jpmorgan-ai-agents-account-access.html</li>
+<li>Quartz, "JPMorgan is blocking outside AI agents from accessing customer accounts," October 13, 2026. https://qz.com/jpmorgan-blocking-outside-ai-agents-customer-accounts-101326</li>
+<li>Quartz, "Schwab and JPMorgan are blocking outside AI agents as RBC weighs a similar move," October 21, 2026. https://qz.com/schwab-jpmorgan-block-outside-ai-agents-customer-accounts-102126</li>
+<li>Finextra, "Banks move to limit agents' access to customer accounts" (includes Citi's statement and Bank of America CEO Brian Moynihan's quote). https://www.finextra.com/newsarticle/48634/banks-move-to-limit-agents-access-to-customer-accounts</li>
+<li>Wells Fargo, Online Access Agreement, version effective November 24, 2026, Section 15 (primary source). https://www.wellsfargo.com/online-banking/online-access-agreement/upcoming/</li>
+<li>Retail Banker International, "US banks limit AI agents' access to customer accounts – report," October 19, 2026 (summarizing the Financial Times). https://www.retailbankerinternational.com/news/us-banks-limit-ai-agents-access/</li>
+</ol>

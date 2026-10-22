@@ -21,9 +21,14 @@ Key facts:
 - 9: Stock the Shelves. A major escalation with serious practical implications. This does not literally mean buying seventeen years’ worth of canned goods.
 - 10: Get in the Bunker. Immediate or rapidly developing catastrophic consequences that existing safeguards are struggling to contain.
 
+## Current overall reading
+6/10, Eyebrow Raised (as of 2026-10-22). Agents keep turning up where they weren't supposed to be, in tests that reached real systems and in accounts people use every day, and attackers are getting real work out of AI tools. On the other side, labs are holding back models that fail their own safety tests, and banks and regulators are starting to set limits. Nothing so far has outrun the safeguards built to contain it. That puts the overall picture in Eyebrow Raised territory.
+
 ## Pages
 - [About The Bunker Scale](https://thebunkerscale.com/about/)
 - [How the Ratings Work](https://thebunkerscale.com/how-the-ratings-work/)
+- [Ratings: the current reading, every rating and every rating change](https://thebunkerscale.com/ratings/)
+- [What You Can Probably Ignore](https://thebunkerscale.com/ignore/)
 - [All posts](https://thebunkerscale.com/posts/)
 - [Privacy](https://thebunkerscale.com/privacy/)
 

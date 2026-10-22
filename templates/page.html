@@ -1,0 +1,5 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+{% block main %}<article class="wrap prose page"><header class="post-head"><h1>{{ page.title|esc }}</h1></header>
+{% if page.scale_strip %}<div class="strip" aria-hidden="true">{% for b in site.bands %}<span style="--c:{{ b.color }}"><b>{{ b.range }}</b>{{ b.name }}</span>{% endfor %}</div>{% endif %}{{ page.body_html|safe }}</article>
+{% if page.subscribe %}{{ m.subscribe("sub-page", site) }}{% endif %}{% endblock %}

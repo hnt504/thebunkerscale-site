@@ -1,0 +1,41 @@
+{% macro badge(post) -%}
+{%- if post.rating is not none -%}<span class="badge" style="--c:{{ post.band.color }}">{{ post.rating }}/10 · {{ post.band.name|upper }}</span>
+{%- else -%}<span class="badge plain">{{ (post.kicker or 'Post')|upper }}</span>{%- endif -%}
+{%- endmacro %}
+
+{% macro card(post, big=false) -%}
+<article class="card{% if big %} big{% endif %}">{{ badge(post) }}
+<h3><a href="{{ post.path }}">{{ post.title|esc }}</a></h3>
+<p>{{ post.description|esc }}</p>
+<p class="meta"><time datetime="{{ post.date }}">{{ post.date_long }}</time> · <a href="{{ post.path }}">Read the full post</a></p></article>
+{%- endmacro %}
+
+{% macro subscribe(id, site, lead_magnet=false) -%}
+<section class="subscribe dark" id="subscribe" aria-labelledby="{{ id }}">
+<div class="wrap narrow">
+{% if lead_magnet %}<p class="lm-kicker">Free for subscribers</p>
+<h2 id="{{ id }}">Get the free family AI-safety fridge checklist.</h2>
+<p>One printable page: pick a family safe word, know what to do when a panicked call comes in, and what never to type into a chatbot. Subscribe to {{ site.name }} and the checklist arrives by email right away, along with new posts and the occasional note on what to ignore. Free. Plain English. No panic.</p>
+{% else %}<h2 id="{{ id }}">Get clear, practical AI analysis in your inbox.</h2>
+<p>New posts, major developments, and occasional notes on what to ignore. No spam. No panic. Just perspective.</p>
+{% endif %}<div class="bh-card" data-signup="beehiiv">
+<script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="{{ site.beehiiv.form_id }}"></script>
+<noscript><p class="bh-fallback"><a class="btn" href="{{ site.beehiiv.subscribe_url }}">Subscribe on beehiiv</a></p></noscript>
+</div>
+<p class="bh-note">Form not showing up? <a href="{{ site.beehiiv.subscribe_url }}">Subscribe on beehiiv</a>. Unsubscribe anytime. See <a href="/privacy/">privacy</a>.</p>
+{% if lead_magnet %}<p class="bh-note lm-guide">Want the longer version? The <a href="{{ site.beehiiv.guide_url }}">Family AI Safety Guide</a> is four printable pages for $7. Totally optional.</p>
+{% endif %}<p class="bh-note rss-note"><a href="/rss.xml">Follow by RSS</a></p>
+</div></section>
+{%- endmacro %}
+
+{% macro ratingbar(rating, bands) -%}
+<div class="ratingbar" role="img" aria-label="Rated {{ rating }} out of 10">{% for b in bands %}{% for n in range(b.low, b.high + 1) %}<span class="cell{% if n == rating %} on{% endif %}" style="--c:{{ b.color }}">{{ n }}</span>{% endfor %}{% endfor %}</div>
+{%- endmacro %}
+
+{% macro gauge(bands, label, needle_deg=none, decorative=true, static_needle=none) -%}
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 225" role="img" aria-label="{{ label|esc }}">{{ gauge_arcs|safe }}
+{%- if decorative %}<g class="deco-needle" aria-hidden="true"><g class="deco-needle-arm"><line x1="200" y1="214" x2="200" y2="82" stroke="#1E1F1B" stroke-width="4" stroke-linecap="round"/></g></g><circle cx="200" cy="200" r="8" fill="#1E1F1B"/><circle cx="200" cy="200" r="3" fill="#D18A12"/>
+{%- elif static_needle %}{{ static_needle|safe }}
+{%- else %}<g class="needle" style="--deg:{{ needle_deg }}deg" aria-hidden="true"><g class="needle-arm"><line x1="200" y1="214" x2="200" y2="82" stroke="#1E1F1B" stroke-width="4" stroke-linecap="round"/></g></g><circle cx="200" cy="200" r="8" fill="#1E1F1B"/><circle cx="200" cy="200" r="3" fill="#D18A12"/>
+{%- endif %}</svg>
+{%- endmacro %}

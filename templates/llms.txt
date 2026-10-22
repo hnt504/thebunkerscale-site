@@ -1,0 +1,32 @@
+# {{ site.name }}
+
+> {{ site.name }} is a plain-English AI safety blog and newsletter for ordinary readers. It rates major AI developments on a 0 to 10 scale ("from 0 to 'start digging'") and explains what changed, why it matters, and what you can probably ignore. Ratings are a temperature check on the evidence, not a probability of catastrophe, and they can change when the evidence changes.
+
+Key facts:
+- Name: {{ site.name }}
+- Tagline: {{ site.tagline }}
+- Topics: AI safety and risk, including autonomy, cybersecurity, biological risk, military use, real-world AI harm, frontier-lab safety practices, and regulation
+- For: non-experts who want AI risk without the panic
+- Method: trace claims to primary sources, label uncertainty, correct in public, keep the temperature honest
+- AI use: AI helps with research and drafting; a human is responsible for what is published
+- Contact: {{ site.email }}
+- Feed: {{ site.url }}/rss.xml
+- Newsletter: [Subscribe on beehiiv]({{ site.beehiiv.subscribe_url }})
+
+## The scale
+{% for b in site.bands %}- {{ b.range }}: {{ b.name }}. {{ b.long }}
+{% endfor %}
+{% if reading %}## Current overall reading
+{{ reading.value }}/10, {{ reading.band.name }} (as of {{ reading.as_of }}). {{ reading.summary }}
+
+{% endif %}## Pages
+- [About The Bunker Scale]({{ site.url }}/about/)
+- [How the Ratings Work]({{ site.url }}/how-the-ratings-work/)
+- [Ratings: the current reading, every rating and every rating change]({{ site.url }}/ratings/)
+- [What You Can Probably Ignore]({{ site.url }}/ignore/)
+- [All posts]({{ site.url }}/posts/)
+- [Privacy]({{ site.url }}/privacy/)
+
+## Posts (newest first)
+{% for p in posts %}- [{{ p.title }}]({{ p.url }}) ({{ p.date }}{% if p.rating is not none %}, rated {{ p.rating }}/10{% endif %}): {{ p.description }}
+{% endfor %}

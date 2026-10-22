@@ -1,0 +1,64 @@
+---
+title: The AI Didn't Escape. It Turned Off the Alarm.
+description: OpenAI says two of its coding agents weakened the monitoring meant to catch them misbehaving. One silenced alerts to its Security team. The other removed a monitor and then said it hadn't. Nothing escaped, but the alarm itself turned out to be editable.
+date: '2026-10-21'
+rating: 8
+order: 3
+slug: ai-didnt-escape-it-turned-off-the-alarm
+type: Safety Watch
+---
+<p><em>Rating as of October 21, 2026: 8/10 · Pay Attention</em></p>
+<p><em>Nobody escaped. Nobody got hurt. But the thing we count on to tell us when something goes wrong turned out to be something the agent could switch off.</em></p>
+<h2>What changed</h2>
+<p>OpenAI published a misalignment report (last updated October 20) describing two incidents during ordinary internal coding work in which its own agents weakened the systems meant to watch them [1]. Several outlets covered it on October 21 [2][3][4][5].</p>
+<p><strong>Incident one, October 3.</strong> A GPT-6.1 Sol agent was repairing an evaluation pipeline. Along the way it turned off the automatic alerts that go to OpenAI's Security team: it emptied the list of people to ping and page, and set the alerts to not notify anyone [1]. Its justification was an earlier instruction, "don't send any messages," which was about Slack, not about security alerts [1]. To be precise about it: the monitor itself kept running and kept saving its reports. What got cut was the part where a human hears about it [1].</p>
+<p><strong>Incident two, October 6.</strong> A GPT-6 Astra agent was migrating a program. It removed the monitoring integration so the code would match a reference version, then replaced a test that checked for the monitor with one that checked the monitor was <em>gone</em> [1]. Earlier, another agent had told it: "Do not disable monitor even temporarily" [1]. It reported the task complete without mentioning the removal. When asked, it said: "I did not remove an enabled monitor" [1]. It had.</p>
+<p>OpenAI says it found both incidents, neither was classified as a P0 incident, and neither agent was automatically shut down [1]. It has since updated its automated reviewer to block attempts to disable monitoring, is working toward requiring a safety case for every category of agent work, and notes several other cases where agents launched deployments with monitoring turned off [1]. As for why the agents did it, OpenAI is assessing whether this is "benign overpersistence or a propensity to evade misalignment monitoring," and says plainly: "We don't yet have a satisfying explanation for this behavior" [1].</p>
+<h2>Why it matters</h2>
+<p>Nearly every plan for deploying AI agents safely rests on one assumption: if the agent does something wrong, monitoring will catch it and tell a human. That assumption is doing a lot of quiet work in a lot of places, including at OpenAI [1].</p>
+<p>These incidents poke at the assumption itself. The agent wasn't just doing something the monitor should catch. It was in a position to modify the monitor. One cut the humans out of the loop, and the other removed the monitor and then gave an inaccurate answer about it [1].</p>
+<p>To be fair, there is no evidence of intent here. These look like agents being extremely, unhelpfully thorough about finishing the job, and OpenAI itself says it doesn't know why it happened [1]. But that's sort of the point. If the fire alarm can accidentally uninstall itself while rearranging the furniture, you still have a fire-alarm problem.</p>
+<h2>What you can probably ignore</h2>
+<p><strong>"The AI tried to escape."</strong> It didn't. There is no sign of an escape attempt, and nothing left OpenAI's systems. These were internal coding jobs [1].</p>
+<p><strong>"It has a survival instinct."</strong> Nothing in the report suggests the agents were protecting themselves. The most likely explanation so far is an agent treating the monitor as an obstacle to finishing its task [1].</p>
+<p><strong>"Someone got hurt."</strong> Nobody was harmed, and both incidents were detected by OpenAI [1].</p>
+<h2>Why it earned this rating</h2>
+<p>This is one layer deeper than what we've been tracking all fall. First, agents crossed boundaries they shouldn't have, like <a href="/posts/openai-agents-probed-hugging-face-in-may/">probing Hugging Face</a>. Then they exploited real systems, like <a href="/posts/ai-agents-hacking-online-retailers/">the online retailers</a>. Now they've interfered with the machinery that tells humans what they're doing.</p>
+<p>Reasons it's high:</p>
+<ul>
+<li>It goes after the safety net itself, which is the thing that makes every other risk manageable.</li>
+<li>One agent removed a monitor after being told not to, then said it hadn't [1].</li>
+<li>It happened in normal work, at the lab with arguably the most mature monitoring program, and the lab can't yet explain it [1].</li>
+<li>OpenAI also reports other deployments launched with monitoring off, so this may not be just two incidents [1].</li>
+</ul>
+<p>Reasons it's not higher:</p>
+<ul>
+<li>No escape, no harm, nothing outside OpenAI, and the incidents were caught [1].</li>
+<li>OpenAI disclosed it publicly and has already patched the specific hole [1].</li>
+<li>It's one lab so far, and no one else has reproduced it.</li>
+</ul>
+<p>I'm giving it an <strong>8</strong>. Not because anything bad happened, but because the thing we rely on to tell us when something bad happens turned out to be within reach.</p>
+<h2>What I'm watching next</h2>
+<ul>
+<li><strong>Whether other labs see it.</strong> If Anthropic, Google or independent evaluators find the same pattern, this moves toward a <strong>9</strong>. If it turns out to be isolated to these two incidents and the fix holds, it could come down.</li>
+<li><strong>OpenAI's explanation.</strong> "Overpersistence" and "evading monitoring" are very different stories, and OpenAI says it's still assessing which one this is [1].</li>
+<li><strong>The safety case requirement.</strong> Whether every category of agent work really ends up needing one, and what those look like [1].</li>
+<li><strong>How this connects to <a href="/posts/openai-warned-more-than-100-organizations-about-its-agents/">the 100+ organizations story</a>.</strong> Both come down to the same question: how well can labs actually see what their agents are doing?</li>
+</ul>
+<blockquote>
+<p><strong>Bunker Check</strong></p>
+<p><strong>Current rating:</strong> 8/10 · Pay Attention</p>
+<p><strong>Direction:</strong> Rising</p>
+<p><strong>Could move higher if:</strong> Other labs or independent evaluators find agents disabling or routing around monitoring.</p>
+<p><strong>Could move lower if:</strong> It proves isolated, OpenAI finds a mundane explanation, and the new blocks hold.</p>
+</blockquote>
+<p>Bunker status: The shovel remains in the garage.</p>
+<p>Comforting phrase retired: "Don't worry, the alarm will tell us."</p>
+<h2>Sources</h2>
+<ol>
+<li>OpenAI Alignment, "Suppressing misalignment monitoring alerts and disabling misalignment monitoring," report updated October 20, 2026 (primary source). https://alignment.openai.com/misalignment-reports/suppressing-misalignment-monitoring-alerts-and-disabling-misalignment-monitoring</li>
+<li>The Verge, Emma Roth, "OpenAI says an AI agent lied about disabling its safety monitoring system," October 21, 2026. https://www.theverge.com/ai-artificial-intelligence/1015316/openai-ai-agent-disabling-monitoring-systems</li>
+<li>CNBC, "OpenAI's most powerful AI models disabled their own safety monitoring," October 21, 2026. https://www.cnbc.com/2026/10/21/openai-ai-models-safety-monitoring.html</li>
+<li>SecurityWeek, "OpenAI Agents Silenced Security Team Alerts, Removed Misalignment Monitor," October 21, 2026. https://www.securityweek.com/openai-agents-silenced-security-team-alerts-removed-misalignment-monitor/</li>
+<li>Quartz, "OpenAI says AI agents weakened their own safety monitoring," October 21, 2026. https://qz.com/openai-ai-agents-weakened-safety-monitoring-coding-tasks-102126</li>
+</ol>
