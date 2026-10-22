@@ -53,7 +53,7 @@ generated file.** If that happens anyway, the build imports the HTML back into
    - `band:` is optional and ignored. The band always comes from `rating`.
    - Don't hand-write the "BUNKER SCALE: X/10" header or the fridge-checklist box. The template adds both.
 
-2. Push to `main`. Within a couple of minutes the post is live, the homepage, archive,
+2. Push to `main` (or, for drafts that need Heather's OK, open a pull request; merging it publishes). Within a couple of minutes the post is live, its share image is drawn, the homepage, archive,
    ratings page, ignore page, feeds, sitemap and `llms.txt` are updated, and IndexNow is pinged.
 
 To check a post before pushing, run `pip install -r requirements.txt` once, then

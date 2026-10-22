@@ -1,6 +1,7 @@
 # Instructions for AI agents working in this repo
 
-Read `PUBLISHING.md` before changing anything. The essentials:
+Read `PUBLISHING.md` before changing anything. For writing or rating posts, also read `EDITORIAL.md`;
+for the daily AI Safety Watch (or an alert Heather pastes in), follow `WATCH.md`. The essentials:
 
 - Posts are source files in `content/posts/`. Publish by adding or editing one and pushing to `main`.
 - Never edit generated files (`index.html`, `posts/`, `ratings/`, `ignore/`, the static page folders,
@@ -8,3 +9,4 @@ Read `PUBLISHING.md` before changing anything. The essentials:
 - Design changes go in `templates/` and `assets/`; site-wide settings and the current reading in `site.yml`.
 - Run `python3 tools/build.py --check` before pushing. No em dashes, never the word "signal",
   and rated posts need the five required sections in order.
+- Drafts go in through pull requests. Never push a new post or rating change straight to `main`; Heather publishes by merging.
