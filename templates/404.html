@@ -1,0 +1,5 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+{% block main %}<section class="wrap prose page nf">{{ m.gauge(site.bands, "The Bunker Scale gauge, from 0 (Background Noise) to 10 (Get in the Bunker)", decorative=false, static_needle='<line x1="200" y1="200" x2="83.20" y2="183.21" stroke="#1E1F1B" stroke-width="4" stroke-linecap="round"/><circle cx="200" cy="200" r="5.0" fill="#1E1F1B"/>') }}<h1>Page not found</h1>
+<p>Bunker Scale reading for this missing page: 0/10, Background Noise. The shovel can stay in the garage.</p>
+<p><a class="btn" href="/">Go to the homepage</a> <a class="link" href="/posts/">Browse all posts</a></p></section>{% endblock %}

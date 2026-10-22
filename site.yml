@@ -1,0 +1,63 @@
+# Site-wide settings for The Bunker Scale.
+# Change something here and every page picks it up on the next build.
+
+name: The Bunker Scale
+url: https://thebunkerscale.com
+tagline: What changed. Why it matters. What you can probably ignore.
+description: A plain-English AI safety publication that rates AI developments on a 0 to 10 scale, from Background Noise to Get in the Bunker. What changed. Why it matters. What you can probably ignore.
+email: hello@thebunkerscale.com
+author: The Bunker Scale
+og_image_alt: "The Bunker Scale: a 0 to 10 gauge for AI risk. What changed. Why it matters. What you can probably ignore."
+
+beehiiv:
+  form_id: 05a3d6d8-c355-4e74-b9d1-672ea1baf8b6
+  subscribe_url: https://thebunkerscale.beehiiv.com/subscribe
+  guide_url: https://thebunkerscale.beehiiv.com/products/family-ai-safety-guide
+
+goatcounter: https://thebunkerscale.goatcounter.com/count
+
+# The six bands of the scale. "short" is the one-liner used in compact keys,
+# "long" is the full definition used on the scale page, About and llms.txt.
+bands:
+  - range: "0-2"
+    low: 0
+    high: 2
+    name: Background Noise
+    color: "#9DA287"
+    short: Interesting, but nothing changed.
+    long: Interesting, but no meaningful change in risk.
+  - range: "3-4"
+    low: 3
+    high: 4
+    name: Worth Watching
+    color: "#6B7253"
+    short: Something real. Keep an eye on it.
+    long: Something real. Keep an eye on it.
+  - range: "5-6"
+    low: 5
+    high: 6
+    name: Eyebrow Raised
+    color: "#DDA53F"
+    short: Starting to change the picture.
+    long: A meaningful development worth understanding and following.
+  - range: "7-8"
+    low: 7
+    high: 8
+    name: Pay Attention
+    color: "#D18A12"
+    short: Credible evidence of real change.
+    long: Credible evidence of a significant change in capability, risk, policy, or real-world impact.
+  - range: "9"
+    low: 9
+    high: 9
+    name: Stock the Shelves
+    color: "#A84436"
+    short: Serious, widespread consequences.
+    long: A major escalation with serious practical implications. This does not literally mean buying seventeen years’ worth of canned goods.
+  - range: "10"
+    low: 10
+    high: 10
+    name: Get in the Bunker
+    color: "#7E2A22"
+    short: Catastrophic and hard to contain.
+    long: Immediate or rapidly developing catastrophic consequences that existing safeguards are struggling to contain.

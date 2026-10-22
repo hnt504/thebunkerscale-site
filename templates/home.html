@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+{% block main %}<section class="hero"><div class="wrap hero-grid">
+<div class="hero-copy"><p class="eyebrow">AI risk, in perspective</p>
+<h1>How worried should we <em>actually</em> be about AI?</h1>
+<p class="tagline">{{ site.tagline }}</p>
+<p class="lede">{{ site.name }} puts fast-moving AI developments in perspective. We separate real changes from scary headlines, explain what the evidence actually shows, and rate how much attention each development deserves.</p>
+<p class="ctas"><a class="btn" href="{{ posts[0].path }}">Read the latest</a> <a class="link" href="/about/">About {{ site.name }}</a></p></div>
+<figure class="hero-gauge">{{ m.gauge(site.bands, "The Bunker Scale gauge, from 0 (Background Noise) to 10 (Get in the Bunker). The needle is decorative, not a rating.") }}
+<figcaption><strong>On a scale from 0 to “start digging,” how worried should we actually be?</strong><span>The shovel can stay in the garage for now.</span></figcaption>
+<div class="mini-key"><ul aria-label="The Bunker Scale, at a glance">{% for b in site.bands %}<li style="--c:{{ b.color }}"><b>{{ b.range }}</b><strong>{{ b.name }}</strong><span>{{ b.short }}</span></li>{% endfor %}</ul><a class="mini-link" href="/how-the-ratings-work/">How the ratings work →</a></div></figure>
+</div></section>
+<section class="wrap featured"><p class="label">Start here</p>{{ m.card(posts[0], big=true) }}</section>
+<section class="wrap recent"><p class="label">Recent posts</p><div class="grid3">{% for p in posts[1:4] %}{{ m.card(p) }}{% endfor %}</div></section>
+<section class="scale-sec dark"><div class="wrap">
+<h2>From background noise to get in the bunker.</h2>
+<p class="lede">{{ site.name }} rates AI developments from 0-10 based on evidence, real-world impact, autonomy, access, reproducibility, and how much the development actually changes the risk picture. It is not a prediction. It is a current reading.</p>
+<ol class="bands">{% for b in site.bands %}<li style="--c:{{ b.color }}"><span class="rng">{{ b.range }}</span><strong>{{ b.name }}</strong><span>{{ b.long }}</span></li>{% endfor %}</ol>
+<p><a class="link light" href="/how-the-ratings-work/">How the ratings work</a></p></div></section>
+<section class="wrap method"><p class="label">Our method</p><div class="grid4"><div><h3>Trace the claim</h3><p>Follow the evidence back to the strongest available source, not just the headline.</p></div><div><h3>Label uncertainty</h3><p>Say what is known, what is disputed, and what remains unclear.</p></div><div><h3>Correct in public</h3><p>If the evidence changes, update the rating and explain why.</p></div><div><h3>Keep the temperature honest</h3><p>Serious risk deserves serious language. Speculation does not become evidence because it is frightening or viral.</p></div></div></section>
+<section class="wrap promise"><blockquote>“Understand the thing you’re afraid of. Then decide what it actually deserves from you.”</blockquote>
+<p>AI can help with the work. It does not get to grade its own homework.</p></section>
+{{ m.subscribe("sub-home", site) }}
+{% endblock %}
