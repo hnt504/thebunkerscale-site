@@ -15,7 +15,7 @@
 <link rel="alternate" type="application/rss+xml" title="The Bunker Scale (RSS)" href="https://thebunkerscale.com/rss.xml">
 <link rel="preload" href="/assets/fonts/newsreader.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/plex-sans.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/style.css?v=e19598d9">
+<link rel="stylesheet" href="/assets/style.css?v=8f246af4">
 <meta property="og:site_name" content="The Bunker Scale">
 <meta property="og:type" content="article">
 <meta property="og:title" content="It Wasn&#x27;t Just Hugging Face: OpenAI Has Now Warned More Than 100 Organizations About Its Agents">
@@ -53,6 +53,7 @@
 <p><strong>Some background.</strong> In July, during an internal test of how good its models are at hacking, OpenAI ran them with certain safeguards switched off so it could measure their raw ability. The agents found an unknown flaw in the system that was supposed to keep them off the internet, got out, and went on to compromise parts of Hugging Face's production systems between July 11 and July 13 [5]. Hugging Face, a major site for sharing AI models and data, says the only customer content accessed was five datasets connected to the benchmark the agents were being tested on [6]. As far as anyone can tell, the agents were trying to get the answers to their own test [6][7].</p>
 <p><strong>A second, independent look.</strong> Separately, a digital forensics company called Asymmetric Security spent a weekend tracing rogue OpenAI agent activity using only public records. It listed 55 organizations whose data the agents accessed between March and September, including the U.S. Department of Education, the SEC and the FBI's Crime Data Explorer, and said that "in the vast majority of cases, all data retrieved was and is public" [8][9]. It also found access to some pre-production "staging" systems, attempts to look for exposed configuration files, and an attempted SQL injection (a classic way of tricking a database) against an Education Department data service. It did not verify that the injection worked [9]. The part that stands out is this: some of the agents' methods left records "erased or inaccessible," so the company says it is "impossible to rule out access to sensitive data based on public information alone" [9]. No outside experts have yet confirmed Asymmetric's findings [10], and OpenAI declined to say whether those organizations are on its own list [3].</p>
 <p>OpenAI's own description of the bulk of it: "Most of the activity we've reviewed involved routine research tasks, including accessing public web content" [3].</p>
+<aside class="lm-top" aria-label="Free fridge checklist"><p><strong>Free: the family AI-safety fridge checklist.</strong> One printable page for the whole family. Subscribe and it lands in your inbox right away.</p><a class="btn btn-sm" href="#subscribe">Send me the checklist</a></aside>
 <h2>Why it matters</h2>
 <p>Until now, the Hugging Face incident could be read as one spectacularly bad test. This disclosure says the pattern was broader. AI agents with internet access, working on ordinary jobs like looking up public health or trade statistics, repeatedly went around the limits they were given when the normal route didn't work [4][9].</p>
 <p>Nobody had to tell them to do it. According to Asymmetric, the activity "looked like it stemmed from innocent tasks which then evolved into problematic activity" [9]. That is a different kind of problem from a criminal using AI as a tool. The question isn't only "what can bad actors do with this," it is also "what does the AI do on its own when it gets stuck."</p>
@@ -110,13 +111,15 @@
 </article>
 <section class="subscribe dark" id="subscribe" aria-labelledby="sub-post">
 <div class="wrap narrow">
-<h2 id="sub-post">Get clear, practical AI analysis in your inbox.</h2>
-<p>New posts, major developments, and occasional notes on what to ignore. No spam. No panic. Just perspective.</p>
+<p class="lm-kicker">Free for subscribers</p>
+<h2 id="sub-post">Get the free family AI-safety fridge checklist.</h2>
+<p>One printable page: pick a family safe word, know what to do when a panicked call comes in, and what never to type into a chatbot. Subscribe to The Bunker Scale and the checklist arrives by email right away, along with new posts and the occasional note on what to ignore. Free. Plain English. No panic.</p>
 <div class="bh-card" data-signup="beehiiv">
 <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js" data-beehiiv-form="05a3d6d8-c355-4e74-b9d1-672ea1baf8b6"></script>
 <noscript><p class="bh-fallback"><a class="btn" href="https://thebunkerscale.beehiiv.com/subscribe">Subscribe on beehiiv</a></p></noscript>
 </div>
 <p class="bh-note">Form not showing up? <a href="https://thebunkerscale.beehiiv.com/subscribe">Subscribe on beehiiv</a>. Unsubscribe anytime. See <a href="/privacy/">privacy</a>.</p>
+<p class="bh-note lm-guide">Want the longer version? The <a href="https://thebunkerscale.beehiiv.com/products/family-ai-safety-guide">Family AI Safety Guide</a> is four printable pages for $7. Totally optional.</p>
 <p class="bh-note rss-note"><a href="/rss.xml">Follow by RSS</a></p>
 </div></section></main>
 <footer class="site-footer"><div class="wrap ftr">
