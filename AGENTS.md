@@ -3,7 +3,7 @@
 Read `PUBLISHING.md` before changing anything. For writing or rating posts, also read `EDITORIAL.md`;
 for the daily AI Safety Watch (or an alert Heather pastes in), follow `WATCH.md`. The essentials:
 
-- Posts are source files in `content/posts/`. Publish by adding or editing one and pushing to `main`.
+- Posts are source files in `content/posts/`. A post goes live when its source file reaches `main`.
 - Never edit generated files (`index.html`, `posts/`, `ratings/`, `ignore/`, the static page folders,
   `404.html`, `rss.xml`, `feed.xml`, `sitemap.xml`, `llms.txt`). The build overwrites them.
 - Design changes go in `templates/` and `assets/`; site-wide settings and the current reading in `site.yml`.
