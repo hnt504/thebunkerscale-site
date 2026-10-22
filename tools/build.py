@@ -39,6 +39,7 @@ import yaml
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from importer import import_page, import_post, split_front_matter  # noqa: E402
+import og  # noqa: E402
 import validate  # noqa: E402
 
 REQUIRED_SECTIONS = [
@@ -360,6 +361,9 @@ def build(site: dict, posts: list[dict], pages: dict, dry: bool) -> list[str]:
         },
     )
 
+    # share images (one card per post, redrawn only when its title or rating changes)
+    changed += og.ensure_cards(posts, site, dry)
+
     # posts
     for i, post in enumerate(posts):
         body = insert_before_second_h2(post["body_html"], LM_BOX)
@@ -371,12 +375,14 @@ def build(site: dict, posts: list[dict], pages: dict, dry: bool) -> list[str]:
             head={
                 "title": f"{post['title']} | {site['name']}", "description": post["description"],
                 "canonical": post["url"], "og_type": "article", "og_title": post["title"], "og_url": post["url"],
+                "og_image": f"{url}/assets/og/{post['slug']}.png",
+                "og_image_alt": f"{post['title']}" + (f" Bunker Scale rating: {post['rating']}/10, {post['band']['name']}." if post["rating"] is not None else ""),
                 "published": post["date"],
                 "jsonld": [
                     crumbs(site, ("Posts", f"{url}/posts/"), (post["title"], post["url"])),
                     {"@context": "https://schema.org", "@type": "BlogPosting", "headline": post["title"],
                      "description": post["description"], "datePublished": post["date"], "dateModified": post["updated"],
-                     "url": post["url"], "mainEntityOfPage": post["url"], "image": f"{url}/assets/og.png",
+                     "url": post["url"], "mainEntityOfPage": post["url"], "image": f"{url}/assets/og/{post['slug']}.png",
                      "author": {"@type": "Organization", "name": site["name"], "url": f"{url}/"},
                      "publisher": {"@type": "Organization", "name": site["name"],
                                    "logo": {"@type": "ImageObject", "url": f"{url}/assets/icon-512.png"}}},
