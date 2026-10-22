@@ -27,6 +27,8 @@ def check(site: dict, posts: list[dict], required: list[str]) -> tuple[list[str]
     problems: list[str] = []
     warnings: list[str] = []
     seen: dict[str, str] = {}
+    if not posts:
+        problems.append("content/posts/ has no published posts; refusing to build an empty site")
     cr = site.get("current_reading") or {}
     if cr and not 0 <= int(cr.get("value", -1)) <= 10:
         problems.append("site.yml: current_reading value must be 0 to 10")

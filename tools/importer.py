@@ -128,7 +128,38 @@ def split_front_matter(text: str) -> tuple[dict, str]:
     if not text.startswith("---"):
         return {}, text
     _, fm, body = text.split("---", 2)
-    return (yaml.safe_load(fm) or {}), body.strip()
+    try:
+        meta = yaml.safe_load(fm) or {}
+    except yaml.YAMLError:
+        meta = _lenient_front_matter(fm)
+    return meta, body.strip()
+
+
+def _lenient_front_matter(fm: str) -> dict:
+    """Read simple `key: value` front matter that strict YAML rejects.
+
+    The usual culprit is an unquoted title or description containing ": "
+    ("The AI Test Didn't Stay a Test: India Says ..."). Each line is split at
+    its first ": " only. Anything more complex (lists, nested keys) still has
+    to be valid YAML, so it's re-raised with the original error.
+    """
+    meta: dict = {}
+    for line in fm.strip().splitlines():
+        if not line.strip() or line.lstrip().startswith("#"):
+            continue
+        if line[0] in " \t-" or ":" not in line:
+            return yaml.safe_load(fm)  # not simple key/value: raise the real YAML error
+        key, _, value = line.partition(":")
+        value = value.strip()
+        if len(value) >= 2 and value[0] == value[-1] and value[0] in "'\"":
+            value = value[1:-1]
+        if re.fullmatch(r"-?\d+", value):
+            meta[key.strip()] = int(value)
+        elif value.lower() in ("true", "false"):
+            meta[key.strip()] = value.lower() == "true"
+        else:
+            meta[key.strip()] = value
+    return meta
 
 
 def import_page(root: Path, name: str) -> Path:
