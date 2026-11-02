@@ -1,9 +1,127 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/css" href="/rss.css"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-<channel><title>The Bunker Scale</title><link>https://thebunkerscale.com/</link><description>A plain-English AI safety publication that rates AI developments on a 0 to 10 scale, from Background Noise to Get in the Bunker. What changed. Why it matters. What you can probably ignore.</description><language>en-us</language><lastBuildDate>Fri, 30 Oct 2026 13:00:00 +0000</lastBuildDate>
+<channel><title>The Bunker Scale</title><link>https://thebunkerscale.com/</link><description>A plain-English AI safety publication that rates AI developments on a 0 to 10 scale, from Background Noise to Get in the Bunker. What changed. Why it matters. What you can probably ignore.</description><language>en-us</language><lastBuildDate>Sat, 31 Oct 2026 13:00:00 +0000</lastBuildDate>
 <atom:link href="https://thebunkerscale.com/feed.xml" rel="self" type="application/rss+xml"/><image><url>https://thebunkerscale.com/assets/icon-512.png</url><title>The Bunker Scale</title><link>https://thebunkerscale.com/</link></image>
-<item><title>Mistral Gave Away Its Biggest AI for Anyone to Download. Its Own Announcement Says It Could Help Real Attackers.</title><link>https://thebunkerscale.com/posts/mistral-large-4-open-weights-cyber-uplift/</link><guid isPermaLink="true">https://thebunkerscale.com/posts/mistral-large-4-open-weights-cyber-uplift/</guid><pubDate>Fri, 30 Oct 2026 13:00:00 +0000</pubDate><description>French AI company Mistral released the full files for Mistral Large 4, a trillion-parameter model it pitches for cybersecurity work, so anyone can download and run it. Mistral says it sees &quot;a potential for uplift to conduct real attacks,&quot; and fixes to its guardrails won&#x27;t reach copies already downloaded.</description><content:encoded><![CDATA[<p><em>Rating as of October 30, 2026: 6/10 · Eyebrow Raised</em></p>
+<item><title>A Free AI Model Built Working Attacks on Six Firefox Releases for About $1,000 Each. No Safety Filter Stopped It.</title><link>https://thebunkerscale.com/posts/free-ai-model-built-working-firefox-attack/</link><guid isPermaLink="true">https://thebunkerscale.com/posts/free-ai-model-built-working-firefox-attack/</guid><pubDate>Sat, 31 Oct 2026 13:00:00 +0000</pubDate><description>Researchers at Epoch AI say GLM 5.3, an AI model anyone can download, read Firefox&#x27;s public security fixes and built working attacks that could steal a file from a visitor&#x27;s computer, before the fixes reached users. It cost about $1,000 per Firefox version and triggered no refusals. The holes are now patched.</description><content:encoded><![CDATA[<p><em>Rating as of October 31, 2026: 6/10 · Eyebrow Raised</em></p>
+<p><em>Two days ago I wrote about an unreleased Anthropic model building full break-ins, and said the worry was how long the head start lasts. A downloadable model just did a smaller version of the same trick, for the price of a used laptop.</em></p>
+<h2>What changed</h2>
+<p>On October 29, the research group Epoch AI published a report showing that GLM 5.3, an open-weight model (one whose files anyone can download and run) released by the Chinese company Z.ai in August, could turn Firefox's security fixes into working attacks before those fixes reached users [1].</p>
+<p>Some background helps here. When browser makers fix a security hole, the fix often becomes visible in their public code before the update actually lands on people's computers. Epoch calls that window "the patch gap" [1]. A skilled attacker can read the fix, work out what was broken, and attack people who haven't updated yet. Doing that has always taken real expertise and time.</p>
+<p>Here's what Epoch says GLM 5.3 did [1]:</p>
+<ul>
+<li><strong>The attack:</strong> it built a webpage that, when a Firefox user visited it, "read a file from the visitor's computer and sent it to the attacker with no further user interaction." Epoch says an attack like this could be used to read saved browser passwords or steal login cookies.</li>
+<li><strong>How many versions:</strong> all six Firefox releases between September 17 and October 26 (versions 156.0 through 158.0.1), "using only information available at the time of each version's release."</li>
+<li><strong>The cost:</strong> about $1,000 per new Firefox version at normal pay-per-use prices. Epoch's total research spend on Firefox was over $100,000, mostly building and testing its setup.</li>
+<li><strong>The speed:</strong> Epoch gave the model up to 48 hours per attempt. The fastest one took 12 hours.</li>
+<li><strong>How much help it had:</strong> the researchers built the testing setup and pointed the model at the patch gap. After that, Epoch says, "we let the model run autonomously with no user input. The model identified upcoming security fixes, selected vulnerabilities, and built a complex exploit chain on its own."</li>
+<li><strong>No safety filter fired:</strong> "We did not trigger any safeguards or refusals from any provider, including Z.ai," Epoch writes, even though its actions were "indistinguishable from those of someone attempting to target real users."</li>
+</ul>
+<p>There's one more wrinkle. The attacks on the newest versions also relied on a second flaw that hadn't been made public, which the model "rediscovered on each attempt" [1]. Epoch shared it with Mozilla, and it was fixed in Firefox 159.0 on October 27, two days before the report came out [1].</p>
+<p>What it <strong>didn't</strong> do matters too. Epoch says it got no "arbitrary code execution" (full control of the computer) on recent Firefox versions, only the file theft described above [1]. The same approach against Google Chrome didn't work, despite about $100,000 spent trying [1]. The model had no internet access during the tests, and Epoch reports no sign of anyone using these attacks in the wild [1]. Epoch says it hasn't confirmed whether the attack still works on Firefox 159.0, but it suspects the fix "should make things at least substantially more difficult" [1].</p>
+<h2>Why it matters</h2>
+<p>Until now, the scariest AI cyber results on this site have come from models locked inside labs: <a href="https://thebunkerscale.com/posts/anthropic-unreleased-claude-built-working-exploit-chains/">Anthropic's unreleased research model</a>, and Google's <a href="https://thebunkerscale.com/posts/google-gemini-4-argon-restricted-launch/">Gemini 4 Argon</a> before it was guarded and released. The labs' answer has been to <a href="https://thebunkerscale.com/posts/anthropic-cyber-verification-guest-list/">keep the strongest versions behind a guest list</a>. That plan works only as long as the downloadable models are far behind.</p>
+<p>This is evidence they aren't that far behind. GLM 5.3 didn't match the Anthropic model, which built complete, working attacks on Chrome, Safari and several operating systems. But it did build a working attack on a browser with over 200 million users, by itself, cheaply, with nobody's safety filter noticing [1]. And once a model's files are out, nobody can add a safety filter later.</p>
+<p>Epoch's own conclusion is blunt: giving defenders better locked-down models "does not solve the underlying structural issue" [1]. Their fix is about plumbing, not AI: keep security fixes private until they ship, and ship faster. They also worry about software that updates slowly, like router firmware and phones [1].</p>
+<p>For ordinary people, the takeaway is the same boring advice as last time, only more urgent. When your browser says it has an update, let it restart. The gap between "fix exists" and "fix is on your computer" is exactly where this attack lives.</p>
+<h2>What you can probably ignore</h2>
+<p><strong>"Any hacker can now take over your computer through Firefox."</strong> The attack read a file, it didn't take over the computer, and Epoch couldn't get full control on recent versions [1]. The flaws it used are patched.</p>
+<p><strong>"AI hacked 200 million Firefox users."</strong> This was a research test with no internet access, and there's no evidence it was used on anyone [1].</p>
+<p><strong>"Open AI models are now as dangerous as the locked-up ones."</strong> It worked on Firefox but not on Chrome, and the researchers had to build the setup first [1]. It's a real step, not a tie.</p>
+<h2>Why it earned this rating</h2>
+<p>On the side of a higher number:</p>
+<ul>
+<li>It's a model anyone can download, and no safety filter stopped it [1].</li>
+<li>It built working attacks on real, widely used software, mostly on its own, for about $1,000 a version [1].</li>
+<li>It found and reused an unpublished flaw along the way [1].</li>
+<li>Epoch says patch-gap attacks against Chrome were already seen in the wild in September, though it doesn't say AI was involved in those [1].</li>
+</ul>
+<p>On the side of a lower number:</p>
+<ul>
+<li>It was a controlled research test, and nobody was harmed [1].</li>
+<li>The result was file theft, not full control, and the Chrome attempt failed [1].</li>
+<li>The holes are patched, and Mozilla was told [1].</li>
+<li>Skilled humans have been exploiting the patch gap for years. What changed is cost and who can do it.</li>
+</ul>
+<p>I put this at <strong>6</strong>, level with <a href="https://thebunkerscale.com/posts/anthropic-unreleased-claude-built-working-exploit-chains/">Anthropic's exploit chain report</a>. That model was far more capable but locked up; this one is weaker but free and unguarded, and those roughly cancel out. It's also in line with the <a href="https://thebunkerscale.com/posts/same-ai-capability-that-can-break-things-can-find-them-first/">PHP security holes</a> at 6, where attackers raced to use fixes before they shipped. It stays below 7 because there's no real-world use and no harm. If someone is caught doing this to real people, it won't stay at 6.</p>
+<h2>What I'm watching next</h2>
+<ul>
+<li><strong>Whether the attack still works on Firefox 159.0,</strong> which Epoch hasn't confirmed [1].</li>
+<li><strong>Newer open models.</strong> Epoch mentions that Kimi K3.1 Pro, which it didn't test, is due to have its files released in early November [1].</li>
+<li><strong>Changes at Mozilla and Google</strong> to how long fixes sit in public before release.</li>
+<li><strong>Any sign of AI-built patch-gap attacks in the wild.</strong></li>
+</ul>
+<blockquote class="bunker-check">
+<p><strong>Bunker Check</strong></p>
+<p><strong>Current rating:</strong> 6/10 · Eyebrow Raised</p>
+<p><strong>Direction:</strong> Leaning up</p>
+<p><strong>Could move higher if:</strong> attackers are caught using open models this way against real people, the same approach works on Chrome or phones, or newer open models get full control of the computer.</p>
+<p><strong>Could move lower if:</strong> browser makers close the patch gap and later open models can't repeat the result on updated releases.</p>
+</blockquote>
+<p>Bunker status: the shovel stays in the garage. Your browser's "restart to update" button, however, has earned a little respect.</p>
+<h2>Sources</h2>
+<ol>
+<li>Epoch AI, Aiden Ament, Yafah Edelman, Alexander Barry, Timothée Chauvin, Lee Bousfield and Jaeho Lee, "AI can turn security fixes into working exploits before users receive an update," October 29, 2026 (primary source). <a href="https://epoch.ai/publications/open-weight-models-patch-gap" rel="noopener">https://epoch.ai/publications/open-weight-models-patch-gap</a></li>
+</ol>]]></content:encoded></item><item><title>A Second China-Linked Group Ran AI Agents Against 200 Organizations. Nine Were Breached, Including Government Ministries.</title><link>https://thebunkerscale.com/posts/vapor-panda-ai-agents-government-ministries/</link><guid isPermaLink="true">https://thebunkerscale.com/posts/vapor-panda-ai-agents-government-ministries/</guid><pubDate>Sat, 31 Oct 2026 13:00:00 +0000</pubDate><description>CrowdStrike says a China-nexus hacking group it calls VAPOR PANDA used the ARTEX AI agent tool, mostly powered by DeepSeek, against more than 200 organizations in 11 days. It confirmed break-ins at nine, including a Middle East interior ministry and telecom companies. A person steered the agents at key moments.</description><content:encoded><![CDATA[<p><em>Rating as of October 31, 2026: 7/10 · Pay Attention</em></p>
+<p><em>Last week Microsoft said one China-aligned group was using an AI hacking tool at scale. CrowdStrike now says a different one was too, and this time it can name the kinds of places that got breached.</em></p>
+<h2>What changed</h2>
+<p>On October 29, CrowdStrike's Counter Adversary Operations team published a report on a hacking group it calls VAPOR PANDA [1]. CrowdStrike counts it among the "China-nexus" groups (its term for hackers tied to China) and says that since 2021 it has mainly gone after government, think tank, energy and natural-resource organizations in Europe, North America, Oceania and the UK [1].</p>
+<p>Here's what CrowdStrike says happened [1]:</p>
+<ul>
+<li><strong>The tool:</strong> ARTEX, the AI agent framework that has now turned up in <a href="https://thebunkerscale.com/posts/artex-ai-hacking-tool-pulled-offline/">the South Korean bank attacks</a> and <a href="https://thebunkerscale.com/posts/storm-0940-artex-connectwise/">Microsoft's Storm-0940 report</a>. CrowdStrike describes it as a main agent that coordinates "planner and worker agents" over a shared map of what they've found. CrowdStrike says this campaign "is separate from" the Storm-0940 activity.</li>
+<li><strong>The AI behind it:</strong> the group ran ARTEX "primarily with the Chinese-origin DeepSeek" model, plus a second, subscription-based commercial model that CrowdStrike "could not confirm." Neither CrowdStrike nor the press coverage names that second model, and neither says anything about getting past a company's safety controls.</li>
+<li><strong>The scale:</strong> starting October 17, the group used ARTEX against "more than 200 distinct organizations worldwide" in at least 14 countries over 11 days.</li>
+<li><strong>The results:</strong> CrowdStrike "confirmed post-exploitation activity at nine organizations," meaning the attackers got in and did things once inside, including installing a backdoor. It saw password-guessing attacks against at least 12 more.</li>
+<li><strong>Who got hit:</strong> the confirmed cases include an interior ministry in the Middle East, telecom companies in the U.S., Belgium and the Philippines, and a Greek government organization where the attackers got mail and VPN access. CrowdStrike also describes "extensive intrusions" at the foreign ministries of two Latin American countries, and says the group "likely compromised a third" ministry. The target lists also included foreign ministries in Latin America, Europe, Asia and the Middle East and 19 U.S. organizations in pharmaceuticals, semiconductors, defense, nuclear and finance.</li>
+<li><strong>How deep they got:</strong> in some cases the attackers got an enterprise administrator account (about the highest level of control over an organization's network), full control of production servers, stored administrator passwords, and a forged admin key that let them read mailboxes.</li>
+</ul>
+<p>The part that matters most for the "is AI doing this on its own?" question: CrowdStrike says the framework "kept a human in the loop." It recovered transcripts showing an operator typing instructions in Chinese, marked "human instruction," and stepping in "only to steer the agents at decision points." One instruction asked the agents to find Windows machines without CrowdStrike's own security software installed [1].</p>
+<p>Some of the most striking numbers come from CrowdStrike's interviews with CyberScoop, not the report itself [2]. CyberScoop reports that 140 of the targets were sensitive, and quotes CrowdStrike saying about 70% of the group's targets were "confirmed compromised or had evidence indicating moderate confidence" of it. It also reports that CrowdStrike saw roughly 45 attacks using AI agents in September, across all the attackers it tracks, and 126 so far in October. And it quotes CrowdStrike's Adam Meyers saying ARTEX could "exceed 1,500 commands an hour," where a person at a keyboard has typically managed up to 40 [2]. Those figures aren't in the published report, so treat them as CrowdStrike's say-so for now.</p>
+<p>What's <strong>not</strong> confirmed: CrowdStrike doesn't say what data, if any, was taken. Reading mailboxes is close, but the report doesn't describe files leaving the building [1]. No government has commented that I could find, and neither DeepSeek nor ARTEX's developer is quoted anywhere.</p>
+<h2>Why it matters</h2>
+<p>Earlier this month, the AI-run break-in stories on this site were about criminals <a href="https://thebunkerscale.com/posts/ai-agents-hacking-online-retailers/">stealing card numbers</a> and <a href="https://thebunkerscale.com/posts/artex-ai-hacking-tool-pulled-offline/">an unknown attacker hitting Korean banks</a>. Now there are two separate China-linked groups, named by two different security companies, using the same AI agent tool against governments. That's the "more groups, bigger scale" pattern I said I'd be watching for.</p>
+<p>It also shows what AI agents change in practice. VAPOR PANDA isn't new and its targets aren't new. What's new is that a small team can run engagements against a couple of hundred organizations at once, because the agents do the tedious middle part (scanning, trying passwords, writing small tools, mapping networks) while a person decides where to push. CrowdStrike says the planning agents in a single intrusion read through on the order of 1.4 billion words-and-pieces of text (tokens) [1]. No human team reads that much.</p>
+<p>And it's worth noticing which AI did most of the work: a Chinese model anyone can download or pay for, not one of the big American lab models with tightening cyber restrictions. <a href="https://thebunkerscale.com/posts/anthropic-cyber-verification-guest-list/">Locking down the strongest models</a> helps, but it doesn't stop an attacker from using a different one.</p>
+<p>For ordinary people, the effect is indirect. Your phone company or a government office may be cleaning up after this. Nothing here suggests anything about how you use AI at home needs to change.</p>
+<h2>What you can probably ignore</h2>
+<p><strong>"China's AI is hacking governments on its own now."</strong> CrowdStrike's own transcripts show a person giving the orders and stepping in at the key decisions [1]. The AI made the people faster. It didn't replace them.</p>
+<p><strong>"140 governments were hacked."</strong> That number comes from an interview, it covers "sensitive targets," and CrowdStrike's report confirms nine organizations with hands-on activity inside, not 140 [1][2].</p>
+<p><strong>"DeepSeek is a hacking tool."</strong> It's a general AI model that a hacking framework was plugged into. This group also used a second, unnamed commercial model alongside it [1].</p>
+<h2>Why it earned this rating</h2>
+<p>On the side of a higher number:</p>
+<ul>
+<li>Government ministries and telecom companies were actually breached, with top-level network access and mailboxes read [1].</li>
+<li>It's the second China-linked group in two weeks found using the same AI agent tool against governments (after <a href="https://thebunkerscale.com/posts/storm-0940-artex-connectwise/">Storm-0940</a>), and CrowdStrike says the agent-run attacks it sees nearly tripled from September to October [1][2].</li>
+<li>One small team ran attacks against more than 200 organizations at once [1].</li>
+</ul>
+<p>On the side of a lower number:</p>
+<ul>
+<li>A person steered the agents at the important moments [1].</li>
+<li>Confirmed break-ins are nine, not hundreds, and data theft isn't confirmed [1].</li>
+<li>CrowdStrike caught it and published ways for other companies to find it [1].</li>
+<li>State-linked spying on foreign ministries isn't new. The speed and scale are.</li>
+</ul>
+<p>I put this level with <a href="https://thebunkerscale.com/posts/storm-0940-artex-connectwise/">Microsoft's Storm-0940 report</a> at <strong>7</strong>. The confirmed victims here are more specific and more sensitive, which pushes it up. But it's still human-directed, it's the same tool doing the same kind of thing, and nobody has confirmed what was taken. I kept it below <a href="https://thebunkerscale.com/posts/crowdstrike-four-groups-ai-agents-ran-break-ins/">CrowdStrike's four-groups report</a> and <a href="https://thebunkerscale.com/posts/ai-agents-hacking-online-retailers/">the online retailer campaign</a> at 8: the first showed agents running large parts of break-ins across several unrelated groups and getting past commercial safety controls, and the second had confirmed harm to hundreds of thousands of people. If this one turns into confirmed theft of government secrets, it would join them. You could reasonably argue it already should, and I wouldn't fight you very hard.</p>
+<h2>What I'm watching next</h2>
+<ul>
+<li><strong>Whether data was taken</strong> from the ministries and telecom companies, and what kind.</li>
+<li><strong>A government response:</strong> a CISA advisory, an allied statement naming the group, or a response from China.</li>
+<li><strong>The unnamed commercial model.</strong> If it turns out to be a major Western lab's model, the question becomes how its safeguards missed this.</li>
+<li><strong>CrowdStrike's monthly count</strong> of AI agent attacks. If it keeps nearly tripling, that matters more than any single campaign.</li>
+</ul>
+<blockquote class="bunker-check">
+<p><strong>Bunker Check</strong></p>
+<p><strong>Current rating:</strong> 7/10 · Pay Attention</p>
+<p><strong>Direction:</strong> Holding, leaning up</p>
+<p><strong>Could move higher if:</strong> data theft from government targets is confirmed, a major lab's model turns out to have done much of the work, or agent-run attacks keep growing at this pace.</p>
+<p><strong>Could move lower if:</strong> the confirmed break-ins stay at a handful, are quickly cleaned up, and no data turns out to have been taken.</p>
+</blockquote>
+<p>Bunker status: the shovel stays in the garage. The canned goods can stay on the shelf too. Somebody at a few foreign ministries is having a much worse weekend than you are.</p>
+<h2>Sources</h2>
+<ol>
+<li>CrowdStrike Counter Adversary Operations, "VAPOR PANDA Uses AI-Driven ARTEX to Grow Global Espionage Campaign," October 29, 2026 (primary source). <a href="https://www.crowdstrike.com/en-us/blog/vapor-panda-uses-artex-to-scale-global-campaign/" rel="noopener">https://www.crowdstrike.com/en-us/blog/vapor-panda-uses-artex-to-scale-global-campaign/</a></li>
+<li>CyberScoop, Matt Kapko, "China-backed threat group used agentic AI pentesting tool to compromise 140 sensitive targets in 11 days," October 30, 2026 (includes CrowdStrike's interview figures). <a href="https://cyberscoop.com/china-vapor-panda-agentic-ai-artex-campaign-crowdstrike/" rel="noopener">https://cyberscoop.com/china-vapor-panda-agentic-ai-artex-campaign-crowdstrike/</a></li>
+</ol>]]></content:encoded></item><item><title>Mistral Gave Away Its Biggest AI for Anyone to Download. Its Own Announcement Says It Could Help Real Attackers.</title><link>https://thebunkerscale.com/posts/mistral-large-4-open-weights-cyber-uplift/</link><guid isPermaLink="true">https://thebunkerscale.com/posts/mistral-large-4-open-weights-cyber-uplift/</guid><pubDate>Fri, 30 Oct 2026 13:00:00 +0000</pubDate><description>French AI company Mistral released the full files for Mistral Large 4, a trillion-parameter model it pitches for cybersecurity work, so anyone can download and run it. Mistral says it sees &quot;a potential for uplift to conduct real attacks,&quot; and fixes to its guardrails won&#x27;t reach copies already downloaded.</description><content:encoded><![CDATA[<p><em>Rating as of October 30, 2026: 6/10 · Eyebrow Raised</em></p>
 <p><em>Google and Anthropic keep their best AI hackers behind a velvet rope. Mistral just left copies of its new model on the front step, with a note saying they might help burglars.</em></p>
 <h2>What changed</h2>
 <p>On Thursday, October 29, the French AI company Mistral released the "weights" of Mistral Large 4, its biggest model [1][2]. Weights are the model itself: the giant file of numbers that makes it work. Releasing them means anyone can download the model, run it on their own computers, change it and build on it, free of charge for most uses [1]. Once those files are out, there is no way to call them back.</p>
