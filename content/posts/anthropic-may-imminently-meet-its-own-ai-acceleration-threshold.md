@@ -1,12 +1,12 @@
 ---
 title: Anthropic Told Investors It May Soon Hit Its Own Line for AI Speeding Up AI. No Model Has Crossed It Yet.
 date: 2026-11-03
-rating: 6
+rating: 7
 slug: anthropic-may-imminently-meet-its-own-ai-acceleration-threshold
-type: Briefing
+type: Safety Watch
 description: In an updated filing to go public, Anthropic says its expectations for future models suggest it "may imminently" meet its own safety policy's definition of AI dramatically speeding up AI progress. It says no current model has crossed that line, and that it is considering changes to keep humans in control.
 ---
-*Rating as of November 3, 2026: 6/10 · Eyebrow Raised*
+*Rating as of November 3, 2026: 7/10 · Pay Attention*
 
 *Labs have talked for years about the moment AI starts doing most of the work of building better AI. Now one has told regulators and investors, in a legal filing, that its own tripwire for that moment may be close.*
 
@@ -18,13 +18,17 @@ Anthropic has filed an updated version of its paperwork to sell shares to the pu
 
 Some background. Anthropic's Responsible Scaling Policy is its own rulebook for which safety measures have to be in place as its models get more capable [3]. One of its tripwires is about AI research and development: the point where AI is speeding up AI progress so much that things could move faster than people can keep up with. In an earlier clarification of that policy, Anthropic said its acceleration test means "doubling the rate of progress in aggregate AI capabilities," roughly fitting two years of 2018 to 2024 AI progress into one [3]. Its current version, from July, says it revised the automated research threshold again, and I haven't seen the exact new wording [3].
 
+That is not a model rewriting itself overnight. It's the feedback loop people have been watching for years: AI helps researchers build better AI, the better AI helps them go faster, and the next generation arrives sooner. The threshold is Anthropic's own early-warning line for when that loop gets fast enough to worry about.
+
 **What it is careful to say.** "We have not designated any of our current models as exceeding this threshold, and we continue to assess the underlying data" [2]. So: no model has crossed it. The filing is talking about where Anthropic expects future models to land.
 
 **The more uncomfortable admission.** The filing says Anthropic has "in the past not identified, and may in the future not identify, a significant acceleration in our rate of development until after it has occurred" [2]. In plain English: it has noticed a speed-up only in hindsight before, and might again.
 
 **What it says it will and won't do.** "We do not anticipate being able to safely use Claude to fully autonomously design and build successive generations of frontier models without meaningful human supervision or understanding, if and when that becomes technically possible" [2]. And: "we are considering updates to our Responsible Scaling Policy to keep humans in control of frontier model development at Anthropic" [2]. That is a plan under consideration, not a change that has been made.
 
-This builds on numbers Anthropic has already published. In a longer essay called "When AI builds itself," it says more than 80% of the code merged into its codebase was written by Claude as of May 2026, and that "recursive self-improvement is not inevitable. But it could come sooner than most institutions are prepared for" [4]. ("Recursive self-improvement" is the idea of AI systems building their own, better successors.) The same essay says Anthropic thinks it would be good for the world to have "the option to slow or temporarily pause frontier AI development," which it presents as something to build toward, not a commitment [4].
+Forbes reported that the original filing in October said more than 90% of Anthropic's code in September was written by Claude [6]. That doesn't mean Claude is doing 90% of Anthropic's research, but it shows how much of the engineering work already runs through AI.
+
+This also builds on numbers Anthropic has already published. In a longer essay called "When AI builds itself," it says more than 80% of the code merged into its codebase was written by Claude as of May 2026, and that "recursive self-improvement is not inevitable. But it could come sooner than most institutions are prepared for" [4]. ("Recursive self-improvement" is the idea of AI systems building their own, better successors.) The same essay says Anthropic thinks it would be good for the world to have "the option to slow or temporarily pause frontier AI development," which it presents as something to build toward, not a commitment [4].
 
 ## Why it matters
 
@@ -36,7 +40,7 @@ For ordinary people, nothing changes today. No product is different, and nothing
 
 ## What you can probably ignore
 
-**"Anthropic says its AI is now improving itself."** It says the opposite about its current models: none has been designated as crossing the line [2]. The "imminently" is about expectations for future models [2].
+**"Anthropic admits self-improving AI is imminent."** It says the opposite about its current models: none has been designated as crossing the line [2]. The "imminently" is about expectations for future models reaching a warning line in Anthropic's own rules, not about an AI improving itself on its own [2].
 
 **"AI will be building itself by next month, with no humans involved."** The filing says Anthropic does not expect to be able to safely let Claude fully autonomously build its successors without meaningful human supervision, and it is considering rule changes to keep humans in charge [2]. Its own essay says self-improvement "is not inevitable" [4].
 
@@ -48,7 +52,8 @@ On the side of a higher number:
 
 - A frontier lab says, in a legal filing, that it may imminently reach one of its own safety tripwires [2].
 - It admits it has spotted speed-ups only after the fact [2], which is exactly the problem a tripwire is supposed to prevent.
-- It fits a pattern from the same company: models getting better at evading oversight [5] and Claude writing most of its code [4].
+- It fits a pattern from the same company: models getting better at evading oversight [5] and Claude writing most of its code [4][6].
+- It's much stronger evidence than a prediction on a conference stage. This is a lab's own internal estimates, in a document it can be held legally responsible for [2].
 
 On the side of a lower number:
 
@@ -57,7 +62,7 @@ On the side of a lower number:
 - The response so far is the right kind: disclosure, plus considering stronger rules to keep humans in control [2].
 - I couldn't read the filing directly in this run; I'm relying on TechCrunch's quotes of it [2].
 
-I compared it with my [September rating on the Claude-leads-research measure](/posts/claude-leads-a-quarter-of-anthropic-ai-research/) (6) and the [original IPO filing](/posts/anthropic-ipo-filing-delayed-training-to-lock-the-vault/) (5). This is more pointed than the October filing, because it names a specific safety threshold as possibly close, so it sits above it. But it's still a forecast with no incident behind it, so I kept it at **6**, in **Eyebrow Raised**, rather than pushing into Pay Attention.
+I compared it with my [September rating on the Claude-leads-research measure](/posts/claude-leads-a-quarter-of-anthropic-ai-research/) (6) and the [original IPO filing](/posts/anthropic-ipo-filing-delayed-training-to-lock-the-vault/) (5). Both of those were about a trend. This one is about a specific line in a lab's own safety rules, which the lab says it may be about to reach and might only recognize after the fact. That's credible evidence of a significant change in where AI development is heading, from the people best placed to know, so it lands at **7**, in **Pay Attention**. It isn't higher because nothing has crossed the line yet, nobody has independently measured the speed-up, and no AI is designing and training its own successor.
 
 ## What I'm watching next
 
@@ -68,9 +73,9 @@ I compared it with my [September rating on the Claude-leads-research measure](/p
 
 > **Bunker Check**
 >
-> **Current rating:** 6/10 · Eyebrow Raised
+> **Current rating:** 7/10 · Pay Attention
 >
-> **Direction:** Leaning up
+> **Direction:** Holding, leaning up
 >
 > **Could move higher if:** Anthropic designates a model as crossing the threshold, the policy update weakens human control instead of strengthening it, or another lab discloses the same thing.
 >
@@ -85,3 +90,4 @@ Bunker status: the shovel stays in the garage. The AI is not building its own re
 3. Anthropic, Responsible Scaling Policy, version 3.4 (effective July 8, 2026), including the version 3.1 clarification of the AI R&D threshold. https://www.anthropic.com/responsible-scaling-policy
 4. Anthropic Institute, "When AI builds itself." https://www.anthropic.com/institute/recursive-self-improvement
 5. The Bunker Scale, "Anthropic Held Off Training Its Next Big Model to Lock the Vault First. It Told Investors Why," October 28, 2026. https://thebunkerscale.com/posts/anthropic-ipo-filing-delayed-training-to-lock-the-vault/
+6. Forbes, Rashi Shrivastava, "Claude Now Writes 90% Of Anthropic's Code," October 26, 2026. https://www.forbes.com/sites/rashishrivastava/2026/10/26/anthropic-relies-on-claude-to-build-claude-thats-an-advantage-and-a-risk/
