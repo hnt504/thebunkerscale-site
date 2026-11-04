@@ -224,3 +224,7 @@ section.ignore-home{padding-top:56px;padding-bottom:8px}
 .tier-empty{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;padding-bottom:14px}
 .tier-empty .tier-desc{margin:0}
 .tier-none{font:600 15px/1.3 var(--sans);color:var(--olive)}
+
+/* Keep rating badges compact in post lists (the generic .archive span rule was stretching and recoloring them) */
+.archive li .badge{justify-self:start;color:#fff;font-size:12px}
+.archive li .badge.plain{color:var(--olive)}
