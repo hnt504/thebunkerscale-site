@@ -210,3 +210,17 @@ section.ignore-home{padding-top:56px;padding-bottom:8px}
 .ratings-table td:last-child,.ratings-table th:last-child{display:none}
 .spread{height:130px;gap:3px}
 }
+
+/* Ratings page: every rating, grouped by band */
+.tier{border-top:2px solid var(--ink);margin:0 0 8px;padding:14px 0 4px}
+.tier summary{cursor:pointer;list-style:none;display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.tier summary::-webkit-details-marker{display:none}
+.tier summary::after{content:"\2212";margin-left:auto;font:600 20px/1 var(--sans);color:var(--olive)}
+.tier:not([open]) summary::after{content:"+"}
+.tier-count{font:600 14px/1 var(--sans);color:var(--muted)}
+.tier-desc{color:var(--muted);font-size:16px;margin:10px 0 0}
+.tier .archive{margin-top:6px}
+.tier .archive span.tier-dir{color:var(--muted);font-size:15px}
+.tier-empty{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;padding-bottom:14px}
+.tier-empty .tier-desc{margin:0}
+.tier-none{font:600 15px/1.3 var(--sans);color:var(--olive)}
