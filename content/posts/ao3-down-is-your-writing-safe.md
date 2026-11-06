@@ -8,6 +8,8 @@ description: Archive of Our Own is offline after a security incident and could b
 ---
 *As of November 2, 2026. This one isn't rated: there's no confirmed AI connection, so there's nothing for the scale to measure.*
 
+*Update, November 6, 2026: AO3 is still down, and OTW says its original estimate still holds. [Here's the latest](/posts/ao3-still-down-update-november-6/).*
+
 If you've spent years writing stories on Archive of Our Own, a headline saying the site could be gone for weeks is enough to make your stomach drop. Those uploads are late nights, unfinished chapters, favorite comments, and entire worlds built one sentence at a time.
 
 So I'll start with the most reassuring thing available: the Organization for Transformative Works (OTW), which runs AO3, says "no AO3 data has been deleted. All your works, bookmarks, kudos, etc., are safe." The site being unavailable does not mean your writing has vanished.
