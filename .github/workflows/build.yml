@@ -86,8 +86,10 @@ jobs:
           done
           exit 1
 
+      # Also runs on a manual "Run workflow", so a Pages deploy that timed out
+      # or got cancelled can be retried from the Actions tab with one click.
       - name: Ask GitHub Pages to deploy
-        if: steps.commit.outputs.pushed == 'true'
+        if: steps.commit.outputs.pushed == 'true' || github.event_name == 'workflow_dispatch'
         env:
           GH_TOKEN: ${{ github.token }}
         run: gh api -X POST "repos/${GITHUB_REPOSITORY}/pages/builds" || echo "Pages will pick up the push on its own."
