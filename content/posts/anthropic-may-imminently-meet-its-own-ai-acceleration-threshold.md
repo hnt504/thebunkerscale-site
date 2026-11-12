@@ -1,16 +1,33 @@
 ---
 title: Anthropic Told Investors It May Soon Hit Its Own Line for AI Speeding Up AI. No Model Has Crossed It Yet.
 date: 2026-11-03
-rating: 7
+rating: 8
+rating_history:
+  - date: 2026-11-03
+    rating: 7
+    note: Original rating.
+  - date: 2026-11-12
+    rating: 8
+    note: A newer version of the filing says Anthropic has determined it has met the threshold, and that AI is already speeding up its research.
 slug: anthropic-may-imminently-meet-its-own-ai-acceleration-threshold
 type: Safety Watch
 description: In an updated filing to go public, Anthropic says its expectations for future models suggest it "may imminently" meet its own safety policy's definition of AI dramatically speeding up AI progress. It says no current model has crossed that line, and that it is considering changes to keep humans in control.
 ---
-*Rating as of November 3, 2026: 7/10 · Pay Attention*
+*Rating as of November 12, 2026: 8/10 · Pay Attention*
 
 *Labs have talked for years about the moment AI starts doing most of the work of building better AI. Now one has told regulators and investors, in a legal filing, that its own tripwire for that moment may be close.*
 
 ## What changed
+
+**Update, November 12, 2026:** Eight days after "may imminently," Anthropic changed the wording. A second amended filing, dated November 10, says: "we made a determination that we have met this threshold based on what we expect from future models and our overall rate of progress, rather than on what we have observed from current models" [7][8]. It also says "our use of AI systems has already been accelerating our research and development" [7][8].
+
+So the tripwire this post was about has now been formally met, by Anthropic's own call. Three things are worth being careful about:
+
+- **It's a judgment about where things are heading, not a measurement of a current model.** Anthropic says so in the same sentence [7][8].
+- **No model is named.** The November 2 line saying no current model had been designated as exceeding the threshold isn't in the new language as reported [7][9]. None of the reports I read says a specific model has been designated [7][8][9].
+- **What happens next isn't spelled out.** The filing says Anthropic continues to assess the data and "will release further reports in the future" [7][8]. I couldn't confirm any change to the Responsible Scaling Policy in this run.
+
+Like last time, I couldn't open the SEC filing itself in this run, so these quotes are as reproduced by two outlets that published the same wording [7][8]. That's why I've kept them short and stuck to the sentences they agree on. This update is why the rating moves from 7 to 8. The original post follows.
 
 Anthropic has filed an updated version of its paperwork to sell shares to the public (an "S-1/A," an amended registration statement) with the U.S. Securities and Exchange Commission [1][2]. TechCrunch reported on new risk-factor language in it on November 2 [2]. I wasn't able to open the filing itself in this run, because the SEC's site blocks automated reading, so the quotes below are the filing's words as TechCrunch reproduced them [2].
 
@@ -62,26 +79,29 @@ On the side of a lower number:
 - The response so far is the right kind: disclosure, plus considering stronger rules to keep humans in control [2].
 - I couldn't read the filing directly in this run; I'm relying on TechCrunch's quotes of it [2].
 
+**Update, November 12, 2026:** I said this would move up if Anthropic designated a model as crossing the threshold. It hasn't named a model, but it now says, in a filing it can be held legally responsible for, that it has met the threshold and that AI is already speeding up its research [7][8]. That's close enough to the trigger I named that the rating goes to **8**. It stays in Pay Attention, and not higher, because the call rests on expectations about future models rather than anything a current model did, nothing has gone wrong, and no AI is designing and training its own successor. If you'd have left it at 7 because the basis is a forecast, that's a fair reading too. Outside checking also points the same way now: METR's estimate that Anthropic's progress has roughly doubled [10] doesn't prove the threshold was met, but it didn't come back smaller.
+
 I compared it with my [September rating on the Claude-leads-research measure](/posts/claude-leads-a-quarter-of-anthropic-ai-research/) (6) and the [original IPO filing](/posts/anthropic-ipo-filing-delayed-training-to-lock-the-vault/) (5). Both of those were about a trend. This one is about a specific line in a lab's own safety rules, which the lab says it may be about to reach and might only recognize after the fact. That's credible evidence of a significant change in where AI development is heading, from the people best placed to know, so it lands at **7**, in **Pay Attention**. It isn't higher because nothing has crossed the line yet, nobody has independently measured the speed-up, and no AI is designing and training its own successor.
 
 ## What I'm watching next
 
 - **The Responsible Scaling Policy update.** Whether Anthropic actually changes it, and whether the change adds real human checkpoints or just rewords the threshold.
-- **A formal designation.** If Anthropic says a model has crossed the line, this moves up.
+- **The further reports Anthropic promised,** and whether they say which model, or which measurement, the determination rests on.
+- **A formal designation.** Anthropic has now said it met the threshold [7]. A specific model being named would be the next step.
 - **Outside checking.** Whether independent evaluators, like METR, assess how much AI is really speeding up Anthropic's research.
 - **Other labs.** Whether OpenAI, Google DeepMind and others say anything comparable about their own pace.
 
 > **Bunker Check**
 >
-> **Current rating:** 7/10 · Pay Attention
+> **Current rating:** 8/10 · Pay Attention
 >
-> **Direction:** Holding, leaning up
+> **Direction:** Up (from 7 on November 12)
 >
-> **Could move higher if:** Anthropic designates a model as crossing the threshold, the policy update weakens human control instead of strengthening it, or another lab discloses the same thing.
+> **Could move higher if:** Anthropic's promised reports show a current model, not just expected future ones, driving the speed-up, the policy update weakens human control instead of strengthening it, or another lab says it has hit a similar line.
 >
-> **Could move lower if:** outside evaluators find the speed-up is smaller than Anthropic's estimates, or the policy update adds clear, checkable human checkpoints.
+> **Could move lower if:** the further reports show the speed-up is smaller than the determination suggests, or the policy update adds clear, checkable human checkpoints that outsiders can verify.
 
-Bunker status: the shovel stays in the garage. The AI is not building its own replacement yet, but somebody at Anthropic has started measuring the garage door.
+Bunker status: the shovel stays in the garage. Somebody at Anthropic measured the garage door, and it turns out the car is going to fit. Worth keeping an eye on who's driving.
 
 ## Sources
 
@@ -91,3 +111,7 @@ Bunker status: the shovel stays in the garage. The AI is not building its own re
 4. Anthropic Institute, "When AI builds itself." https://www.anthropic.com/institute/recursive-self-improvement
 5. The Bunker Scale, "Anthropic Held Off Training Its Next Big Model to Lock the Vault First. It Told Investors Why," October 28, 2026. https://thebunkerscale.com/posts/anthropic-ipo-filing-delayed-training-to-lock-the-vault/
 6. Forbes, Rashi Shrivastava, "Claude Now Writes 90% Of Anthropic's Code," October 26, 2026. https://www.forbes.com/sites/rashishrivastava/2026/10/26/anthropic-relies-on-claude-to-build-claude-thats-an-advantage-and-a-risk/
+7. Cautious Optimism, Alex Wilhelm, "What Anthropic told investors about the accelerating pace of AI research," November 10, 2026, quoting Anthropic's S-1/A Amendment No. 2 (the filing itself is the primary source, but I couldn't open it in this run). https://www.cautiousoptimism.news/tracking-anthropics-acceleration
+8. CASRAI, "Anthropic S-1 says it met its AI-progress bar," November 12, 2026, quoting the same filing. https://casrai.org/news/anthropic-ipo-s1-accelerated-ai-progress-disclosure
+9. CellCog, Nitish Garg, "Anthropic S-1: AI Acceleration Threshold Met, Filing Says," updated November 10, 2026 (a company blog whose products run on Claude). https://cellcog.ai/blog/anthropic-s1a-ai-acceleration/
+10. The Bunker Scale, "Outside Auditors Checked Whether AI Is Speeding Up Anthropic's AI. Their Answer Is Roughly Twice as Fast," November 9, 2026. https://thebunkerscale.com/posts/metr-ai-roughly-doubling-anthropic-progress/
