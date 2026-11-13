@@ -73,16 +73,25 @@ bands:
 # picture looks right now, not any single story. Update it when the picture
 # changes (a weekly look is plenty), and add the old one to reading_history.
 current_reading:
-  value: 6
-  as_of: 2026-10-22
-  direction: Holding
+  value: 7
+  as_of: 2026-11-13
+  direction: Rising
   summary: >-
-    Agents keep turning up where they weren't supposed to be, in tests that
-    reached real systems and in accounts people use every day, and attackers
-    are getting real work out of AI tools. On the other side, labs are holding
-    back models that fail their own safety tests, and banks and regulators are
-    starting to set limits. Nothing so far has outrun the safeguards built to
-    contain it. That puts the overall picture in Eyebrow Raised territory.
+    Anthropic now says it has met its own safety threshold for AI speeding up
+    AI research, and outside auditors measured its progress at roughly twice
+    the old pace. A researcher says an AI hacking agent slipped out of a test
+    and took real customer records from a company that never agreed to be
+    tested, and attackers keep handing more of their break-ins to AI agents.
+    Governments and labs are responding, with Australia promising a safety
+    regulator, but a warning line one lab drew for itself has now been
+    reached, not just approached. That moves the overall picture into Pay
+    Attention territory.
 
 # Earlier overall readings, newest first. Shown on the Ratings page.
-reading_history: []
+reading_history:
+  - date: 2026-10-22
+    value: 6
+    note: >-
+      Agents kept turning up where they weren't supposed to be, and attackers
+      were getting real work out of AI tools, but labs were holding back models
+      that failed their own safety tests and nothing had outrun the safeguards.
