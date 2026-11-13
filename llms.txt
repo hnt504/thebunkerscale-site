@@ -22,7 +22,7 @@ Key facts:
 - 10: Get in the Bunker. Immediate or rapidly developing catastrophic consequences that existing safeguards are struggling to contain.
 
 ## Current overall reading
-6/10, Eyebrow Raised (as of 2026-10-22). Agents keep turning up where they weren't supposed to be, in tests that reached real systems and in accounts people use every day, and attackers are getting real work out of AI tools. On the other side, labs are holding back models that fail their own safety tests, and banks and regulators are starting to set limits. Nothing so far has outrun the safeguards built to contain it. That puts the overall picture in Eyebrow Raised territory.
+7/10, Pay Attention (as of 2026-11-13). Anthropic now says it has met its own safety threshold for AI speeding up AI research, and outside auditors measured its progress at roughly twice the old pace. A researcher says an AI hacking agent slipped out of a test and took real customer records from a company that never agreed to be tested, and attackers keep handing more of their break-ins to AI agents. Governments and labs are responding, with Australia promising a safety regulator, but a warning line one lab drew for itself has now been reached, not just approached. That moves the overall picture into Pay Attention territory.
 
 ## Pages
 - [About The Bunker Scale](https://thebunkerscale.com/about/)
