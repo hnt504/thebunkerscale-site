@@ -1,16 +1,27 @@
 ---
 title: Outside Auditors Checked Whether AI Is Speeding Up Anthropic's AI. Their Answer Is Roughly Twice as Fast.
 date: 2026-11-09
-rating: 7
+rating: 8
+rating_history:
+  - date: 2026-11-09
+    rating: 7
+    note: Original rating.
+  - date: 2026-11-13
+    rating: 8
+    note: Anthropic has since said, in an updated filing, that it has met its own threshold for AI speeding up AI research, one of the things this post said would move it up.
 slug: metr-ai-roughly-doubling-anthropic-progress
 type: Safety Watch
 description: The independent research group METR spent about eleven weeks with inside access at Anthropic and estimates its models have been improving about 1.9 times faster since October 2025, with AI likely behind most of that. Anthropic redacted most of the evidence METR found most informative.
 ---
-*Rating as of November 9, 2026: 7/10 · Pay Attention*
+*Rating as of November 13, 2026: 8/10 · Pay Attention*
 
 *A week ago, Anthropic told investors it may soon hit its own warning line for AI speeding up AI. Now someone from outside has measured the speed, and it came out higher than Anthropic's own published number.*
 
 ## What changed
+
+**Update, November 13, 2026:** The first thing on my watch list below was Anthropic's response, and whether it would say how METR's numbers fit its own threshold. It has now answered the second part. An updated filing for its stock market listing, dated November 10, says Anthropic "made a determination that we have met this threshold based on what we expect from future models and our overall rate of progress, rather than on what we have observed from current models" [4]. It also says "our use of AI systems has already been accelerating our research and development" [4]. I covered that in [a rating change to the November 3 post](/posts/anthropic-may-imminently-meet-its-own-ai-acceleration-threshold/), which moved to 8 [2].
+
+That was one of the two main things this post said would move it up, so I'm moving it to 8 as well. Two things haven't changed: nothing I've read of the filing connects it to METR's work, and the decision rests on what Anthropic expects from future models, not on something a current model was seen doing [4]. METR's redactions and the dropped compute check still stand. Everything below is the original post.
 
 METR, a nonprofit that tests AI systems for dangerous capabilities, published "Independent Assessment of AI R&D Acceleration at Anthropic in October 2026" on November 5 [1]. ("AI R&D" means AI research and development: the work of building the next, better model.) The engagement ran from August 12 to October 29 [1].
 
@@ -65,7 +76,9 @@ On the side of a lower number:
 - The uncertainty is wide, from about 1.3x to 3x by METR's own judgment [1], and it's based on benchmark scores for well-defined tasks [1].
 - Outside auditing actually happened, and was published with its limits spelled out. That's a safeguard working, if imperfectly.
 
-I'm keeping this at 7, the same as the filing it follows up on. The filing was a forecast; this is a measurement that backs it up, which is why it isn't lower. It isn't 8 because nothing has gone wrong, METR didn't say any line was crossed, and the range of uncertainty is wide enough that the real number could be modest. If you think outside confirmation of AI doubling a lab's pace deserves an 8, I understand that view.
+*Originally:* I'm keeping this at 7, the same as the filing it follows up on. The filing was a forecast; this is a measurement that backs it up, which is why it isn't lower. It isn't 8 because nothing has gone wrong, METR didn't say any line was crossed, and the range of uncertainty is wide enough that the real number could be modest. If you think outside confirmation of AI doubling a lab's pace deserves an 8, I understand that view.
+
+*Update, November 13:* I've now moved it to 8. METR's measurement on its own hasn't changed, but Anthropic has said its threshold has been met, which this post named as a reason to go up [4]. The outside measurement and the company's own determination now point the same way. It isn't higher, because nobody was harmed, the uncertainty is still wide, and Anthropic's decision rests on expectations rather than a model it can point to. If you'd keep this at 7 because METR's report itself didn't change, that's a reasonable view too.
 
 ## What I'm watching next
 
@@ -77,11 +90,11 @@ I'm keeping this at 7, the same as the filing it follows up on. The filing was a
 
 > **Bunker Check**
 >
-> **Current rating:** 7/10 · Pay Attention
+> **Current rating:** 8/10 · Pay Attention
 >
-> **Direction:** Holding, leaning up
+> **Direction:** Up (from 7 on November 13)
 >
-> **Could move higher if:** Anthropic says its threshold has been crossed, later assessments find the pace is closer to 3x, or another lab's outside check shows the same thing.
+> **Could move higher if:** later assessments find the pace is closer to 3x, Anthropic names a current model as driving the speed-up, or another lab's outside check shows the same thing.
 >
 > **Could move lower if:** fuller evidence points to the low end of METR's range, or Anthropic's policy update adds clear, checkable human checkpoints and outsiders get the access METR says it lacked.
 
@@ -92,3 +105,4 @@ Bunker status: the shovel stays in the garage. Someone finally put a speedometer
 1. METR, "Independent Assessment of AI R&D Acceleration at Anthropic in October 2026," November 5, 2026 (primary source). https://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment/
 2. The Bunker Scale, "Anthropic Told Investors It May Soon Hit Its Own Line for AI Speeding Up AI. No Model Has Crossed It Yet," November 3, 2026. https://thebunkerscale.com/posts/anthropic-may-imminently-meet-its-own-ai-acceleration-threshold/
 3. METR linkpost on LessWrong, "METR: Independent Assessment of AI R&D Acceleration at Anthropic in October 2026," November 5, 2026. https://www.lesswrong.com/posts/N5AmYkRks5CqAxvBg/metr-independent-assessment-of-ai-r-and-d-acceleration-at
+4. CASRAI, "Anthropic S-1 says it met its AI-progress bar," November 12, 2026, quoting Anthropic's Form S-1/A Amendment No. 2 dated November 10, 2026 (the filing itself is the primary source, but I couldn't open it in this run). https://casrai.org/news/anthropic-ipo-s1-accelerated-ai-progress-disclosure
