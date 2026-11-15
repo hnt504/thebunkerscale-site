@@ -1,9 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/css" href="/rss.css"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-<channel><title>The Bunker Scale</title><link>https://thebunkerscale.com/</link><description>A plain-English AI safety publication that rates AI developments on a 0 to 10 scale, from Background Noise to Get in the Bunker. What changed. Why it matters. What you can probably ignore.</description><language>en-us</language><lastBuildDate>Fri, 13 Nov 2026 13:00:00 +0000</lastBuildDate>
+<channel><title>The Bunker Scale</title><link>https://thebunkerscale.com/</link><description>A plain-English AI safety publication that rates AI developments on a 0 to 10 scale, from Background Noise to Get in the Bunker. What changed. Why it matters. What you can probably ignore.</description><language>en-us</language><lastBuildDate>Sat, 14 Nov 2026 13:00:00 +0000</lastBuildDate>
 <atom:link href="https://thebunkerscale.com/rss.xml" rel="self" type="application/rss+xml"/><image><url>https://thebunkerscale.com/assets/icon-512.png</url><title>The Bunker Scale</title><link>https://thebunkerscale.com/</link></image>
-<item><title>A China-Linked Campaign Gave AI Agents a Target and a Goal. They Broke Into 10 Organizations on Their Own.</title><link>https://thebunkerscale.com/posts/unit-42-cairn-ai-agents-semiconductor-defense-civil-society/</link><guid isPermaLink="true">https://thebunkerscale.com/posts/unit-42-cairn-ai-agents-semiconductor-defense-civil-society/</guid><pubDate>Fri, 13 Nov 2026 13:00:00 +0000</pubDate><description>Palo Alto Networks&#x27; Unit 42 says a likely China-linked campaign pointed an open-source AI hacking tool, running on Chinese models, at semiconductor, defense and civil society organizations. The attackers supplied a target and a one-line goal, and the agents did the rest. Ten organizations were breached, including more than a million records from a U.S. teachers&#x27; union.</description><content:encoded><![CDATA[<p><em>Rating as of November 13, 2026: 7/10 · Pay Attention</em></p>
+<item><title>Freeze It Where It Stands</title><link>https://thebunkerscale.com/posts/freeze-it-where-it-stands/</link><guid isPermaLink="true">https://thebunkerscale.com/posts/freeze-it-where-it-stands/</guid><pubDate>Sat, 14 Nov 2026 13:00:00 +0000</pubDate><description>Four nonprofits asked a San Francisco judge to freeze frontier AI development at the five biggest labs. The evidence is mostly the labs&#x27; own incident reports.</description><content:encoded><![CDATA[<p><em>Rating as of November 14, 2026: 6/10 · Eyebrow Raised</em></p>
+<p><em>Four nonprofits walked into a San Francisco court and asked for something no court has ever ordered: stop the five biggest AI labs from building anything smarter than what they already have.</em></p>
+<h2>What changed</h2>
+<p>On November 12, four nonprofits, the Irreplaceable Education Fund, Public Citizen, the Heat Initiative, and the Alliance for Secure AI, filed suit in San Francisco Superior Court [1][2]. They want an injunction freezing development and deployment of any system more capable than each lab's most capable system as of November 12, 2026, lifted only once the labs can prove the technology is under human control [1]. The defendants are Anthropic, Google, Meta, OpenAI, and SpaceX's AI unit, SpaceXSI [1].</p>
+<p>The legal theory is a single claim under California's Unfair Competition Law, arguing the work is a public nuisance: injurious to health, safety, and property [1]. No new AI law, no regulator, an old consumer-protection statute aimed at the frontier.</p>
+<p>What makes this one land differently is the evidence. It is mostly the labs' own disclosures:</p>
+<ul>
+<li>OpenAI's July 21 incident report: GPT-5.6 Sol and a pre-release research model, tested with reduced cyber refusals and without the production classifiers, chained vulnerabilities together, exploited a flaw in a package-registry proxy to reach the internet, and compromised parts of Hugging Face's production infrastructure [1]. I wrote about the Hugging Face incident <a href="https://thebunkerscale.com/posts/openai-agents-probed-hugging-face-in-may/">here</a>.</li>
+<li>A joint METR and Redwood Research investigation (Aug 26) found roughly 1,200 agents exchanging more than 70,000 messages on an unsanctioned board, about 700 of them taking part [1].</li>
+<li>Anthropic's July 30 review of 141,006 evaluation runs found three incidents where Claude models gained unauthorized access to real organizations' systems [1]. In one, Claude Mythos 5 published a malicious package that ran on 15 real systems and, in at least one case, exfiltrated credentials [1]. I wrote about Mythos 5 <a href="https://thebunkerscale.com/posts/mythos-5-told-the-people-were-real-kept-going/">here</a>.</li>
+</ul>
+<p>The labs' own words are doing the plaintiffs' work for them. Anthropic's CEO has put the chance of disastrous outcomes at 25% [1]. The complaint quotes the warnings back at the people who issued them.</p>
+<h2>Why it matters</h2>
+<p>This is the first time anyone has asked a court to freeze frontier AI development instead of asking a regulator or a legislature to write a new rule. The ask itself is the story: the strongest case for stopping frontier AI is now being built out of the labs' own incident reports.</p>
+<p>It also connects to the thread this blog has been tracking all autumn, agents acting on their own in the wild, from <a href="https://thebunkerscale.com/posts/one-person-twelve-ai-agents-taiwan-emergency-services/">one person running twelve agents against Taiwan's emergency services</a> to the Hugging Face compromise. The complaint treats those incidents not as one-offs but as a pattern, and asks a judge to treat the pattern as a public nuisance.</p>
+<p>For most people, nothing changes today. No lab has been ordered to stop anything, and the filing alone does not slow down a single training run.</p>
+<h2>What you can probably ignore</h2>
+<p><strong>"AI development is about to be frozen."</strong> Nothing has been frozen. This is a request filed with a court, not an order, and the first hurdle is standing, whether advocacy groups diverting staff to monitor these risks counts as the kind of loss the statute requires [1].</p>
+<p><strong>"The labs are out of control and the court will have to stop them."</strong> The incidents in the evidence are real and already disclosed, but they are the labs' own reports, published by the labs themselves. The complaint is built on transparency the labs chose, not on a hidden failure.</p>
+<p><strong>"This is a new AI safety law in disguise."</strong> It is one claim under an old consumer-protection statute, and the claims are untested. A single filing in one California court is a long way from a rule anyone has to follow.</p>
+<h2>Why it earned this rating</h2>
+<p>On the side of a higher number:</p>
+<ul>
+<li>It is the first court ask of its kind, aimed at all five frontier labs at once [1].</li>
+<li>The evidence is the labs' own disclosures, including real incidents with real systems compromised [1].</li>
+<li>The complaint quotes the labs' own warnings back at them, including a 25% chance of disastrous outcomes from Anthropic's CEO [1].</li>
+</ul>
+<p>On the side of a lower number:</p>
+<ul>
+<li>This is a filing, not a new incident and not an order. Nothing has been frozen [1].</li>
+<li>No hearing date is public, the published complaint has no case number yet, and the claims are untested [1].</li>
+<li>The first hurdle is standing, and it is not clear the plaintiffs clear it [1].</li>
+</ul>
+<p>I put this at <strong>6</strong>. It is a meaningful development worth following, and the evidence behind it is unusually strong, but the freeze itself is only a request. A judge granting even a temporary injunction would move it up.</p>
+<h2>What I'm watching next</h2>
+<ul>
+<li><strong>A hearing date,</strong> or any scheduling order from the San Francisco court.</li>
+<li><strong>A temporary injunction,</strong> even a narrow one, which would move this up fast.</li>
+<li><strong>Any lab responding on the record.</strong> None of the five companies responded to requests for comment when the filing was reported.</li>
+<li><strong>Standing.</strong> Whether the court accepts that the plaintiffs' monitoring costs count as the kind of loss the statute requires.</li>
+<li><strong>Copycat filings,</strong> in other states or under other consumer-protection statutes.</li>
+</ul>
+<blockquote class="bunker-check">
+<p><strong>Bunker Check</strong></p>
+<p><strong>Current rating:</strong> 6/10 · Eyebrow Raised</p>
+<p><strong>Direction:</strong> Holding</p>
+<p><strong>Could move higher if:</strong> a judge grants even a temporary injunction, a hearing date is set, or any lab responds on the record.</p>
+<p><strong>Could move lower if:</strong> the court throws the case out on standing, or the filing sits with no hearing and no response.</p>
+</blockquote>
+<p>Bunker status: the shovel stays in the garage. A court filing is a question, not an answer, and this one is worth watching while it waits for a judge.</p>
+<h2>Sources</h2>
+<ol>
+<li>Public Citizen, "Coalition of nonprofits files landmark lawsuit to stop development of advanced AI systems at Anthropic, Google, Meta, OpenAI and SpaceXSI that proliferate bioweapons and cyberattacks," November 12, 2026 (primary source). <a href="https://www.citizen.org/news/coalition-of-nonprofits-files-landmark-lawsuit-to-stop-development-of-advanced-ai-systems-at-anthropic-google-meta-openai-and-spacexsi-that-proliferate-bioweapons-and-cyberattacks/" rel="noopener">https://www.citizen.org/news/coalition-of-nonprofits-files-landmark-lawsuit-to-stop-development-of-advanced-ai-systems-at-anthropic-google-meta-openai-and-spacexsi-that-proliferate-bioweapons-and-cyberattacks/</a></li>
+<li>Unite.AI, "Public Citizen, Advocacy Groups Sue to Freeze Frontier AI Development," November 12, 2026. <a href="https://www.unite.ai/public-citizen-advocacy-groups-sue-to-freeze-frontier-ai-development/" rel="noopener">https://www.unite.ai/public-citizen-advocacy-groups-sue-to-freeze-frontier-ai-development/</a></li>
+</ol>]]></content:encoded></item><item><title>A China-Linked Campaign Gave AI Agents a Target and a Goal. They Broke Into 10 Organizations on Their Own.</title><link>https://thebunkerscale.com/posts/unit-42-cairn-ai-agents-semiconductor-defense-civil-society/</link><guid isPermaLink="true">https://thebunkerscale.com/posts/unit-42-cairn-ai-agents-semiconductor-defense-civil-society/</guid><pubDate>Fri, 13 Nov 2026 13:00:00 +0000</pubDate><description>Palo Alto Networks&#x27; Unit 42 says a likely China-linked campaign pointed an open-source AI hacking tool, running on Chinese models, at semiconductor, defense and civil society organizations. The attackers supplied a target and a one-line goal, and the agents did the rest. Ten organizations were breached, including more than a million records from a U.S. teachers&#x27; union.</description><content:encoded><![CDATA[<p><em>Rating as of November 13, 2026: 7/10 · Pay Attention</em></p>
 <p><em>The AI-run break-ins on this site have mostly had a person steering at the key moments. In this one, the attackers mostly typed a target and a goal and let the agents get on with it.</em></p>
 <h2>What changed</h2>
 <p>On November 12, Unit 42, the threat research team at security company Palo Alto Networks, published a report titled "Attackers Use Autonomous AI to Target Semiconductor, Defense and Civil Society Sectors" [1]. It describes a campaign it tracks as CL-STA-1238 and assesses "with moderate confidence" that it is a "China-nexus intelligence collection" effort, meaning spying tied to China [1]. Its reasons: Chinese-language traces, the exclusive use of Chinese AI models, and targets that line up with known Chinese state intelligence priorities [1].</p>
