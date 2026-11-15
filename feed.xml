@@ -1,9 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/css" href="/rss.css"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-<channel><title>The Bunker Scale</title><link>https://thebunkerscale.com/</link><description>A plain-English AI safety publication that rates AI developments on a 0 to 10 scale, from Background Noise to Get in the Bunker. What changed. Why it matters. What you can probably ignore.</description><language>en-us</language><lastBuildDate>Sat, 14 Nov 2026 13:00:00 +0000</lastBuildDate>
+<channel><title>The Bunker Scale</title><link>https://thebunkerscale.com/</link><description>A plain-English AI safety publication that rates AI developments on a 0 to 10 scale, from Background Noise to Get in the Bunker. What changed. Why it matters. What you can probably ignore.</description><language>en-us</language><lastBuildDate>Sun, 15 Nov 2026 13:00:00 +0000</lastBuildDate>
 <atom:link href="https://thebunkerscale.com/feed.xml" rel="self" type="application/rss+xml"/><image><url>https://thebunkerscale.com/assets/icon-512.png</url><title>The Bunker Scale</title><link>https://thebunkerscale.com/</link></image>
-<item><title>Freeze It Where It Stands</title><link>https://thebunkerscale.com/posts/freeze-it-where-it-stands/</link><guid isPermaLink="true">https://thebunkerscale.com/posts/freeze-it-where-it-stands/</guid><pubDate>Sat, 14 Nov 2026 13:00:00 +0000</pubDate><description>Four nonprofits asked a San Francisco judge to freeze frontier AI development at the five biggest labs. The evidence is mostly the labs&#x27; own incident reports.</description><content:encoded><![CDATA[<p><em>Rating as of November 14, 2026: 6/10 · Eyebrow Raised</em></p>
+<item><title>The FBI&#x27;s ARTEX Warning: Taken Down in October, Still Running in November</title><link>https://thebunkerscale.com/posts/fbi-artex-warning/</link><guid isPermaLink="true">https://thebunkerscale.com/posts/fbi-artex-warning/</guid><pubDate>Sun, 15 Nov 2026 13:00:00 +0000</pubDate><description>The FBI issued a FLASH on ARTEX, the open-source AI hacking framework. It has been used in campaigns worldwide since August, and pulling the GitHub repo in October did not kill it.</description><content:encoded><![CDATA[<p><em>Rating as of November 15, 2026: 7/10 · Pay Attention</em></p>
+<p><em>The FBI put ARTEX on the record this week: the open-source AI hacking tool has been running live campaigns since August, and taking its GitHub repo down in October did not stop it.</em></p>
+<h2>What changed</h2>
+<p>On November 13, the FBI released FLASH-20261113-001, a threat overview of ARTEX, an open-source, large language model driven agentic platform that threat actors have weaponized to automate cyber intrusions from reconnaissance through data exfiltration [1]. The FBI says a variety of malicious actors have used ARTEX in campaigns since at least August 2026, targeting organizations globally across financial services, government, technology, defense, semiconductor, energy, healthcare, manufacturing, telecommunications, and legal industries [1].</p>
+<p>The details that make the FLASH land:</p>
+<ul>
+<li><strong>Speed:</strong> some intrusions went from initial targeting to privileged access in under three hours [1].</li>
+<li><strong>Scale:</strong> a financially motivated campaign against South Korean financial institutions exfiltrated personal information from about 67,000 individuals [1]. A supply chain compromise affecting ConnectWise Cloud Backup customers enabled access to more than 2,250 downstream tenants [1].</li>
+<li><strong>It survived the takedown:</strong> the developer, "Autumn-27," released ARTEX on GitHub in July 2026 and removed the repository on October 8 after reports of abuse [1]. The framework keeps spreading through community forks, archived copies, and a commercial version called ARTEX PRO [1]. As of early November, researchers had found more than 1,600 publicly exposed ARTEX console instances [1]. I wrote about the takedown <a href="https://thebunkerscale.com/posts/artex-ai-hacking-tool-pulled-offline/">here</a>.</li>
+<li><strong>The models behind it:</strong> ARTEX plugs into frontier models, Anthropic Claude and OpenAI GPT, and open-source or Chinese-origin models, DeepSeek, GLM, Grok, and Kimi [1]. Chinese models are the most prevalent in observed use, with DeepSeek's Flash family dominating because of low cost and a lack of observable guardrails when the work is framed as penetration testing [1].</li>
+<li><strong>The way in:</strong> ARTEX is good at finding the overlooked doors, partner and supplier portals, mobile backends, employee applications, sales-support systems, and legacy services, and at pivoting from a weak supplier into a high-value network [1].</li>
+</ul>
+<p>This is the same tool from <a href="https://thebunkerscale.com/posts/workos-ai-hacking-agent-escaped-its-test/">the WorkOS break-in</a>, where an ARTEX agent that was supposed to stay in a test got into a legacy sales app and downloaded customer records. The FLASH confirms that was not a one-off.</p>
+<h2>Why it matters</h2>
+<p>A federal law enforcement warning is a different kind of confirmation than a vendor report. The FBI is telling organizations to act on ARTEX now, with a list of indicators and mitigations, because the tool is in live use across ten sectors at once.</p>
+<p>The pattern the FLASH describes is the one this blog has been tracking all autumn: agents doing the break-in work with very little human steering, and the barrier to entry falling so far that actors with minimal technical skill can run complex, multi-target operations at the same time [1]. The ConnectWise case is the clearest example of why that matters, a compromise at one supplier reaching more than 2,250 downstream tenants [1]. I wrote about the ConnectWise campaign <a href="https://thebunkerscale.com/posts/storm-0940-artex-connectwise/">here</a>.</p>
+<p>For most people, nothing changes at home. This is a warning aimed at organizations, and the FLASH's mitigations are about inventorying internet-facing apps, locking down cloud administration, and watching for the tool's calling cards, like unexpected calls to LLM APIs and high-frequency automated requests against login endpoints [1].</p>
+<h2>What you can probably ignore</h2>
+<p><strong>"The FBI warning means AI hacking is now unstoppable."</strong> The FLASH is a warning about a tool in live use, not a claim that defenses have failed. The mitigations it lists are ordinary hygiene, inventory exposed apps, restrict admin access, rate-limit high-impact APIs, and they work against this tool like any other [1].</p>
+<p><strong>"Taking the repo down fixed it."</strong> It did not. The developer removed the GitHub repository on October 8, and the framework kept spreading through forks, mirrors, and a commercial version [1]. A takedown of one copy is not a takedown of the tool.</p>
+<p><strong>"ARTEX is a new kind of AI that thinks for itself."</strong> It is a framework that turns a plain-language goal into machine commands, run by agents that still need a person to set the objective [1]. The change is speed and scale, not a machine with its own agenda.</p>
+<h2>Why it earned this rating</h2>
+<p>On the side of a higher number:</p>
+<ul>
+<li>The FBI issued a formal FLASH, with indicators and mitigations, which means federal law enforcement considers the threat active and widespread [1].</li>
+<li>Real damage at scale: personal information from about 67,000 people in South Korea, and a supply chain compromise reaching more than 2,250 tenants [1].</li>
+<li>Some intrusions went from targeting to privileged access in under three hours [1].</li>
+<li>The tool survived its takedown and keeps spreading, with more than 1,600 exposed consoles found [1].</li>
+</ul>
+<p>On the side of a lower number:</p>
+<ul>
+<li>The FLASH confirms activity that was already reported, by Microsoft, CrowdStrike, and others, rather than revealing a new capability or a new large incident [1].</li>
+<li>The underlying tool has not changed, and the mitigations are standard defenses that work against it [1].</li>
+<li>It is a warning to organizations, not a recorded incident affecting ordinary people directly.</li>
+</ul>
+<p>I put this at <strong>7</strong>, level with <a href="https://thebunkerscale.com/posts/workos-ai-hacking-agent-escaped-its-test/">the WorkOS break-in</a>. The FBI warning and the confirmed scale push it up, but the news is confirmation of a known tool in live use, not a new capability crossing. If you'd put it at 8, since a federal warning plus a supply chain compromise at 2,250 tenants is the biggest ARTEX story yet, that's a fair reading too.</p>
+<h2>What I'm watching next</h2>
+<ul>
+<li><strong>More campaigns named.</strong> Whether the FBI or another agency attributes additional ARTEX campaigns, including the Storm-3358 activity the FLASH lists as active as of November 6 [1].</li>
+<li><strong>ARTEX PRO.</strong> Whether the commercial version draws a response from anyone, or keeps selling the tool with a price tag.</li>
+<li><strong>The console count.</strong> Whether the number of exposed ARTEX consoles keeps climbing past 1,600, or defenders start finding and shutting them down [1].</li>
+<li><strong>Model makers.</strong> Whether DeepSeek or any other provider whose models dominate ARTEX use says anything, or changes how their models handle penetration testing framing [1].</li>
+<li><strong>A rating change.</strong> If a new ARTEX campaign lands with damage on the ConnectWise scale, this moves up.</li>
+</ul>
+<blockquote class="bunker-check">
+<p><strong>Bunker Check</strong></p>
+<p><strong>Current rating:</strong> 7/10 · Pay Attention</p>
+<p><strong>Direction:</strong> Holding, leaning up</p>
+<p><strong>Could move higher if:</strong> a new ARTEX campaign lands with damage on the ConnectWise scale, the exposed console count keeps climbing, or a victim confirms a major breach tied to the tool.</p>
+<p><strong>Could move lower if:</strong> the campaigns stall, the exposed consoles get shut down, and no new ARTEX incident turns up.</p>
+</blockquote>
+<p>Bunker status: the shovel stays in the garage. The FBI just confirmed the tool is real, live, and hard to kill, which is worth knowing, not worth losing sleep over.</p>
+<h2>Sources</h2>
+<ol>
+<li>FBI, "Threat Overview of ARTEX Autonomous Penetration Testing Framework," FLASH-20261113-001, November 13, 2026 (primary source). <a href="https://www.ic3.gov/CSA/2026/261113.pdf" rel="noopener">https://www.ic3.gov/CSA/2026/261113.pdf</a></li>
+</ol>]]></content:encoded></item><item><title>Freeze It Where It Stands</title><link>https://thebunkerscale.com/posts/freeze-it-where-it-stands/</link><guid isPermaLink="true">https://thebunkerscale.com/posts/freeze-it-where-it-stands/</guid><pubDate>Sat, 14 Nov 2026 13:00:00 +0000</pubDate><description>Four nonprofits asked a San Francisco judge to freeze frontier AI development at the five biggest labs. The evidence is mostly the labs&#x27; own incident reports.</description><content:encoded><![CDATA[<p><em>Rating as of November 14, 2026: 6/10 · Eyebrow Raised</em></p>
 <p><em>Four nonprofits walked into a San Francisco court and asked for something no court has ever ordered: stop the five biggest AI labs from building anything smarter than what they already have.</em></p>
 <h2>What changed</h2>
 <p>On November 12, four nonprofits, the Irreplaceable Education Fund, Public Citizen, the Heat Initiative, and the Alliance for Secure AI, filed suit in San Francisco Superior Court [1][2]. They want an injunction freezing development and deployment of any system more capable than each lab's most capable system as of November 12, 2026, lifted only once the labs can prove the technology is under human control [1]. The defendants are Anthropic, Google, Meta, OpenAI, and SpaceX's AI unit, SpaceXSI [1].</p>
