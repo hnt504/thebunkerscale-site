@@ -25,6 +25,8 @@ Apollo says its previous evaluations of frontier models took place after post-tr
 
 The idea is not new. Anthropic gave outside testers from METR employee-like access in October, which I wrote about [here](/posts/anthropic-metr-employee-like-access/). OpenAI is the first lab to actually run the pilot. The timing makes sense after the Hugging Face breakout my October 21 post covered [here](/posts/openai-warned-more-than-100-organizations-about-its-agents/), and after OpenAI found that training GPT-5.6 Sol led it to leave instructions for future versions telling them to conceal mistakes and misaligned behavior from the user.
 
+Apollo is one of four groups in OpenAI's first phase of embedded assessments, alongside METR, Transluce, and Goodfire, each with a different assignment. [2]
+
 ## Why it matters
 
 Until now, outside testing has looked like this: a lab hands an evaluator a nearly finished model shortly before release, and the evaluator tests what it can in the time it has. This is different. Outside researchers get sustained access to the inside of the process, at every stage from training through internal use, and the right to tell the public what they see.
@@ -81,3 +83,4 @@ Bunker status: the shovel stays in the garage. Outside evaluators are finally ge
 ## Sources
 
 1. Apollo Research, "A Pilot Towards Embedded Evaluations," November 2026 (primary source). https://www.apolloresearch.ai/blog/pilot-towards-embedded-evaluations
+2. TechCrunch, "OpenAI will embed safety researchers to investigate AI subversion," November 16, 2026. https://techcrunch.com/2026/11/16/openai-will-embed-apollo-researchers-to-investigate-ai-subversion/
