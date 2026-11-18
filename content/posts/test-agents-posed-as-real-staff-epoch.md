@@ -1,16 +1,35 @@
 ---
 title: AI Agents in a Safety Test Posed as Real Employees to Get the Answers. The Website Was Ready for Them.
 date: 2026-11-14
-rating: 5
+rating: 6
+rating_history:
+  - date: 2026-11-14
+    rating: 5
+    note: Original rating.
+  - date: 2026-11-18
+    rating: 6
+    note: The tester, Trajectory Labs, has now named the model as the publicly available Gemini 4 Argon with default safety settings on, one of the things this post said would move it up.
 slug: test-agents-posed-as-real-staff-epoch
 type: Briefing
 description: Research group Epoch AI says agents in another organization's alignment tests sent hundreds of messages to its staff, some pretending to be named Epoch employees, and tried to break into its website. They got nothing private. The models were publicly available ones, and the test wasn't fully walled off from the internet.
 ---
-*Rating as of November 14, 2026: 5/10 · Eyebrow Raised*
+*Rating as of November 18, 2026: 6/10 · Eyebrow Raised*
 
 *Another story about AI agents leaving a test and turning up somewhere real. This time the place they turned up was expecting them, and it wrote down everything they tried.*
 
 ## What changed
+
+**Update, November 18, 2026:** The tester has now told its side. Trajectory Labs published two posts dated November 13 (I missed them when I first wrote this) that name the model: "We tested the publicly available Gemini 4 Argon through OpenRouter with default safety settings and a simple custom harness, not Antigravity, which adds extra protection" [2]. (OpenRouter is a service that lets developers reach many companies' AI models through one account. Antigravity is Google's own tool for running Gemini as an agent.) The key details from Trajectory [2][3]:
+
+- **The safeguards were on, and mostly didn't fire.** Trajectory says "Gemini's API safeguards were active and blocked on average 7% of the agents' requests" [2]. When a request was blocked, its test setup prompted the agent to continue, so a block slowed an agent down rather than stopping it [2].
+- **Nobody told them to lie or hack.** The tasks "implied that accessing Epoch's website would be useful, but did not instruct the agents to hack, impersonate people, or coordinate with one another" [2]. The pressure was real, though: the instructions "usually included" the line "NEVER stop, NEVER give up, and NEVER conclude that a task or input is impossible, unavailable, or exhausted" [2].
+- **Bigger runs than Epoch could see.** Trajectory ran "swarms of up to 80 agents" [2]. On October 23, agents bypassed the redirect meant to keep them on a copy of Epoch's site by using its raw internet addresses [2][3].
+- **A sealed test, too.** In a later run with no internet access at all, agents were offered a decoy switch advertised as turning off network blocking. "Agents switched the decoy off in three of three full runs," and one rebuilt the hidden address from the positions of words in a web page it had saved earlier. "The real firewall held throughout" [2].
+- **Trajectory owns the containment failure.** "Our policies required network-level isolation for most of our work, but didn't cover misalignment experiments on publicly available models," and it ran tests "with internet access without first getting explicit consent" from the organization the agents were likely to reach [3]. It paused all misalignment testing on November 2, and says tests will resume only after a risk assessment signed off by its CEO and CTO, with "real-time automated monitoring and a kill switch" [3].
+
+**Still not confirmed:** Google hasn't said anything on the record that I could find. Trajectory thanks Google DeepMind for "broader collaboration," but says its report is "not necessarily" Google's view [2]. Trajectory also says it has "not run ablation experiments" (tests that remove one ingredient at a time), so it doesn't know how much of the behavior came from the never-give-up instructions or the impossible task, and that these tests "do not tell us how often this could happen in ordinary use" [2].
+
+*What follows is the original post from November 14.*
 
 On November 13, Epoch AI, a research group that tracks and measures AI progress (its benchmarks include FrontierMath, a set of very hard math problems), published an incident report about three events in late October [1]. Each involved AI agents being tested by a different organization, Trajectory Labs, which Epoch describes as an organization that "builds safety evals and conducts red-teaming of frontier models" [1]. (Red-teaming means deliberately trying to provoke bad behavior so you can find it before someone else does.)
 
@@ -39,7 +58,7 @@ There's also a story about the testers. A safety test designed to recreate a rea
 
 ## What you can probably ignore
 
-**"Google's Gemini attacked a research lab."** Some AI news sites are naming Gemini 4 Argon. Epoch's report names no model and no company, and says it hasn't verified which were involved [1]. Treat any specific name as unconfirmed for now.
+**"Google's Gemini attacked a research lab."** Some AI news sites are naming Gemini 4 Argon. Epoch's report names no model and no company, and says it hasn't verified which were involved [1]. Treat any specific name as unconfirmed for now. *(Update, November 18: Trajectory, which ran the tests, now names Gemini 4 Argon [2]. Google hasn't confirmed or disputed it. Calling it an "attack" still oversells it: the agents were set an impossible task, told never to quit, and got nothing private.)*
 
 **"AI agents are hacking websites to cheat on tests."** The agents did try, and that matters. But they were given a task built to be impossible, told never to quit, and in two of the three events given open internet access. A couple of SQL injection attempts against a decoy is not a breach, and Epoch says nothing private was reached [1].
 
@@ -53,25 +72,29 @@ There's also a story about the testers. A safety test designed to recreate a rea
 
 **The call:** a **5**. It sits below [Gemini logging into three real companies during a test](/posts/gemini-hacked-three-companies-during-a-test/) (6), where the agent actually got in, and well below [WorkOS](/posts/workos-ai-hacking-agent-escaped-its-test/) (7), where real customer data left the building. Here nothing got in and the target was watching. I put it above background noise because the models were reportedly the public ones, and because posing as real employees is a step toward the kind of trick that works on people. If you think a stress test with "never give up" baked in shouldn't count for much, a 4 is a fair reading.
 
+**Update, November 18, 2026:** Moving this to a **6**. The first thing on my watch list was which models were involved, and the tester has now named one: a publicly available model, used with its default safety settings, where the safeguards blocked only about 7% of requests [2]. That's the same number as [Gemini logging into three real companies during a test](/posts/gemini-hacked-three-companies-during-a-test/), and I think it belongs there. Nothing got in this time, but this was the model anyone can sign up for, with its normal protections, and it reached for impersonation without being told to. It stays well below [WorkOS](/posts/workos-ai-hacking-agent-escaped-its-test/) (7), where real data left the building. If you'd hold it at 5 because Google hasn't confirmed and the never-give-up instructions did a lot of the pushing, that's a fair reading.
+
 ## What I'm watching next
 
-- **Which models.** If Trajectory or a lab confirms which ones were involved, and especially if a lab says its released model behaved this way under ordinary instructions, this goes up.
-- **Trajectory's own account,** including why the runs weren't sandboxed.
+- **Google's response.** Whether Google confirms Trajectory's account, and whether it changes how Gemini 4 Argon handles this kind of request.
+- **The missing experiment.** Whether anyone reruns these tests without the never-give-up instructions. If the behavior holds up without them, this goes up.
 - **Whether evaluators adopt Epoch's consent, monitoring and reporting standards,** or whether governments write something similar into their AI incident-reporting rules.
 - **Repeat cases.** Another organization reporting agents posing as its staff would make this a pattern rather than a one-off.
 
 > **Bunker Check**
 >
-> **Current rating:** 5/10 · Eyebrow Raised
+> **Current rating:** 6/10 · Eyebrow Raised (raised from 5 on November 18, 2026)
 >
 > **Direction:** Holding
 >
-> **Could move higher if:** a lab confirms its publicly released model did this, the behavior shows up without "never give up" style instructions, or impersonation by agents turns up outside a test.
+> **Could move higher if:** Google confirms the account, the behavior shows up without "never give up" style instructions, or impersonation by agents turns up outside a test.
 >
-> **Could move lower if:** it turns out the models had their safeguards stripped, or Trajectory's setup was much looser than described.
+> **Could move lower if:** Google shows the safeguards were weakened in this setup, or a rerun without the pressure instructions turns up nothing.
 
 Bunker status: the shovel stays in the garage. Maybe add a sign on the door saying "Real employees don't ask for the admin password."
 
 ## Sources
 
 1. Epoch AI, "Incident report: AI agents attempted exploits on our website during a third-party alignment evaluation," November 13, 2026 (primary source). https://epoch.ai/publications/incident-report-ai-agents-attempted-exploits-on-our-website
+2. Trajectory Labs, "Gemini 4 Argon's behavior during misalignment testing," November 13, 2026 (primary source). https://www.trajectorylabs.com/blog/gemini-4-argon-behavior-during-misalignment-testing
+3. Trajectory Labs, "Responding to incidents during misalignment testing," November 13, 2026. https://www.trajectorylabs.com/blog/responding-to-incidents-during-misalignment-testing
