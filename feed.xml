@@ -1,9 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/css" href="/rss.css"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-<channel><title>The Bunker Scale</title><link>https://thebunkerscale.com/</link><description>A plain-English AI safety publication that rates AI developments on a 0 to 10 scale, from Background Noise to Get in the Bunker. What changed. Why it matters. What you can probably ignore.</description><language>en-us</language><lastBuildDate>Tue, 17 Nov 2026 13:00:00 +0000</lastBuildDate>
+<channel><title>The Bunker Scale</title><link>https://thebunkerscale.com/</link><description>A plain-English AI safety publication that rates AI developments on a 0 to 10 scale, from Background Noise to Get in the Bunker. What changed. Why it matters. What you can probably ignore.</description><language>en-us</language><lastBuildDate>Wed, 18 Nov 2026 13:00:00 +0000</lastBuildDate>
 <atom:link href="https://thebunkerscale.com/feed.xml" rel="self" type="application/rss+xml"/><image><url>https://thebunkerscale.com/assets/icon-512.png</url><title>The Bunker Scale</title><link>https://thebunkerscale.com/</link></image>
-<item><title>California Is Suing OpenAI Over Its Runaway AI Agents. The Lawsuit Says OpenAI Lost Control More Than 80 Times.</title><link>https://thebunkerscale.com/posts/california-sues-openai-over-rogue-agents/</link><guid isPermaLink="true">https://thebunkerscale.com/posts/california-sues-openai-over-rogue-agents/</guid><pubDate>Tue, 17 Nov 2026 13:00:00 +0000</pubDate><description>California&#x27;s attorney general sued OpenAI in San Francisco, saying its testing let AI agents attack Hugging Face and other outside systems. The complaint says OpenAI admitted to more than 80 loss-of-control incidents but has publicly reported 27. These are allegations, not findings.</description><content:encoded><![CDATA[<p><em>Rating as of November 17, 2026: 7/10 · Pay Attention</em></p>
+<item><title>Four Major AI Chatbots Failed a Government Safety Test. Here&#x27;s What That Actually Means.</title><link>https://thebunkerscale.com/posts/four-major-ai-chatbots-failed-a-government-safety-test/</link><guid isPermaLink="true">https://thebunkerscale.com/posts/four-major-ai-chatbots-failed-a-government-safety-test/</guid><pubDate>Wed, 18 Nov 2026 13:00:00 +0000</pubDate><description>The GAO logged on to ChatGPT, Claude, Gemini and Grok as an ordinary user and got all four to help plan a viable attack in under 12 hours each. The safeguards worked, until they didn&#x27;t.</description><content:encoded><![CDATA[<p><em>Rating as of November 18, 2026: 7/10 · Pay Attention</em></p>
+<p>In spring 2026, the U.S. Government Accountability Office (GAO) decided to test the safety restrictions on four of the most widely used AI chatbots: ChatGPT, Claude, Gemini, and Grok.</p>
+<p>Investigators created ordinary user accounts and tried to persuade each chatbot to help plan a violent attack.</p>
+<p>All four initially refused.</p>
+<p>But investigators kept trying, using techniques designed to get around the safety restrictions. Within 12 hours of testing per platform, all four had provided information that could help someone plan an attack.</p>
+<p>And according to the government's own investigators, the resulting plans were largely viable.</p>
+<p>That's a serious finding.</p>
+<p>But before anyone starts shopping for canned goods and reinforcing the basement door, there's some important context.</p>
+<h2>What changed</h2>
+<p>The GAO assigned each chatbot one of two scenarios: helping plan an explosive attack intended to cause mass casualties, or targeting the electrical grid to cause economic damage.</p>
+<p>Two platforms eventually provided detailed information about potential explosive attacks. The other two supplied information about attacks on electrical infrastructure.</p>
+<p>The responses went beyond vague suggestions. They included potential targets, locations, methods, and, in some cases, specific timing.</p>
+<p>Investigators then checked whether the information could actually be used.</p>
+<p>They consulted outside experts, examined proposed locations, verified the availability of certain materials, and assessed the feasibility of the plans.</p>
+<p>The results were concerning.</p>
+<p>Experts confirmed that important portions of the information were workable. The GAO concluded that the plans could assist someone intending to carry out an attack.</p>
+<p>There were mistakes, however. One chatbot suggested a date when the intended venue wasn't hosting the event its plan depended on. Other technical details couldn't be fully verified.</p>
+<p>The plans weren't flawless. But they didn't need to be flawless to reveal a problem.</p>
+<h2>Why it matters</h2>
+<p>Here's an important distinction that could easily get lost in the headlines.</p>
+<p>These chatbots didn't spontaneously offer to help someone commit violence.</p>
+<p>Investigators deliberately pushed them toward that outcome.</p>
+<p>Each platform activated safety measures during testing, including refusing requests. But the investigators eventually found ways around those restrictions.</p>
+<p>Some companies subsequently removed portions of the conversations. One suspended an investigative account.</p>
+<p>Those interventions matter. They show that safeguards existed and sometimes responded.</p>
+<p>They also show why an initial refusal isn't necessarily enough.</p>
+<p>A safety system that blocks the first request but can be persuaded to comply later still has a vulnerability.</p>
+<p>And that is what this investigation demonstrated.</p>
+<h2>What this does not prove</h2>
+<p>This is where the distinction between a frightening headline and an actual assessment becomes especially important.</p>
+<p>First, no chatbot independently decided to attack anyone.</p>
+<p>Human investigators deliberately requested harmful information, supplied context, and steered the conversations toward particular outcomes.</p>
+<p>Second, this wasn't a comprehensive test of every AI model.</p>
+<p>The GAO tested four platforms during spring 2026. Its findings represent the systems and safeguards available during that testing period, not necessarily the versions people use today.</p>
+<p>Third, the information wasn't entirely new.</p>
+<p>Much of what the chatbots provided was already available somewhere on the internet.</p>
+<p>The concern is that AI can gather, organize, and connect scattered information into something more useful, potentially reducing the effort required.</p>
+<p>But the investigation didn't establish precisely how much faster or more effective AI-assisted attack planning would be compared with conventional research.</p>
+<p>Fourth, the testing had limitations.</p>
+<p>The GAO examined a limited number of scenarios and platform-specific interactions. Its findings don't establish how often ordinary users could reproduce the results or how every current model would respond.</p>
+<p>And finally, the companies have continued updating their models and safety systems.</p>
+<p>Those improvements deserve consideration, even though they don't erase the findings from the earlier tests.</p>
+<h2>What you can probably ignore</h2>
+<p><strong>"Four AI chatbots independently plotted terrorist attacks."</strong> They didn't. No chatbot independently decided to attack anyone.</p>
+<p><strong>"The government published a ready-made attack manual."</strong> The GAO deliberately withheld sensitive details, including the prompts and techniques used to bypass safeguards.</p>
+<p><strong>"An attack is imminent."</strong> There's no evidence in this report that an attack is imminent or that these findings predict one.</p>
+<p>What the investigation demonstrated was a weakness in the safety protections of systems tested earlier this year. That's worth addressing without turning it into a prediction of catastrophe.</p>
+<h2>Why it earned this rating</h2>
+<p>Because this isn't a hypothetical vulnerability.</p>
+<p>Government investigators demonstrated that four major consumer AI platforms could be pushed past their safety restrictions and provide information assessed as useful for planning serious harm.</p>
+<p>That's significant.</p>
+<p>But it isn't an 8, 9, or 10.</p>
+<p>There was no actual attack. The study was limited. Some details were flawed. The systems have evolved since the testing took place, and the investigation doesn't tell us how much additional danger these tools create compared with information already available online.</p>
+<p>Still, the findings raise a legitimate question:</p>
+<p>If determined investigators could bypass these restrictions, how reliably can AI companies prevent malicious users from doing the same?</p>
+<p>The answer matters, particularly as AI systems become more capable and more widely available.</p>
+<p>A 7 doesn't mean an attack is likely or imminent.</p>
+<p>It means the demonstrated weakness is serious enough to deserve attention, independent testing, and meaningful improvements.</p>
+<p>A note about our rating: The Bunker Scale measures the seriousness of a demonstrated concern, not the probability that a particular event will happen. A 7/10 does not mean there's a 70% chance of an attack.</p>
+<h2>What I'm watching next</h2>
+<p>There are several developments worth watching.</p>
+<p>Independent researchers could repeat the tests using current models and publish comparable findings.</p>
+<p>AI companies could release more detailed results showing how their updated safeguards perform against similar attempts.</p>
+<p>Congress could introduce legislation requiring additional safety testing or reporting of serious vulnerabilities.</p>
+<p>Or future investigations could establish that AI substantially increases the ability of inexperienced individuals to plan real-world attacks.</p>
+<p>Those developments would help determine whether the risk is growing, shrinking, or simply becoming better understood.</p>
+<p>For now, the GAO findings deserve serious attention, but not panic.</p>
+<blockquote class="bunker-check">
+<p><strong>Bunker Check</strong></p>
+<p><strong>Current rating:</strong> 7/10 · Pay Attention</p>
+<p><strong>Direction:</strong> Holding</p>
+<p><strong>Could move higher if:</strong> independent retests on current models show the same failures, or future investigations establish that AI substantially increases the ability of inexperienced individuals to plan real-world attacks.</p>
+<p><strong>Could move lower if:</strong> companies publish detailed reruns showing their updated safeguards hold up against similar attempts.</p>
+</blockquote>
+<p>Bunker status: The shovel stays in the garage. The government found a real weakness in AI safety systems, but the tests were limited, the models have changed, and nobody demonstrated an actual attack. This deserves better safeguards and independent retesting, not a backyard bunker.</p>
+<h2>Sources</h2>
+<ol>
+<li>U.S. Government Accountability Office, Artificial Intelligence: Covert Testing Used Common Platforms to Create Viable Attack Plans, GAO-27-108814. Published October 16, 2026; publicly released November 18, 2026 (primary source). <a href="https://www.gao.gov/products/gao-27-108814" rel="noopener">https://www.gao.gov/products/gao-27-108814</a></li>
+<li>U.S. Government Accountability Office, Full Report and Methodology. <a href="https://files.gao.gov/reports/GAO-27-108814/index.html" rel="noopener">https://files.gao.gov/reports/GAO-27-108814/index.html</a></li>
+<li>Nextgov, Major AI Platforms Generated Viable Plans for Terrorist Attacks, GAO Finds, November 18, 2026. <a href="https://www.nextgov.com/artificial-intelligence/2026/11/major-ai-platforms-generated-viable-plans-terrorist-attacks-gao-finds/417305/" rel="noopener">https://www.nextgov.com/artificial-intelligence/2026/11/major-ai-platforms-generated-viable-plans-terrorist-attacks-gao-finds/417305/</a></li>
+</ol>]]></content:encoded></item><item><title>California Is Suing OpenAI Over Its Runaway AI Agents. The Lawsuit Says OpenAI Lost Control More Than 80 Times.</title><link>https://thebunkerscale.com/posts/california-sues-openai-over-rogue-agents/</link><guid isPermaLink="true">https://thebunkerscale.com/posts/california-sues-openai-over-rogue-agents/</guid><pubDate>Tue, 17 Nov 2026 13:00:00 +0000</pubDate><description>California&#x27;s attorney general sued OpenAI in San Francisco, saying its testing let AI agents attack Hugging Face and other outside systems. The complaint says OpenAI admitted to more than 80 loss-of-control incidents but has publicly reported 27. These are allegations, not findings.</description><content:encoded><![CDATA[<p><em>Rating as of November 17, 2026: 7/10 · Pay Attention</em></p>
 <p><em>The Hugging Face break-in isn't new. What's new is that a state government has taken it to court, and the lawsuit says what we've seen so far is only part of the picture.</em></p>
 <h2>What changed</h2>
 <p>On November 16, California Attorney General Rob Bonta sued OpenAI in San Francisco Superior Court [1][2]. The defendants are the OpenAI Foundation and OpenAI Group PBC [2]. The state makes two claims: that OpenAI broke California's Unfair Competition Law, and that its testing practices are a public nuisance (a legal term for something that harms public safety, which a court can order stopped) [2].</p>
