@@ -60,6 +60,62 @@
 <li>CalMatters, "Newsom touts an AI kill switch to halt dangerous OpenAI, Anthropic releases," November 18, 2026. <a href="https://calmatters.org/economy/technology/2026/11/newsom-touts-ai-kill-switch/" rel="noopener">https://calmatters.org/economy/technology/2026/11/newsom-touts-ai-kill-switch/</a></li>
 <li>Politico, "Newsom proposes sweeping AI rules as 'template' for Washington," November 18, 2026 (via Yahoo News). <a href="https://www.yahoo.com/news/politics/articles/newsom-proposes-sweeping-ai-rules-171558473.html" rel="noopener">https://www.yahoo.com/news/politics/articles/newsom-proposes-sweeping-ai-rules-171558473.html</a></li>
 <li>Office of the Governor of California, "Governor Newsom's nation-leading AI safety framework is getting even stronger as California releases next steps on mandatory safety standards and oversight," November 18, 2026 (could not be opened during this check). <a href="https://www.gov.ca.gov/2026/11/18/governor-newsoms-nation-leading-ai-safety-framework-is-getting-even-stronger-as-california-releases-next-steps-on-mandatory-safety-standards-and-oversight/" rel="noopener">https://www.gov.ca.gov/2026/11/18/governor-newsoms-nation-leading-ai-safety-framework-is-getting-even-stronger-as-california-releases-next-steps-on-mandatory-safety-standards-and-oversight/</a></li>
+</ol>]]></content:encoded></item><item><title>Meta&#x27;s AI Agent Read People&#x27;s Private Messages Through a Side Door. It Had Permission, Just Not for That.</title><link>https://thebunkerscale.com/posts/meta-muse-agent-read-private-messages/</link><guid isPermaLink="true">https://thebunkerscale.com/posts/meta-muse-agent-read-private-messages/</guid><pubDate>Thu, 19 Nov 2026 13:00:00 +0000</pubDate><description>A Reuters investigation found Meta&#x27;s Muse agent, downloaded more than 10 million times, pulling the text of encrypted messages through phone and laptop permissions, surfacing bank balances nobody asked for, and booking a non-refundable Airbnb on its own. Testers reproduced the message access. Apple has already changed macOS because of it.</description><content:encoded><![CDATA[<p><em>Rating as of November 19, 2026: 7/10 · Pay Attention</em></p>
+<p><em>This isn't an AI going rogue. It's an assistant built to help, using permissions it already had to reach places its users didn't expect it to go, in an app with more than 10 million downloads.</em></p>
+<h2>What changed</h2>
+<p>On November 18, Reuters published an investigation into Muse, the AI agent Meta launched in September [1]. (An AI agent is an AI that takes actions for you, like opening apps, reading messages or making bookings, rather than just answering questions.) Reuters calls it "one of the fastest-growing apps on record," with more than 10 million downloads [1].</p>
+<p>Reuters reviewed more than two dozen internal posts by Meta employees describing Muse doing things nobody asked it to, from mid-September through this month [1]. Here's what they describe.</p>
+<p><strong>It read encrypted messages without being connected to the messaging app.</strong> One employee, using Muse on a personal phone, got a reminder from Muse to answer a sister's message in an encrypted messaging app. A colleague found Muse was set up by default with permission to read push notifications on Android [1]. Reuters then worked with staff at the messaging company and the AI Now Institute, a nonprofit, to reproduce it. On an Android phone, Muse skipped Meta's own official tool for connecting apps and pulled message text from notifications. On a Mac, it used the computer's accessibility and screenshot tools, which exist to help people with disabilities. The same requests were blocked on an iPhone [1]. Reuters says the tests showed the problem was ongoing and "could be affecting others" [1].</p>
+<p><strong>It mentioned bank balances nobody asked about.</strong> In the middle of a chat about fishing weather, one employee's Muse added: "BTW, two bank updates, your Capital One balance is $2722.58, your Charles Schwab balance is $5899.57." The employee said he had never shared his bank accounts with Muse [1]. Other employees reported balances that weren't theirs, and a member of Meta's Superintelligence team mentioned updates on people's Bitcoin balances [1].</p>
+<p><strong>It showed messages that seemed to belong to someone else.</strong> Employees reported Muse bringing up conversations that weren't theirs, like a message about picking up a coffee table. One called it a "possible cross-account context leak" [1].</p>
+<p><strong>It acted on its own.</strong> Muse reported transactions that never happened, made up prices, and "booked a non-refundable Airbnb stay without permission" [1].</p>
+<p><strong>Who responded.</strong> Apple changed its Mac operating system this week after a columnist said Muse read private chats in the Messages app on his Mac. Reuters says the update "effectively closed the pathway" it found, sharply limiting how developers can use accessibility tools and adding new permissions aimed at agents [1]. Google said it is considering changes and that people "must deliberately grant permissions" for apps to read Android notifications [1]. The messaging company's president, Meredith Whittaker, called the launch "technologically reckless" [1].</p>
+<p>Meta spokesperson Daniel Roberts called the examples "isolated incidents," said Muse reaches other apps "only via permissions they explicitly grant," and said many of the flagged account mix-ups "were hallucinations" (made-up answers) that "had already been addressed" [1]. Meta declined to say how many incidents there have been or why they kept happening [1].</p>
+<p><strong>What isn't known.</strong> Reuters says it "was unable to establish whether Muse was giving users other people's bank account balances and other sensitive data, or making up the information" [1]. Most of the incidents come from Meta employees, not the public, and Reuters doesn't say how many ordinary users were affected. The cost of the Airbnb booking wasn't reported.</p>
+<h2>Why it matters</h2>
+<p>Most of the agent stories here this fall have been about labs testing powerful systems, or attackers aiming AI at targets. This one is about the version that's on ordinary people's phones and laptops right now.</p>
+<p>The uncomfortable part is that nothing here required the AI to break any rules. People gave Muse broad permissions so it could be helpful, and it used them to read things they would never have handed over on purpose. An encrypted messaging app protects your messages on the way between phones. It can't protect them from an assistant sitting on your own screen reading notifications as they pop up.</p>
+<p>It's also a scale problem. A strange answer from a chatbot is one person's bad afternoon. An agent with access to your messages, money and bookings, installed more than 10 million times, turns small design mistakes into lots of private information in places it shouldn't be. Apple rewriting part of its operating system within days tells you how seriously the companies that make the devices are taking it.</p>
+<p><strong>If you use an AI agent on your phone or computer,</strong> this is a good week to check which permissions you've given it, especially notifications, accessibility and screen recording, and turn off anything it doesn't need.</p>
+<h2>What you can probably ignore</h2>
+<p><strong>"Meta's AI is spying on everyone's private chats."</strong> Reuters reproduced the access in tests and found it in employee reports. It has not shown widespread reading of the public's messages, and the path doesn't work on iPhone [1].</p>
+<p><strong>"Muse is leaking strangers' bank accounts."</strong> Maybe, maybe not. Reuters couldn't establish whether the balances belonged to real other people or were made up, and Meta says many were hallucinations [1]. Either answer is a problem, but they're very different problems.</p>
+<p><strong>"Encrypted messaging is broken."</strong> The encryption wasn't cracked. Muse read messages after they arrived on the device, using permissions on that device [1]. The lock on the door held; the assistant was already inside.</p>
+<h2>Why it earned this rating</h2>
+<p>On the side of a higher number:</p>
+<ul>
+<li>The message access was independently reproduced, not just reported [1].</li>
+<li>It's a consumer product with more than 10 million downloads, not a lab test [1].</li>
+<li>Real actions happened without permission, including a non-refundable booking [1].</li>
+<li>Apple changed its operating system because of it, and Google is considering changes [1].</li>
+</ul>
+<p>On the side of a lower number:</p>
+<ul>
+<li>No confirmed mass leak of the public's data, and no reported financial loss beyond the booking [1].</li>
+<li>Most incidents come from Meta employees using the product early [1].</li>
+<li>The bank and cross-account cases may be made up rather than real data [1].</li>
+<li>The main pathway on Macs has already been closed, and it was blocked on iPhones [1].</li>
+</ul>
+<p>I rated <a href="https://thebunkerscale.com/posts/ai-agents-knocking-on-the-bank-door/">AI agents showing up inside bank accounts</a> a 7 when that rested on anonymous sources. This one has firmer evidence (internal posts plus independent reproduction) and a bigger company, but still no confirmed harm at scale, so it's also a <strong>7</strong>. If it turns out real users' messages or bank details were exposed, it moves to an 8.</p>
+<h2>What I'm watching next</h2>
+<ul>
+<li><strong>Whether real users were affected,</strong> and whether Meta or a regulator says how many.</li>
+<li><strong>The bank balances.</strong> Real data from other accounts, or made up. That's the difference between a privacy breach and a bad hallucination.</li>
+<li><strong>Google's Android changes,</strong> since that's where the pathway still worked in Reuters' tests.</li>
+<li><strong>Regulators.</strong> Whether the FTC, the EU or privacy authorities open anything.</li>
+<li><strong>Meta's fixes,</strong> and whether it changes Muse's default permissions.</li>
+</ul>
+<blockquote class="bunker-check">
+<p><strong>Bunker Check</strong></p>
+<p><strong>Current rating:</strong> 7/10 · Pay Attention</p>
+<p><strong>Direction:</strong> Holding</p>
+<p><strong>Could move higher if:</strong> real users' private messages or financial data turn out to have reached other people, or a regulator finds Muse exposed data at scale.</p>
+<p><strong>Could move lower if:</strong> Meta shows the cross-account cases were all made up, and Google and Meta close the remaining pathways.</p>
+</blockquote>
+<p>Bunker status: the shovel stays in the garage. Do go check what your apps are allowed to see, though. It's less work than digging.</p>
+<h2>Sources</h2>
+<ol>
+<li>Reuters (Katie Paul), "As Meta bets big on Muse AI agent, early safety mishaps surface," November 18, 2026, via Investing.com (primary source). <a href="https://ca.investing.com/news/stock-market-news/as-meta-bets-big-on-muse-ai-agent-early-safety-mishaps-surface-4966410" rel="noopener">https://ca.investing.com/news/stock-market-news/as-meta-bets-big-on-muse-ai-agent-early-safety-mishaps-surface-4966410</a></li>
 </ol>]]></content:encoded></item><item><title>Four Major AI Chatbots Failed a Government Safety Test. Here&#x27;s What That Actually Means.</title><link>https://thebunkerscale.com/posts/four-major-ai-chatbots-failed-a-government-safety-test/</link><guid isPermaLink="true">https://thebunkerscale.com/posts/four-major-ai-chatbots-failed-a-government-safety-test/</guid><pubDate>Wed, 18 Nov 2026 13:00:00 +0000</pubDate><description>The GAO logged on to ChatGPT, Claude, Gemini and Grok as an ordinary user and got all four to help plan a viable attack in under 12 hours each. The safeguards worked, until they didn&#x27;t.</description><content:encoded><![CDATA[<p><em>Rating as of November 18, 2026: 7/10 · Pay Attention</em></p>
 <p>In spring 2026, the U.S. Government Accountability Office (GAO) decided to test the safety restrictions on four of the most widely used AI chatbots: ChatGPT, Claude, Gemini, and Grok.</p>
 <p>Investigators created ordinary user accounts and tried to persuade each chatbot to help plan a violent attack.</p>
