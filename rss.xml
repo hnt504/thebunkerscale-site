@@ -1,9 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/css" href="/rss.css"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-<channel><title>The Bunker Scale</title><link>https://thebunkerscale.com/</link><description>A plain-English AI safety publication that rates AI developments on a 0 to 10 scale, from Background Noise to Get in the Bunker. What changed. Why it matters. What you can probably ignore.</description><language>en-us</language><lastBuildDate>Sun, 22 Nov 2026 13:00:00 +0000</lastBuildDate>
+<channel><title>The Bunker Scale</title><link>https://thebunkerscale.com/</link><description>A plain-English AI safety publication that rates AI developments on a 0 to 10 scale, from Background Noise to Get in the Bunker. What changed. Why it matters. What you can probably ignore.</description><language>en-us</language><lastBuildDate>Tue, 24 Nov 2026 13:00:00 +0000</lastBuildDate>
 <atom:link href="https://thebunkerscale.com/rss.xml" rel="self" type="application/rss+xml"/><image><url>https://thebunkerscale.com/assets/icon-512.png</url><title>The Bunker Scale</title><link>https://thebunkerscale.com/</link></image>
-<item><title>Attackers Told Their AI Agents to &quot;Obtain Shell Access.&quot; The Agents Found a Brand-New Flaw to Do It.</title><link>https://thebunkerscale.com/posts/amazon-cairn-ai-agents-found-a-zero-day/</link><guid isPermaLink="true">https://thebunkerscale.com/posts/amazon-cairn-ai-agents-found-a-zero-day/</guid><pubDate>Sun, 22 Nov 2026 13:00:00 +0000</pubDate><description>Amazon says a likely China-linked attacker pointed the Cairn AI hacking tool at universities in East Asia, and its agents found a flaw nobody knew about in a medical imaging program, then used it to take full control of a server. A fix exists in the code, but no fixed version has been released yet.</description><content:encoded><![CDATA[<p><em>Rating as of November 22, 2026: 7/10 · Pay Attention</em></p>
+<item><title>The European Commission Says It Was Hit by an &quot;AI-Generated&quot; Cyberattack. Staff Systems Went Dark, and Some Personal Data Was Taken.</title><link>https://thebunkerscale.com/posts/european-commission-ai-cyberattack/</link><guid isPermaLink="true">https://thebunkerscale.com/posts/european-commission-ai-cyberattack/</guid><pubDate>Tue, 24 Nov 2026 13:00:00 +0000</pubDate><description>The EU&#x27;s executive branch confirmed that a cyber campaign it detected in October was carried out with a publicly available AI tool. Staff pay, leave and medical reimbursement systems were reportedly offline for more than ten days, and names and email addresses were stolen from an EU training platform. The Commission hasn&#x27;t named the tool or the attacker.</description><content:encoded><![CDATA[<p><em>Rating as of November 24, 2026: 6/10 · Eyebrow Raised</em></p>
+<p><em>Security companies have been telling us for weeks that attackers are handing their break-ins to AI. This is one of the biggest governments in the world saying, on the record, that it happened to them.</em></p>
+<h2>What changed</h2>
+<p>On November 19, at its daily press briefing in Brussels, the European Commission confirmed it had been hit by a cyberattack it first detected on October 22 [1][2]. Commission spokesperson Thomas Regnier said: "This was an AI-generated cybercampaign" [1]. He described it as "a misuse of an AI tool" and said "it was an AI tool that is publicly available" [2]. The Commission confirmed the attack on October 26, after an initial investigation, but didn't say so publicly until almost four weeks later, after Politico reported it [2][3].</p>
+<p>Here's what's confirmed by the Commission itself:</p>
+<ul>
+<li><strong>What it did:</strong> the Commission "temporarily took down several applications" as a precaution, and "most of them have since then been restored" [2].</li>
+<li><strong>Who and why:</strong> Regnier declined to name an attacker ("on the attribution, I will not go there") and said what the attackers wanted is "more a question for the threat actor" [2]. He said he wasn't aware of any ransom demand [2].</li>
+<li><strong>Scale:</strong> he wouldn't describe the scale, but said "It is a campaign, so there was a series of incidents indeed," and that "many elements have been contained" [2].</li>
+<li><strong>Personal data:</strong> on November 19 he said the Commission had "not detected any evidence of a data breach affecting Commission staff as a whole" [2]. At a briefing on November 23, the Commission confirmed that the EU Academy, its online learning platform, was among the compromised systems, and that names and email addresses of people outside the EU institutions were taken [4]. It hasn't said how many people are affected, or whether anything else was taken [4]. It posted a general notice on the EU Academy website rather than contacting users individually [4].</li>
+</ul>
+<p>What's reported but <strong>not</strong> confirmed by the Commission:</p>
+<ul>
+<li><strong>Which systems.</strong> Politico, as relayed by SecurityWeek and Reuters, reported that the disruption "lasted over 10 days" and hit Sysper (the staff HR system for payslips and time off), MyPMO (medical reimbursements) and translation systems [1][3]. The Commission didn't say which services were targeted [2].</li>
+<li><strong>Which tool.</strong> Politico's sources said the EU's own cyber defense team, CERT-EU, saw the attackers using ARTEX, the open-source AI hacking tool the FBI <a href="https://thebunkerscale.com/posts/fbi-artex-warning/">warned about earlier this month</a> [2][3]. The Commission hasn't named the tool [2]. CERT-EU did publish a warning about ARTEX on November 5, saying it had "observed similar instances of AI-driven activities against its constituency" (the EU's institutions and agencies) that "highly likely involved the use of ARTEX" [5]. That post doesn't mention the Commission attack specifically [5].</li>
+<li><strong>How much a person was steering.</strong> Nobody has said. That matters, because it's the difference between "attackers used AI to go faster" and "AI agents ran the break-in."</li>
+</ul>
+<h2>Why it matters</h2>
+<p>Until now, most of what I've rated in this area has come from security companies describing attacks on their customers, or the FBI describing attacks in general. Those reports are careful, but they're one step removed. Here, the victim is the executive branch of the European Union, and it is saying in its own voice that the attack was AI-generated and used a tool anyone can get.</p>
+<p>It's also a fairly ordinary kind of harm, which is part of the point. Nothing exploded. Staff at one of the world's largest bureaucracies reportedly couldn't see their payslips or file medical claims for more than a week, and some outside learners had their names and emails taken. That's the shape AI-assisted hacking is taking so far: more attacks, faster, against more places, rather than one spectacular one.</p>
+<p>The other thing worth noticing is the four-week gap between detection and public confirmation. The Commission says it followed its usual processes [2], but the public found out because a newspaper got there first.</p>
+<p>For most people, nothing changes at home. If you've used the EU Academy platform, watch for phishing emails that use your name, since that's the usual next step with a stolen name-and-email list.</p>
+<h2>What you can probably ignore</h2>
+<p><strong>"AI hacked the EU government on its own."</strong> Nobody has said how much a person directed the attack, and the Commission has not described the tool as acting by itself [2]. "AI-generated" tells us AI was used, not that it was in charge.</p>
+<p><strong>"EU staff records were stolen."</strong> Politico's sources raised that possibility, but the Commission says it has found no evidence of a breach "affecting Commission staff as a whole" [2]. The confirmed theft is names and email addresses from the EU Academy learning platform [4].</p>
+<p><strong>"It was definitely ARTEX, and definitely China."</strong> The ARTEX link comes from Politico's unnamed sources and the timing of CERT-EU's warning [3][5]. The Commission hasn't named a tool or an attacker, and Regnier didn't address a reporter's question about whether it was a Chinese AI tool [2].</p>
+<h2>Why it earned this rating</h2>
+<p>On the side of a higher number:</p>
+<ul>
+<li>The victim is a major government body, and it confirmed the AI part on the record [1][2].</li>
+<li>Real disruption: staff services reportedly offline for more than ten days [1][3].</li>
+<li>Some personal data was confirmed stolen [4].</li>
+<li>The tool is "publicly available," so the same thing can be done to many others [2], and CERT-EU says similar AI-driven activity has been aimed at other EU bodies [5].</li>
+</ul>
+<p>On the side of a lower number:</p>
+<ul>
+<li>The confirmed data loss so far is names and email addresses, from one training platform [4].</li>
+<li>We don't know how much a human was directing it, or whether agents did anything beyond what a skilled human team could [2].</li>
+<li>The tool and attacker are unconfirmed, and the scale is undisclosed [2].</li>
+<li>It's one organization, and most of its systems are back [2].</li>
+</ul>
+<p>I put this at <strong>6</strong>, level with <a href="https://thebunkerscale.com/posts/one-person-twelve-ai-agents-taiwan-emergency-services/">the operator in Taiwan running AI agents against emergency services</a>: a real victim, real disruption, data taken, but limited detail on how autonomous the AI was. It sits below <a href="https://thebunkerscale.com/posts/vapor-panda-ai-agents-government-ministries/">VAPOR PANDA</a> and <a href="https://thebunkerscale.com/posts/unit-42-cairn-ai-agents-semiconductor-defense-civil-society/">the Unit 42 Cairn campaign</a> at 7, because those reports documented many breached organizations and showed the agents doing the work step by step. If you'd go to 7 because this is the first time a major government has stood up and confirmed an AI-generated attack against itself, I understand that, and it's the most likely direction if more comes out.</p>
+<h2>What I'm watching next</h2>
+<ul>
+<li><strong>The count.</strong> How many EU Academy users were affected, and whether staff data from Sysper or MyPMO turns out to have been taken after all.</li>
+<li><strong>The tool.</strong> Whether the Commission or CERT-EU confirms ARTEX, and which AI models powered it.</li>
+<li><strong>How autonomous.</strong> Any technical write-up showing how much of the attack the AI ran on its own.</li>
+<li><strong>Other EU bodies.</strong> CERT-EU says similar activity hit its constituency [5]. Whether other institutions or agencies confirm they were breached.</li>
+<li><strong>Disclosure.</strong> Whether the four-week gap leads EU institutions to tell the public about AI-assisted attacks sooner.</li>
+</ul>
+<blockquote class="bunker-check">
+<p><strong>Bunker Check</strong></p>
+<p><strong>Current rating:</strong> 6/10 · Eyebrow Raised</p>
+<p><strong>Direction:</strong> Holding, leaning up</p>
+<p><strong>Could move higher if:</strong> staff HR or medical data turns out to have been taken, other EU bodies confirm breaches, or a technical account shows AI agents ran most of the attack.</p>
+<p><strong>Could move lower if:</strong> the confirmed loss stays at names and emails, and the AI turns out to have played only a supporting role.</p>
+</blockquote>
+<p>Bunker status: the shovel stays in the garage. The canned goods are fine. If you get an oddly personal email claiming to be from an EU training course, though, that's one to delete.</p>
+<h2>Sources</h2>
+<ol>
+<li>Reuters, via RTÉ News, "AI tools used in cyberattack on European Commission," November 19, 2026 (primary source: reports the Commission spokesperson's on-record remarks). <a href="https://www.rte.ie/news/technology/2026/1119/1599850-eu-cyberattack/" rel="noopener">https://www.rte.ie/news/technology/2026/1119/1599850-eu-cyberattack/</a></li>
+<li>Sinisa Markovic, Help Net Security, "European Commission confirms AI-generated cyberattack disrupted its systems," November 20, 2026. <a href="https://www.helpnetsecurity.com/2026/11/20/european-commission-ai-generated-cyberattack-publicly-available-tool/" rel="noopener">https://www.helpnetsecurity.com/2026/11/20/european-commission-ai-generated-cyberattack-publicly-available-tool/</a></li>
+<li>Ionut Arghire, SecurityWeek, "European Commission Confirms AI-Assisted Cyberattack Disrupted Services," November 20, 2026. <a href="https://www.securityweek.com/european-commission-confirms-ai-assisted-cyberattack-disrupted-services/" rel="noopener">https://www.securityweek.com/european-commission-confirms-ai-assisted-cyberattack-disrupted-services/</a></li>
+<li>Carly Page, The Register, "European Commission confirms personal data stolen in AI-assisted cyberattack," November 24, 2026. <a href="https://www.theregister.com/cyber-crime/2026/11/24/european-commission-confirms-personal-data-stolen-in-ai-assisted-cyberattack/5311834" rel="noopener">https://www.theregister.com/cyber-crime/2026/11/24/european-commission-confirms-personal-data-stolen-in-ai-assisted-cyberattack/5311834</a></li>
+<li>CERT-EU, "From Penetration Testing to Cyber Threat: Beware of ARTEX," November 5, 2026. <a href="https://cert.europa.eu/blog/from-penetration-testing-to-cyber-threat-beware-of-artex" rel="noopener">https://cert.europa.eu/blog/from-penetration-testing-to-cyber-threat-beware-of-artex</a></li>
+</ol>]]></content:encoded></item><item><title>Attackers Told Their AI Agents to &quot;Obtain Shell Access.&quot; The Agents Found a Brand-New Flaw to Do It.</title><link>https://thebunkerscale.com/posts/amazon-cairn-ai-agents-found-a-zero-day/</link><guid isPermaLink="true">https://thebunkerscale.com/posts/amazon-cairn-ai-agents-found-a-zero-day/</guid><pubDate>Sun, 22 Nov 2026 13:00:00 +0000</pubDate><description>Amazon says a likely China-linked attacker pointed the Cairn AI hacking tool at universities in East Asia, and its agents found a flaw nobody knew about in a medical imaging program, then used it to take full control of a server. A fix exists in the code, but no fixed version has been released yet.</description><content:encoded><![CDATA[<p><em>Rating as of November 22, 2026: 7/10 · Pay Attention</em></p>
 <p><em>Until now, the AI-run break-ins I've written about went through doors that were already known to be broken. In this one, the agents found a new door on their own.</em></p>
 <h2>What changed</h2>
 <p>On November 20, Amazon published a report on its security blog titled "Chinese-nexus actor's Cairn AI agents found a zero-day on their own," by CJ Moses, the chief information security officer of Amazon Integrated Security [1]. A "zero-day" is a software flaw that nobody, including the people who make the software, knew about yet, so there is no fix waiting to be installed.</p>
