@@ -8,6 +8,8 @@ description: The Organization for Transformative Works says work to restore Arch
 ---
 *As of November 6, 2026. Still unrated: there's still no confirmed AI connection. This is a short follow-up to [my first AO3 post](/posts/ao3-down-is-your-writing-safe/).*
 
+*Update, November 24, 2026: AO3 has been back since November 15, and draft deletion returns on November 29. [Here's what to do](/posts/ao3-is-back-save-your-drafts/).*
+
 If a pile of old kudos notifications just landed in your inbox and your first thought was "is this a scam?", that's a very reasonable instinct this week. Good news on that one, and a couple of other things.
 
 ## What's new
