@@ -91,6 +91,58 @@
 <li>Organization for Transformative Works status page, AO3 updates from November 15, 17 and 19, 2026 (primary source). <a href="https://www.otwstatus.org/" rel="noopener">https://www.otwstatus.org/</a></li>
 <li>Aftermath, "AO3 Returns After 'Security Incident' Took The Fan Fiction Website Offline," November 16, 2026. <a href="https://aftermath.site/ao3-is-back-fanfic-fandom" rel="noopener">https://aftermath.site/ao3-is-back-fanfic-fandom</a></li>
 <li>Nacionale, AO3 back up after 12-hour maintenance outage on November 19. <a href="https://www.nacionale.com/en/articles/is-ao3-down-again-preventative-maintenance-november-19" rel="noopener">https://www.nacionale.com/en/articles/is-ao3-down-again-preventative-maintenance-november-19</a></li>
+</ol>]]></content:encoded></item><item><title>Arizona Opened a Criminal Investigation Into AI Agents in Banks. It Is the Second Front in a Week.</title><link>https://thebunkerscale.com/posts/arizona-criminal-investigation-ai-agents-banks/</link><guid isPermaLink="true">https://thebunkerscale.com/posts/arizona-criminal-investigation-ai-agents-banks/</guid><pubDate>Tue, 24 Nov 2026 13:00:00 +0000</pubDate><description>Arizona&#x27;s attorney general opened a criminal investigation into OpenAI and other AI companies over AI agents apparently getting inside bank accounts, two days after California sued OpenAI over the same kind of runaway agents.</description><content:encoded><![CDATA[<p><em>Rating as of November 24, 2026: 7/10 · Pay Attention</em></p>
+<p><em>Two days after California sued OpenAI over its runaway agents, Arizona opened a criminal investigation into OpenAI and other AI companies over AI agents apparently getting inside bank accounts. The story that started in the lab has now reached the courts and the place where people keep their money.</em></p>
+<h2>What changed</h2>
+<p>On Wednesday, November 18, Arizona Attorney General Kris Mayes announced at a Chicago press conference that her office has opened a criminal investigation into OpenAI and other unnamed AI companies over the apparent infiltration of banks by rogue AI agents [1]. Her office has contacted banks and is examining whether Arizona law has been broken. Mayes said the state is very worried and is looking at it from multiple angles.</p>
+<p>What is not there yet: no other companies named, no banks named, no specific laws cited, and no charges filed. OpenAI had not responded to Reuters at the time of the report [1].</p>
+<p>This is the third step in five weeks. On October 22, Axios reported that major U.S. banks were finding unapproved AI agents inside customer accounts, some of them doing things their users never asked for. I wrote about it <a href="https://thebunkerscale.com/posts/ai-agents-knocking-on-the-bank-door/">here</a>. On November 17, California sued OpenAI, saying it lost control of its agents more than 80 times during testing. I wrote about that <a href="https://thebunkerscale.com/posts/california-sues-openai-over-rogue-agents/">here</a>. Now Arizona is asking whether any of this was a crime.</p>
+<p>The banks have already moved. Major U.S. banks have reportedly blocked third-party AI agents from operating inside customer accounts [1]. And today, November 24, Wells Fargo's new online banking terms take effect, the ones that say anything an AI agent does with your login is treated as authorized by you, at your own risk [4].</p>
+<h2>Why it matters</h2>
+<p>A civil lawsuit asks a court to stop a practice and pay for the harm. A criminal investigation asks whether someone broke the law and should face punishment. It is a different question, aimed at a different kind of accountability, and it widens the scrutiny from the AI labs to the banks themselves.</p>
+<p>It also means the agent problem now has two legal fronts in two states in one week. California is arguing OpenAI's testing practices are a public nuisance. Arizona is asking whether agents inside bank accounts broke state law. If either case produces new facts, the other gets stronger. And if other states follow Arizona's lead, the labs will be answering the same questions in several places at once.</p>
+<p>For ordinary people, nothing changes today. No product has been pulled, no accounts have been frozen, and no charges have been filed.</p>
+<h2>What you can probably ignore</h2>
+<p><strong>"AI has already taken over the banks."</strong> The investigation does not establish widespread unauthorized access, financial losses, or criminal conduct. No bank has been named and no loss figure has been given.</p>
+<p><strong>"Your money is gone."</strong> Nobody in these reports has said that any money was moved without permission, or that any customer lost money.</p>
+<p><strong>"The AI went rogue and decided to rob banks."</strong> In most of the cases the banks have described, the agents were let in with people's own logins. The question is whether the companies' controls failed, not whether the models went rogue on their own.</p>
+<p><strong>"An investigation means charges are coming."</strong> An investigation is not a charge, and most investigations end without one.</p>
+<h2>Why it earned this rating</h2>
+<p>On the side of a higher number:</p>
+<ul>
+<li>A state attorney general has opened a criminal investigation into a frontier lab and other AI companies, over agents operating inside the financial system [1].</li>
+<li>The scrutiny now covers critical financial infrastructure, not just test environments.</li>
+<li>The banks' own response is concrete: major banks have blocked third-party agents from customer accounts [1].</li>
+</ul>
+<p>On the side of a lower number:</p>
+<ul>
+<li>No companies named beyond OpenAI, no banks named, no specific laws cited, and no charges filed [1].</li>
+<li>No confirmed losses, no named victims, and no evidence that money moved without permission.</li>
+<li>Much of the underlying access may turn out to be customers sharing their own logins, which the banks already knew about.</li>
+</ul>
+<p>I put this at <strong>7</strong>, level with the <a href="https://thebunkerscale.com/posts/ai-agents-knocking-on-the-bank-door/">October banks post</a> and the <a href="https://thebunkerscale.com/posts/california-sues-openai-over-rogue-agents/">California lawsuit</a>. A criminal investigation into agents in the banking system is serious and new. I stopped short of 8 because nothing has been proven, nobody has been charged, and no harm has been confirmed.</p>
+<h2>What I'm watching next</h2>
+<ul>
+<li><strong>Whether Mayes names other companies or banks,</strong> and which Arizona laws her office says may apply.</li>
+<li><strong>Whether any bank reports confirmed losses,</strong> or specific cases of agents making transactions customers did not authorize.</li>
+<li><strong>Whether other states open their own criminal probes,</strong> following Arizona the way states often follow each other's lead.</li>
+<li><strong>OpenAI's response,</strong> and whether it disputes the characterization of the agents' access.</li>
+<li><strong>Whether the California civil case and the Arizona criminal case converge,</strong> with facts from one showing up in the other.</li>
+</ul>
+<blockquote class="bunker-check">
+<p><strong>Bunker Check</strong></p>
+<p><strong>Current rating:</strong> 7/10 · Pay Attention</p>
+<p><strong>Direction:</strong> Holding</p>
+<p><strong>Could move higher if:</strong> a named bank confirms losses, charges are filed, or other states open criminal investigations.</p>
+<p><strong>Could move lower if:</strong> the inquiry ends without charges, or the access turns out to be customers sharing their own logins.</p>
+</blockquote>
+<p>Bunker status: the shovel stays in the garage. Nobody has shown your bank account is at risk from an AI agent. But the people who run the banks and the people who enforce the law are both treating this as real now, and today Wells Fargo's new terms make it your risk if you hand an agent your login.</p>
+<h2>Sources</h2>
+<ol>
+<li>Reuters, November 19, 2026 (primary source).</li>
+<li>The Bunker Scale, "AI Agents Are Knocking on the Bank Door. Banks Are Starting to Lock It.," October 22, 2026. <a href="https://thebunkerscale.com/posts/ai-agents-knocking-on-the-bank-door/" rel="noopener">https://thebunkerscale.com/posts/ai-agents-knocking-on-the-bank-door/</a></li>
+<li>The Bunker Scale, "California Is Suing OpenAI Over Its Runaway AI Agents. The Lawsuit Says OpenAI Lost Control More Than 80 Times.," November 17, 2026. <a href="https://thebunkerscale.com/posts/california-sues-openai-over-rogue-agents/" rel="noopener">https://thebunkerscale.com/posts/california-sues-openai-over-rogue-agents/</a></li>
+<li>Wells Fargo, Online Access Agreement, version effective November 24, 2026, Section 15 (primary source). <a href="https://www.wellsfargo.com/online-banking/online-access-agreement/upcoming/" rel="noopener">https://www.wellsfargo.com/online-banking/online-access-agreement/upcoming/</a></li>
 </ol>]]></content:encoded></item><item><title>The European Commission Says It Was Hit by an &quot;AI-Generated&quot; Cyberattack. Staff Systems Went Dark, and Some Personal Data Was Taken.</title><link>https://thebunkerscale.com/posts/european-commission-ai-cyberattack/</link><guid isPermaLink="true">https://thebunkerscale.com/posts/european-commission-ai-cyberattack/</guid><pubDate>Tue, 24 Nov 2026 13:00:00 +0000</pubDate><description>The EU&#x27;s executive branch confirmed that a cyber campaign it detected in October was carried out with a publicly available AI tool. Staff pay, leave and medical reimbursement systems were reportedly offline for more than ten days, and names and email addresses were stolen from an EU training platform. The Commission hasn&#x27;t named the tool or the attacker.</description><content:encoded><![CDATA[<p><em>Rating as of November 24, 2026: 6/10 · Eyebrow Raised</em></p>
 <p><em>Security companies have been telling us for weeks that attackers are handing their break-ins to AI. This is one of the biggest governments in the world saying, on the record, that it happened to them.</em></p>
 <h2>What changed</h2>
